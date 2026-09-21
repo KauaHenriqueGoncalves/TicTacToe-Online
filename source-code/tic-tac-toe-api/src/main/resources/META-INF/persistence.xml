@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.2">
+    <persistence-unit name="eclipseLinkPersistence" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+        <class>com.tic.tac.toe.domain.entity.User</class>
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver"
+                      value="org.h2.Driver"/>
+            <property name="eclipselink.target-database"
+                      value="org.eclipse.persistence.platform.database.H2Platform"/>
+            <property name="eclipselink.ddl-generation"
+                      value="create-or-extend-tables"/>
+            <property name="eclipselink.logging.level"
+                      value="INFO"/>
+        </properties>
+    </persistence-unit>
+</persistence>
