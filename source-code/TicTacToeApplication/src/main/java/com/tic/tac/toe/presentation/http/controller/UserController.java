@@ -31,7 +31,7 @@ public final class UserController {
 
     public static void register(Javalin server, String path) {
         String route = path + PREFIX;
-        server.before(route + "/*", authorizedHttpMiddleware::authenticate);
+        server.before(route + "*", authorizedHttpMiddleware::authenticate);
         server.get(route, UserController::findAll);
         server.post(route, UserController::create);
     }
