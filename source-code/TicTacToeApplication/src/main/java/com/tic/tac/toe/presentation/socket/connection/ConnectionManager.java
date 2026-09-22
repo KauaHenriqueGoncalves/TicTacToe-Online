@@ -10,49 +10,102 @@ import java.util.concurrent.ConcurrentHashMap;
 public final class ConnectionManager {
     private static final Logger log =
             LoggerFactory.getLogger(ConnectionManager.class);
-    private final Set<Connection> connections = ConcurrentHashMap.newKeySet();
+    private static final ConnectionManager FACTORY;
+    private final Set<Connection> connections;
 
-    public ConnectionManager() {
-        log.info("SocketManager successfully instantiated.");
+    static {
+        FACTORY = new ConnectionManager(ConcurrentHashMap.newKeySet());
+        log.info("Instance {} initialized.", ConnectionManager.class.getSimpleName());
+    }
+
+    private ConnectionManager(Set<Connection> connections) {
+        this.connections = connections;
+    }
+
+    public static ConnectionManager getFactory() {
+        return FACTORY;
     }
 
     public void add(Connection c) {
+        if (c == null) {
+            log.warn("Connection is required.");
+            throw new RuntimeException("Connection is required.");
+        }
+        if (c.getId() == null) {
+            log.warn("ConnectionId is required.");
+            throw new RuntimeException("ConnectionId is required.");
+        }
+        if (c.getConnection() == null) {
+            log.warn("WebSocketConnection is required.");
+            throw new RuntimeException("WebSocketConnection is required.");
+        }
+        if (c.getUserId() == null) {
+            log.warn("UserId is required.");
+            throw new RuntimeException("UserId is required.");
+        }
         connections.add(c);
+        log.info("A connection added on manager. [connectionId={}] [userId={}]",
+                c.getId(), c.getUserId());
     }
 
     public void remove(Connection c) {
-        if (connections.contains(c)) {
-            // throw
+        if (!connections.contains(c)) {
+            log.warn("Connection not found on manager.");
+            throw new RuntimeException("Error on connection manager.");
         }
         connections.remove(c);
+        log.info("Connection removed successfully. [connectionId={}] [userId={}]",
+                c.getId(), c.getUserId());
     }
 
     public void removeByConnection(WebSocket ws) {
-        for (Connection connection : connections) {
-            if (connection.getConnection().equals(ws)) {
-                connections.remove(connection);
+        for (Connection c : connections) {
+            if (c.getConnection().equals(ws)) {
+                connections.remove(c);
+                log.info("Connection removed with by websocket successfully. [connectionId={}] [userId={}]",
+                        c.getId(), c.getUserId());
                 return;
             }
         }
-        // thorw
+        log.warn("Connection by websocket not found on manager.");
+        throw new RuntimeException("Error on connection manager.");
     }
 
     public Connection getByUserId(UUID userId) {
-        return connections.stream()
+        log.info("Getting connection by userId. [userId={}]", userId);
+        Connection connection = connections.stream()
                 .filter(c -> c.getUserId().equals(userId))
                 .findFirst()
                 .orElse(null);
+        if (connection == null) {
+            log.warn("Not found connection by userId");
+            return null;
+        }
+        log.info("Got connection by userId. [connectionId={}] [userId={}]",
+                connection.getId(), connection.getUserId());
+        return connection;
     }
 
     public Connection getByConnection(WebSocket ws) {
-        return connections.stream()
+        log.info("Getting connection by websocket");
+        Connection connection = connections.stream()
                 .filter(c -> c.getConnection().equals(ws))
                 .findFirst()
                 .orElse(null);
+        if (connection == null) {
+            log.warn("Not found connection by websocket");
+            return null;
+        }
+        log.info("Got connection by websocket. [connectionId={}] [userId={}]",
+                connection.getId(), connection.getUserId());
+        return connection;
     }
 
     public void broadcast(String message) {
+        log.info("Sending message on broadcast");
         connections.forEach(conn -> {
+            log.info("Send message to connection. [connectionId={}] [userId={}]",
+                    conn.getId(), conn.getUserId());
             conn.getConnection().send(message);
         });
     }

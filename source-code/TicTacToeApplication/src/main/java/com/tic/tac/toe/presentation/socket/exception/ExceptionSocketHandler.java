@@ -2,6 +2,7 @@ package com.tic.tac.toe.presentation.socket.exception;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.tic.tac.toe.domain.exception.EntityAlreadyExistsException;
 import com.tic.tac.toe.presentation.http.exception.ExceptionHttpHandler;
 import org.java_websocket.WebSocket;
@@ -21,10 +22,11 @@ public final class ExceptionSocketHandler {
     }
 
     private ExceptionSocketHandler(ObjectMapper objectMapper) {
+        objectMapper.registerModule(new JavaTimeModule());
         this.objectMapper = objectMapper;
     }
 
-    public ExceptionSocketHandler getFactory() {
+    public static ExceptionSocketHandler getFactory() {
         return FACTORY;
     }
 
@@ -32,6 +34,7 @@ public final class ExceptionSocketHandler {
         if (exception instanceof EntityAlreadyExistsException) {
             StandardSocketException standard = new StandardSocketException(
                     Instant.now(),
+                    "ERROR",
                     ((EntityAlreadyExistsException) exception).getError(),
                     exception.getMessage(),
                     event
@@ -43,6 +46,7 @@ public final class ExceptionSocketHandler {
         if (exception instanceof RuntimeException) {
             StandardSocketException standard = new StandardSocketException(
                     Instant.now(),
+                    "ERROR",
                     "INTERNET_SERVER_ERROR",
                     exception.getMessage(),
                     event

@@ -16,7 +16,7 @@ public final class Room {
 
     public static Room create(UUID id) {
         if (id == null) {
-            // throw
+            throw new RuntimeException("Id is requeried to create a room.");
         }
         return new Room(id);
     }

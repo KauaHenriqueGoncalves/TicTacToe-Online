@@ -10,10 +10,20 @@ import java.util.concurrent.ConcurrentHashMap;
 public final class RoomManager {
     private static final Logger log =
             LoggerFactory.getLogger(RoomManager.class);
-    private final Set<Room> rooms = ConcurrentHashMap.newKeySet();
+    private static final RoomManager FACTORY;
+    private final Set<Room> rooms;
 
-    public RoomManager() {
-        log.info("RoomManager successfully instantiated.");
+    static {
+        FACTORY = new RoomManager(ConcurrentHashMap.newKeySet());
+        log.info("Instance {} initialized.", RoomManager.class.getSimpleName());
+    }
+
+    private RoomManager(Set<Room> rooms) {
+        this.rooms = rooms;
+    }
+
+    public static RoomManager getFactory() {
+        return FACTORY;
     }
 
     public void create(UUID id) {

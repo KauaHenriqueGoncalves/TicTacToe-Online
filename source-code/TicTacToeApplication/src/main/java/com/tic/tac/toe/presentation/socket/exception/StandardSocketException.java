@@ -4,22 +4,28 @@ import java.time.Instant;
 
 public final class StandardSocketException {
     private Instant timestamp;
+    private String event;
     private String error;
     private String message;
-    private String event;
+    private String fromEvent;
 
     public StandardSocketException() {
     }
 
-    public StandardSocketException(Instant timestamp, String error, String message, String event) {
+    public StandardSocketException(Instant timestamp, String event, String error, String message, String fromEvent) {
         this.timestamp = timestamp;
+        this.event = event;
         this.error = error;
         this.message = message;
-        this.event = event;
+        this.fromEvent = fromEvent;
     }
 
     public Instant getTimestamp() {
         return timestamp;
+    }
+
+    public String getEvent() {
+        return event;
     }
 
     public String getError() {
@@ -30,7 +36,7 @@ public final class StandardSocketException {
         return message;
     }
 
-    public String getEvent() {
-        return event;
+    public String getFromEvent() {
+        return fromEvent;
     }
 }

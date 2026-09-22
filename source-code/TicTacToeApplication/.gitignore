@@ -6,6 +6,7 @@ target/
 .env
 
 ### IntelliJ IDEA ###
+.junie
 .idea
 .idea/modules.xml
 .idea/jarRepositories.xml

@@ -14,14 +14,15 @@ public final class Connection {
         this.id = id;
         this.connection = connection;
         this.userId = userId;
+        this.roomId = null;
     }
 
     public static Connection create(WebSocket connection, UUID userId) {
         if (connection == null) {
-            throw new RuntimeException("connection is required");
+            throw new RuntimeException("Connection is required");
         }
         if (userId == null || userId.toString().isEmpty()) {
-            throw new RuntimeException("userId is required");
+            throw new RuntimeException("UserId is required");
         }
         return new Connection(
                 UUID.randomUUID(),

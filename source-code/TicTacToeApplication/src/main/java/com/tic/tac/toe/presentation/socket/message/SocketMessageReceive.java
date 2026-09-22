@@ -4,15 +4,13 @@ import com.fasterxml.jackson.databind.JsonNode;
 
 public final class SocketMessageReceive {
     private String event;
-    private String accessToken;
     private JsonNode content;
 
     public SocketMessageReceive() {
     }
 
-    public SocketMessageReceive(String event, String accessToken, JsonNode content) {
+    public SocketMessageReceive(String event, JsonNode content) {
         this.event = event;
-        this.accessToken = accessToken;
         this.content = content;
     }
 
@@ -22,14 +20,6 @@ public final class SocketMessageReceive {
 
     public void setEvent(String event) {
         this.event = event;
-    }
-
-    public String getAccessToken() {
-        return accessToken;
-    }
-
-    public void setAccessToken(String accessToken) {
-        this.accessToken = accessToken;
     }
 
     public JsonNode getContent() {
