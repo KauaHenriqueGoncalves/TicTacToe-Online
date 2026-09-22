@@ -14,16 +14,16 @@ public final class SocketServer extends WebSocketServer {
     private static final Logger log =
             LoggerFactory.getLogger(SocketServer.class);
     private static final SocketServer server;
-    private static final SocketManager socketManager;
-    private static final RoomManager roomManager;
-    private static final int port;
+    private static final SocketManager SOCKET_MANAGER;
+    private static final RoomManager ROOM_MANAGER;
+    private static final int PORT;
 
     static {
         try {
-            port = Integer.parseInt(Environment.get("SOCKET_PORT"));
-            server = new SocketServer();
-            socketManager = new SocketManager();
-            roomManager = new RoomManager();
+            PORT = Integer.parseInt(Environment.get("SOCKET_PORT"));
+            server = new SocketServer(PORT);
+            SOCKET_MANAGER = new SocketManager();
+            ROOM_MANAGER = new RoomManager();
             server.start();
         } catch (RuntimeException e) {
             throw new RuntimeException(e);
@@ -34,7 +34,7 @@ public final class SocketServer extends WebSocketServer {
         return server;
     }
 
-    private SocketServer() {
+    private SocketServer(int port) {
         super(new InetSocketAddress(port));
     }
 
@@ -61,6 +61,6 @@ public final class SocketServer extends WebSocketServer {
     @Override
     public void onStart() {
         log.info("WebSocketServer started successfully. [port={}] [url={}]",
-                port, "ws://localhost:" + port);
+                PORT, "ws://localhost:" + PORT);
     }
 }
