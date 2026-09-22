@@ -4,26 +4,26 @@ import org.java_websocket.WebSocket;
 import java.util.Objects;
 import java.util.UUID;
 
-public final class SocketConnection {
+public final class Connection {
     private final UUID id;
     private final WebSocket connection;
     private final UUID userId;
     private UUID roomId;
 
-    private SocketConnection(UUID id, WebSocket connection, UUID userId) {
+    private Connection(UUID id, WebSocket connection, UUID userId) {
         this.id = id;
         this.connection = connection;
         this.userId = userId;
     }
 
-    public static SocketConnection create(WebSocket connection, UUID userId) {
+    public static Connection create(WebSocket connection, UUID userId) {
         if (connection == null) {
-            throw new RuntimeException("informar connection");
+            throw new RuntimeException("connection is required");
         }
-//        if (accessToken == null || accessToken.isEmpty()) {
-//            throw new RuntimeException("accessToken é obrigatório");
-//        }
-        return new SocketConnection(
+        if (userId == null || userId.toString().isEmpty()) {
+            throw new RuntimeException("userId is required");
+        }
+        return new Connection(
                 UUID.randomUUID(),
                 connection,
                 userId
@@ -53,7 +53,7 @@ public final class SocketConnection {
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        SocketConnection that = (SocketConnection) o;
+        Connection that = (Connection) o;
         return Objects.equals(id, that.id);
     }
 

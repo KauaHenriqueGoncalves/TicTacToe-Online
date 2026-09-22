@@ -2,17 +2,17 @@ package com.tic.tac.toe.presentation.http.exception;
 
 import java.time.Instant;
 
-public final class StandardException {
+public final class StandardHttpException {
     private Instant timestamp;
     private int status;
     private String error;
     private String message;
     private String path;
 
-    public StandardException() {
+    public StandardHttpException() {
     }
 
-    public StandardException(Instant timestamp, int status, String error, String message, String path) {
+    public StandardHttpException(Instant timestamp, int status, String error, String message, String path) {
         this.timestamp = timestamp;
         this.status = status;
         this.error = error;

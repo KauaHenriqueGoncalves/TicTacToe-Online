@@ -1,6 +1,6 @@
 package com.tic.tac.toe.presentation.socket.room;
 
-import com.tic.tac.toe.presentation.socket.connection.SocketConnection;
+import com.tic.tac.toe.presentation.socket.connection.Connection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.util.Set;
@@ -29,7 +29,7 @@ public final class RoomManager {
         throw new RuntimeException("error");
     }
 
-    public void join(UUID roomId, SocketConnection socket) {
+    public void join(UUID roomId, Connection socket) {
         for (Room room : rooms) {
             if (room.getId().equals(roomId)) {
                 room.getUsers().put(socket.getUserId(), socket.getConnection());
@@ -39,13 +39,13 @@ public final class RoomManager {
         }
     }
 
-    public void leave(UUID roomId, SocketConnection socketConnection) {
+    public void leave(UUID roomId, Connection connection) {
         for (Room room : rooms) {
             if (room.getId().equals(roomId)) {
                 for (UUID userId : room.getUsers().keySet()) {
-                    if (userId.equals(socketConnection.getUserId())) {
+                    if (userId.equals(connection.getUserId())) {
                         room.getUsers().remove(userId);
-                        socketConnection.setRoomId(null);
+                        connection.setRoomId(null);
                         return;
                     }
                 }

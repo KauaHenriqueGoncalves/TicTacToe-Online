@@ -1,7 +1,7 @@
 package com.tic.tac.toe.presentation.socket;
 
 import com.tic.tac.toe.infrastructure.config.Environment;
-import com.tic.tac.toe.presentation.socket.connection.SocketManager;
+import com.tic.tac.toe.presentation.socket.connection.ConnectionManager;
 import com.tic.tac.toe.presentation.socket.room.RoomManager;
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
@@ -14,7 +14,7 @@ public final class SocketServer extends WebSocketServer {
     private static final Logger log =
             LoggerFactory.getLogger(SocketServer.class);
     private static final SocketServer server;
-    private static final SocketManager SOCKET_MANAGER;
+    private static final ConnectionManager SOCKET_MANAGER;
     private static final RoomManager ROOM_MANAGER;
     private static final int PORT;
 
@@ -22,7 +22,7 @@ public final class SocketServer extends WebSocketServer {
         try {
             PORT = Integer.parseInt(Environment.get("SOCKET_PORT"));
             server = new SocketServer(PORT);
-            SOCKET_MANAGER = new SocketManager();
+            SOCKET_MANAGER = new ConnectionManager();
             ROOM_MANAGER = new RoomManager();
             server.start();
         } catch (RuntimeException e) {
@@ -40,22 +40,26 @@ public final class SocketServer extends WebSocketServer {
 
     @Override
     public void onOpen(WebSocket conn, ClientHandshake handshake) {
-
+        System.out.println(handshake.getFieldValue("accessToken")); // take token
+        // valid jwt and take userId
+        // register connection
+        // add on conection manager
     }
 
     @Override
     public void onClose(WebSocket conn, int code, String reason, boolean remote) {
-
+        // remove from connection manager
+        // if hava room, remove room
     }
 
     @Override
     public void onMessage(WebSocket conn, String message) {
-
+        // send message
     }
 
     @Override
     public void onError(WebSocket conn, Exception ex) {
-
+        // will have handler error
     }
 
     @Override

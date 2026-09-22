@@ -2,7 +2,7 @@ package com.tic.tac.toe.presentation.http;
 
 import com.tic.tac.toe.infrastructure.config.Environment;
 import com.tic.tac.toe.presentation.http.controller.AuthController;
-import com.tic.tac.toe.presentation.http.exception.ExceptionHandler;
+import com.tic.tac.toe.presentation.http.exception.ExceptionHttpHandler;
 import io.javalin.Javalin;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,7 +26,7 @@ public final class HttpServer {
                     ctx.method(), ctx.host(), ctx.path(), ctx.contentLength());
         });
         server.routes(() -> {
-            ExceptionHandler.register(server);
+            ExceptionHttpHandler.register(server);
             AuthController.register(server, PREFIX);
         });
         log.info("Instance {} initialized.", HttpServer.class.getSimpleName());

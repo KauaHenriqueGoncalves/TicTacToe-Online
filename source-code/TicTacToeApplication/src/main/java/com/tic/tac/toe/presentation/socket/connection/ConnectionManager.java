@@ -7,20 +7,20 @@ import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
-public final class SocketManager {
+public final class ConnectionManager {
     private static final Logger log =
-            LoggerFactory.getLogger(SocketManager.class);
-    private final Set<SocketConnection> connections = ConcurrentHashMap.newKeySet();
+            LoggerFactory.getLogger(ConnectionManager.class);
+    private final Set<Connection> connections = ConcurrentHashMap.newKeySet();
 
-    public SocketManager() {
+    public ConnectionManager() {
         log.info("SocketManager successfully instantiated.");
     }
 
-    public void add(SocketConnection c) {
+    public void add(Connection c) {
         connections.add(c);
     }
 
-    public void remove(SocketConnection c) {
+    public void remove(Connection c) {
         if (connections.contains(c)) {
             // throw
         }
@@ -28,7 +28,7 @@ public final class SocketManager {
     }
 
     public void removeByConnection(WebSocket ws) {
-        for (SocketConnection connection : connections) {
+        for (Connection connection : connections) {
             if (connection.getConnection().equals(ws)) {
                 connections.remove(connection);
                 return;
@@ -37,14 +37,14 @@ public final class SocketManager {
         // thorw
     }
 
-    public SocketConnection getByUserId(UUID userId) {
+    public Connection getByUserId(UUID userId) {
         return connections.stream()
                 .filter(c -> c.getUserId().equals(userId))
                 .findFirst()
                 .orElse(null);
     }
 
-    public SocketConnection getByConnection(WebSocket ws) {
+    public Connection getByConnection(WebSocket ws) {
         return connections.stream()
                 .filter(c -> c.getConnection().equals(ws))
                 .findFirst()
