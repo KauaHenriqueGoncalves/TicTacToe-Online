@@ -2,11 +2,13 @@ package com.tic.tac.toe.presentation.socket;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tic.tac.toe.application.event.EventDispatcher;
+import com.tic.tac.toe.domain.event.DomainEvent;
 import com.tic.tac.toe.infrastructure.config.Environment;
 import com.tic.tac.toe.infrastructure.security.JwtService;
 import com.tic.tac.toe.presentation.socket.connection.Connection;
 import com.tic.tac.toe.presentation.socket.connection.ConnectionManager;
-import com.tic.tac.toe.presentation.socket.event.EventConfig;
+import com.tic.tac.toe.presentation.socket.event.EventRegister;
+import com.tic.tac.toe.presentation.socket.event.SocketEventMapper;
 import com.tic.tac.toe.presentation.socket.exception.ExceptionSocketHandler;
 import com.tic.tac.toe.presentation.socket.message.SocketMessageReceive;
 import com.tic.tac.toe.presentation.socket.room.RoomManager;
@@ -26,9 +28,9 @@ public final class SocketServer extends WebSocketServer {
     private static final ConnectionManager CONNECTION_MANAGER;
     private static final RoomManager ROOM_MANAGER;
     private static final ExceptionSocketHandler EXCEPTION_HANDLER;
-    private static final EventDispatcher eventDispatcher;
     private static final JwtService jwtService;
     private static final ObjectMapper objectMapper;
+    private static final EventDispatcher eventDispatcher;
     private static final int PORT;
 
     static {
@@ -38,9 +40,9 @@ public final class SocketServer extends WebSocketServer {
             CONNECTION_MANAGER = ConnectionManager.getFactory();
             ROOM_MANAGER = RoomManager.getFactory();
             EXCEPTION_HANDLER = ExceptionSocketHandler.getFactory();
-            eventDispatcher = EventConfig.register();
             jwtService = JwtService.getFactory();
             objectMapper = new ObjectMapper();
+            eventDispatcher = EventRegister.buildDispatcher();
             SERVER.start();
         } catch (RuntimeException e) {
             throw new RuntimeException(e);
@@ -107,14 +109,10 @@ public final class SocketServer extends WebSocketServer {
     @Override
     public void onMessage(WebSocket conn, String message) {
         try {
-            SocketMessageReceive request =
-                    objectMapper.readValue(
-                            message,
-                            SocketMessageReceive.class
-                    );
-
-            // próximo passo: transformar request em DomainEvent
-
+            SocketMessageReceive request = objectMapper.readValue(message, SocketMessageReceive.class);
+            Connection connection = CONNECTION_MANAGER.getByConnection(conn);
+            DomainEvent event = SocketEventMapper.toDomainEvent(request, connection);
+            eventDispatcher.dispatch(event);
         } catch (Exception e) {
             EXCEPTION_HANDLER.handle(conn, "message", e);
         }
