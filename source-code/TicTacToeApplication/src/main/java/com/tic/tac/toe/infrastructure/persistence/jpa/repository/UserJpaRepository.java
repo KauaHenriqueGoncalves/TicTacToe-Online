@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.TypedQuery;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -60,6 +61,25 @@ public final class UserJpaRepository implements UserRepository {
     }
 
     @Override
+    public Optional<User> findByEmail(String email) {
+        EntityManager em = emf.createEntityManager();
+        try {
+            TypedQuery<User> query = em.createQuery(
+                    "SELECT u FROM " + User.class.getSimpleName() + " u " +
+                    "WHERE u.email = :email",
+                    User.class
+            );
+            query.setParameter("email", email);
+            return Optional.ofNullable(query.getSingleResult());
+        } catch (RuntimeException ex) {
+            log.error("Error trying to find user by username and email. [error={}]", ex.getMessage());
+            return Optional.empty();
+        } finally {
+            em.close();
+        }
+    }
+
+    @Override
     public User save(User user) {
         EntityManager em = emf.createEntityManager();
         try {
@@ -74,7 +94,6 @@ public final class UserJpaRepository implements UserRepository {
             }
             em.getTransaction().commit();
             return result;
-
         } catch (RuntimeException ex) {
             log.error("Error trying to save the user. [error={}]", ex.getMessage());
             if (em.getTransaction().isActive()) {

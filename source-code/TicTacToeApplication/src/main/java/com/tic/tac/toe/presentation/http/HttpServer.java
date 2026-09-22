@@ -2,7 +2,6 @@ package com.tic.tac.toe.presentation.http;
 
 import com.tic.tac.toe.infrastructure.config.Environment;
 import com.tic.tac.toe.presentation.http.controller.AuthController;
-import com.tic.tac.toe.presentation.http.controller.UserController;
 import com.tic.tac.toe.presentation.http.exception.ExceptionHandler;
 import io.javalin.Javalin;
 import org.slf4j.Logger;
@@ -29,7 +28,6 @@ public final class HttpServer {
         server.routes(() -> {
             ExceptionHandler.register(server);
             AuthController.register(server, PREFIX);
-            UserController.register(server, PREFIX);
         });
         log.info("Instance {} initialized.", HttpServer.class.getSimpleName());
         log.info("HttpServer started successfully. [port={}] [url={}]",

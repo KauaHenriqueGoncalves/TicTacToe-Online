@@ -1,8 +1,6 @@
 package com.tic.tac.toe.domain.entity;
 
 import com.tic.tac.toe.application.dto.request.CreateUserRequestDto;
-import com.tic.tac.toe.domain.exception.InputInvalidException;
-import com.tic.tac.toe.domain.validation.EmailValidation;
 import com.tic.tac.toe.infrastructure.security.PasswordHasher;
 import javax.persistence.*;
 import org.eclipse.persistence.annotations.Cache;
@@ -61,9 +59,6 @@ public class User {
     }
 
     public static User create(CreateUserRequestDto dto) {
-        if (!EmailValidation.isValid(dto.getEmail())) {
-            throw new InputInvalidException("Formato do email invalido");
-        }
         return new User(
                 UUID.randomUUID(),
                 dto.getUsername(),

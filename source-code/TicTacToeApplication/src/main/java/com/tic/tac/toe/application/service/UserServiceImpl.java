@@ -18,6 +18,8 @@ public final class UserServiceImpl implements UserService {
 
     public UserServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
+        log.info("Instance {} initialized. [InstanceId={}]",
+                UserServiceImpl.class.getSimpleName(), System.identityHashCode(this));
     }
 
     @Override
