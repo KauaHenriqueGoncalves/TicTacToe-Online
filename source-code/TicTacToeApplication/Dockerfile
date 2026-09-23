@@ -1,3 +1,5 @@
+# TODO: dovenv nao consegue ler o .env no container, configurar o DOCKERFILE
+
 FROM maven:3.9-eclipse-temurin-8 AS build
 WORKDIR /app
 COPY pom.xml .
