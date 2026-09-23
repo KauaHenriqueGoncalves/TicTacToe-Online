@@ -30,6 +30,7 @@ public final class SocketEventMapper {
     }
 
     private static DomainEvent message(JsonNode content, Connection connection) {
+        // TESTE
         UUID roomId = UUID.randomUUID();
         return new MessageEvent(connection.getUserId(), roomId);
     }

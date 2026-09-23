@@ -10,12 +10,13 @@ import com.tic.tac.toe.presentation.socket.event.handlers.MessageHandler;
 import com.tic.tac.toe.domain.event.MessageEvent;
 
 public final class EventRegister {
+    private static final ObjectMapper objectMapper = new ObjectMapper();
+
     private EventRegister() {
     }
 
     public static EventDispatcher buildDispatcher(AppContext context) {
         EventDispatcher eventDispatcher = new EventDispatcher();
-        ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
 
         eventDispatcher.register(

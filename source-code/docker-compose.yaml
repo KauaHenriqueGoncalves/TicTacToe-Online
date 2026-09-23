@@ -1,0 +1,16 @@
+services:
+    tictactoe:
+        build: ./TicTacToeApplication
+        container_name: tictactoe-app
+        restart: unless-stopped
+        env_file: ./TicTacToeApplication/.env
+        ports:
+            - "8080:8080"
+            - "8081:8081"
+        volumes:
+            - tictactoe-data:/app/src/main/resources/data
+            - tictactoe-logs:/app/src/main/resources/logs
+
+volumes:
+    tictactoe-data:
+    tictactoe-logs:

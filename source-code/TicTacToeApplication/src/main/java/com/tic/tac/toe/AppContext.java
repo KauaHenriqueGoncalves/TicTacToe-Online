@@ -11,6 +11,7 @@ import com.tic.tac.toe.infrastructure.security.JwtService;
 import com.tic.tac.toe.presentation.http.controller.AuthController;
 import com.tic.tac.toe.presentation.http.middleware.AuthorizedHttpMiddleware;
 import com.tic.tac.toe.presentation.socket.connection.ConnectionManager;
+import com.tic.tac.toe.presentation.socket.middleware.AuthorizedSocketMiddleware;
 import com.tic.tac.toe.presentation.socket.room.RoomManager;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -22,6 +23,7 @@ public final class AppContext {
     public final UserService userService;
     public final AuthorizedHttpMiddleware authorizedHttpMiddleware;
     public final AuthController authController;
+    public final AuthorizedSocketMiddleware authorizedSocketMiddleware;
     public final ConnectionManager connectionManager;
     public final RoomManager roomManager;
 
@@ -35,10 +37,14 @@ public final class AppContext {
         this.userService = new UserServiceImpl(userRepository);
 
         // presentation layer
+        // http
         this.authorizedHttpMiddleware = new AuthorizedHttpMiddleware(this.jwtService);
         this.authController = new AuthController(this.authService, "/auth");
-        this.connectionManager = new ConnectionManager(ConcurrentHashMap.newKeySet());
-        this.roomManager = new RoomManager(ConcurrentHashMap.newKeySet());
+
+        // websocket
+        this.authorizedSocketMiddleware = new AuthorizedSocketMiddleware(this.jwtService);
+        this.connectionManager = new ConnectionManager();
+        this.roomManager = new RoomManager();
     }
 
     public static AppContext getInstance() {

@@ -2,7 +2,7 @@ package com.tic.tac.toe.presentation.socket.event.handlers;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.tic.tac.toe.application.dto.event.deliver.GlobalMessageDeliver;
+import com.tic.tac.toe.application.dto.message.GlobalMessageDeliver;
 import com.tic.tac.toe.application.event.EventHandler;
 import com.tic.tac.toe.domain.entity.User;
 import com.tic.tac.toe.domain.event.GlobalMessageEvent;

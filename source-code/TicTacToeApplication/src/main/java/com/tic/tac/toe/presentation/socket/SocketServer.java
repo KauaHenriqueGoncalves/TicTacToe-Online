@@ -5,13 +5,13 @@ import com.tic.tac.toe.AppContext;
 import com.tic.tac.toe.application.event.EventDispatcher;
 import com.tic.tac.toe.domain.event.DomainEvent;
 import com.tic.tac.toe.infrastructure.config.Environment;
-import com.tic.tac.toe.infrastructure.security.JwtService;
 import com.tic.tac.toe.presentation.socket.connection.Connection;
 import com.tic.tac.toe.presentation.socket.connection.ConnectionManager;
 import com.tic.tac.toe.presentation.socket.event.EventRegister;
 import com.tic.tac.toe.presentation.socket.event.SocketEventMapper;
 import com.tic.tac.toe.presentation.socket.exception.ExceptionSocketHandler;
 import com.tic.tac.toe.presentation.socket.message.SocketMessageReceive;
+import com.tic.tac.toe.presentation.socket.middleware.AuthorizedSocketMiddleware;
 import com.tic.tac.toe.presentation.socket.room.RoomManager;
 import io.jsonwebtoken.JwtException;
 import org.java_websocket.WebSocket;
@@ -26,8 +26,8 @@ public final class SocketServer extends WebSocketServer {
     private static final Logger log = LoggerFactory.getLogger(SocketServer.class);
     private static ConnectionManager CONNECTION_MANAGER;
     private static RoomManager ROOM_MANAGER;
+    private static AuthorizedSocketMiddleware AUTHORIZED_SOCKET_MIDDLEWARE;
     private static ExceptionSocketHandler EXCEPTION_HANDLER;
-    private static JwtService jwtService;
     private static ObjectMapper objectMapper;
     private static EventDispatcher eventDispatcher;
     private final int port;
@@ -37,8 +37,8 @@ public final class SocketServer extends WebSocketServer {
         SocketServer server = new SocketServer(port);
         CONNECTION_MANAGER = context.connectionManager;
         ROOM_MANAGER = context.roomManager;
+        AUTHORIZED_SOCKET_MIDDLEWARE = context.authorizedSocketMiddleware;
         EXCEPTION_HANDLER = new ExceptionSocketHandler(new ObjectMapper());
-        jwtService = context.jwtService;
         objectMapper = new ObjectMapper();
         eventDispatcher = EventRegister.buildDispatcher(context);
         server.start();
@@ -52,13 +52,8 @@ public final class SocketServer extends WebSocketServer {
     @Override
     public void onOpen(WebSocket conn, ClientHandshake handshake) {
         try {
-            String accessToken = handshake.getFieldValue("accessToken");
-            if (accessToken == null) {
-                log.warn("Authentication required");
-                conn.close(1008, "Authentication required");
-                return;
-            }
-            String userId = jwtService.validate(accessToken);
+            String userId =
+                    AUTHORIZED_SOCKET_MIDDLEWARE.authenticate(conn, handshake);
             Connection connection =
                     Connection.create(conn, UUID.fromString(userId));
             CONNECTION_MANAGER.add(connection);

@@ -1,4 +1,4 @@
-package com.tic.tac.toe.application.dto.event.deliver;
+package com.tic.tac.toe.application.dto.message;
 
 public final class GlobalMessageDeliver {
     private final String from;
