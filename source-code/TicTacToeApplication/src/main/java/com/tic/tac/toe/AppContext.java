@@ -1,8 +1,10 @@
 package com.tic.tac.toe;
 
 import com.tic.tac.toe.application.service.AuthServiceImpl;
+import com.tic.tac.toe.application.service.UserServiceImpl;
 import com.tic.tac.toe.domain.repositoy.UserRepository;
 import com.tic.tac.toe.domain.service.AuthService;
+import com.tic.tac.toe.domain.service.UserService;
 import com.tic.tac.toe.infrastructure.persistence.jpa.JpaUtil;
 import com.tic.tac.toe.infrastructure.persistence.jpa.repository.UserJpaRepository;
 import com.tic.tac.toe.infrastructure.security.JwtService;
@@ -17,6 +19,7 @@ public final class AppContext {
     public final JwtService jwtService;
     public final UserRepository userRepository;
     public final AuthService authService;
+    public final UserService userService;
     public final AuthorizedHttpMiddleware authorizedHttpMiddleware;
     public final AuthController authController;
     public final ConnectionManager connectionManager;
@@ -29,6 +32,7 @@ public final class AppContext {
 
         // application layer
         this.authService = new AuthServiceImpl(userRepository, jwtService);
+        this.userService = new UserServiceImpl(userRepository);
 
         // presentation layer
         this.authorizedHttpMiddleware = new AuthorizedHttpMiddleware(this.jwtService);

@@ -3129,3 +3129,161 @@ Query: InsertObjectQuery(com.tic.tac.toe.domain.entity.User@9154ee9b)]
 2026-09-23 14:38:52 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
 2026-09-23 14:38:52 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
 2026-09-23 14:38:52 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-09-23 15:43:32 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized.
+2026-09-23 15:43:32 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized.
+2026-09-23 15:43:33 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized.
+2026-09-23 15:43:33 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized.
+2026-09-23 15:43:33 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=1928931046]
+2026-09-23 15:43:33 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=1034568234]
+2026-09-23 15:43:33 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized.
+2026-09-23 15:43:33 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized.
+2026-09-23 15:43:33 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized.
+2026-09-23 15:43:33 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionHttpHandler initialized.
+2026-09-23 15:43:33 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-09-23 15:43:33 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1022ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-09-23 15:43:33 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-09-23 15:43:33 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1238 days old. Consider checking for a newer version.).
+2026-09-23 15:43:33 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-09-23 15:43:33 [main] INFO  io.javalin.Javalin - Javalin started in 127ms \o/
+2026-09-23 15:43:33 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-09-23 15:43:33 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-09-23 15:43:33 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-09-23 15:50:19 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized.
+2026-09-23 15:50:19 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized.
+2026-09-23 15:50:19 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized.
+2026-09-23 15:50:19 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized.
+2026-09-23 15:50:19 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=1923598304]
+2026-09-23 15:50:19 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=776700275]
+2026-09-23 15:50:19 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized.
+2026-09-23 15:50:19 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized.
+2026-09-23 15:50:19 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized.
+2026-09-23 15:50:20 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionHttpHandler initialized.
+2026-09-23 15:50:20 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-09-23 15:50:20 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @3772ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-09-23 15:50:20 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-09-23 15:50:20 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1238 days old. Consider checking for a newer version.).
+2026-09-23 15:50:20 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-09-23 15:50:20 [main] INFO  io.javalin.Javalin - Javalin started in 177ms \o/
+2026-09-23 15:50:20 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-09-23 15:50:20 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-09-23 15:50:20 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-09-23 15:51:28 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=1fac5840-ebad-4eab-bd3f-551159be5579] [userId=fa31ffee-0e0c-48e9-b6c2-bd6d19e8c32f]
+2026-09-23 15:51:30 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-09-23 15:51:30 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=1fac5840-ebad-4eab-bd3f-551159be5579] [userId=fa31ffee-0e0c-48e9-b6c2-bd6d19e8c32f]
+2026-09-23 15:51:30 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-09-23 15:51:30 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=1fac5840-ebad-4eab-bd3f-551159be5579] [userId=fa31ffee-0e0c-48e9-b6c2-bd6d19e8c32f]
+2026-09-23 15:51:37 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-09-23 15:51:37 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=1fac5840-ebad-4eab-bd3f-551159be5579] [userId=fa31ffee-0e0c-48e9-b6c2-bd6d19e8c32f]
+2026-09-23 15:51:37 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=1fac5840-ebad-4eab-bd3f-551159be5579] [userId=fa31ffee-0e0c-48e9-b6c2-bd6d19e8c32f]
+2026-09-23 15:51:37 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=1fac5840-ebad-4eab-bd3f-551159be5579] [userId=fa31ffee-0e0c-48e9-b6c2-bd6d19e8c32f] [code=1000] [reason=]
+2026-09-23 15:51:37 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=d1a66550-bc92-4008-abe0-db8cb375d679] [userId=fa31ffee-0e0c-48e9-b6c2-bd6d19e8c32f]
+2026-09-23 15:51:38 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-09-23 15:51:38 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=d1a66550-bc92-4008-abe0-db8cb375d679] [userId=fa31ffee-0e0c-48e9-b6c2-bd6d19e8c32f]
+2026-09-23 15:51:44 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-09-23 15:51:44 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=d1a66550-bc92-4008-abe0-db8cb375d679] [userId=fa31ffee-0e0c-48e9-b6c2-bd6d19e8c32f]
+2026-09-23 15:51:44 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-09-23 15:51:44 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=d1a66550-bc92-4008-abe0-db8cb375d679] [userId=fa31ffee-0e0c-48e9-b6c2-bd6d19e8c32f]
+2026-09-23 15:51:53 [WebSocketWorker-19] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=8b3757ce-8980-4ed8-836e-4dbfda87d86d] [userId=fa31ffee-0e0c-48e9-b6c2-bd6d19e8c32f]
+2026-09-23 15:52:14 [WebSocketWorker-19] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-09-23 15:52:14 [WebSocketWorker-19] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=8b3757ce-8980-4ed8-836e-4dbfda87d86d] [userId=fa31ffee-0e0c-48e9-b6c2-bd6d19e8c32f]
+2026-09-23 15:52:14 [WebSocketWorker-19] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-09-23 15:52:14 [WebSocketWorker-19] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=8b3757ce-8980-4ed8-836e-4dbfda87d86d] [userId=fa31ffee-0e0c-48e9-b6c2-bd6d19e8c32f]
+2026-09-23 15:52:14 [WebSocketWorker-19] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=d1a66550-bc92-4008-abe0-db8cb375d679] [userId=fa31ffee-0e0c-48e9-b6c2-bd6d19e8c32f]
+2026-09-23 15:52:38 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-09-23 15:52:38 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=d1a66550-bc92-4008-abe0-db8cb375d679] [userId=fa31ffee-0e0c-48e9-b6c2-bd6d19e8c32f]
+2026-09-23 15:52:38 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=d1a66550-bc92-4008-abe0-db8cb375d679] [userId=fa31ffee-0e0c-48e9-b6c2-bd6d19e8c32f]
+2026-09-23 15:52:38 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=d1a66550-bc92-4008-abe0-db8cb375d679] [userId=fa31ffee-0e0c-48e9-b6c2-bd6d19e8c32f] [code=1000] [reason=]
+2026-09-23 15:52:39 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-09-23 15:52:39 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=8b3757ce-8980-4ed8-836e-4dbfda87d86d] [userId=fa31ffee-0e0c-48e9-b6c2-bd6d19e8c32f]
+2026-09-23 15:52:39 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=8b3757ce-8980-4ed8-836e-4dbfda87d86d] [userId=fa31ffee-0e0c-48e9-b6c2-bd6d19e8c32f]
+2026-09-23 15:52:39 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=8b3757ce-8980-4ed8-836e-4dbfda87d86d] [userId=fa31ffee-0e0c-48e9-b6c2-bd6d19e8c32f] [code=1000] [reason=]
+2026-09-23 15:57:32 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized.
+2026-09-23 15:57:32 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized.
+2026-09-23 15:57:32 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized.
+2026-09-23 15:57:32 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized.
+2026-09-23 15:57:32 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=1928931046]
+2026-09-23 15:57:32 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=1034568234]
+2026-09-23 15:57:32 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized.
+2026-09-23 15:57:32 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized.
+2026-09-23 15:57:32 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized.
+2026-09-23 15:57:32 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionHttpHandler initialized.
+2026-09-23 15:57:32 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-09-23 15:57:32 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1016ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-09-23 15:57:32 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-09-23 15:57:32 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1238 days old. Consider checking for a newer version.).
+2026-09-23 15:57:32 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-09-23 15:57:32 [main] INFO  io.javalin.Javalin - Javalin started in 197ms \o/
+2026-09-23 15:57:32 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-09-23 15:57:32 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-09-23 15:57:32 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-09-23 15:58:26 [JettyServerThreadPool-44] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: POST, HOST: localhost:8080, PATH: /api/v1/auth/login, CONTENT_LENGTH: 68
+2026-09-23 15:58:26 [JettyServerThreadPool-44] INFO  c.t.t.t.a.service.AuthServiceImpl - Trying login. [email=testeee@eemail.com]
+2026-09-23 15:58:47 [JettyServerThreadPool-35] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: POST, HOST: localhost:8080, PATH: /api/v1/auth/login, CONTENT_LENGTH: 68
+2026-09-23 15:58:47 [JettyServerThreadPool-35] INFO  c.t.t.t.a.service.AuthServiceImpl - Trying login. [email=testeee@eemail.com]
+2026-09-23 16:00:01 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized.
+2026-09-23 16:00:01 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized.
+2026-09-23 16:00:01 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized.
+2026-09-23 16:00:01 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized.
+2026-09-23 16:00:01 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=367746789]
+2026-09-23 16:00:01 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=558216562]
+2026-09-23 16:00:01 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized.
+2026-09-23 16:00:01 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized.
+2026-09-23 16:00:01 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized.
+2026-09-23 16:00:02 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionHttpHandler initialized.
+2026-09-23 16:00:02 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-09-23 16:00:02 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1165ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-09-23 16:00:02 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-09-23 16:00:02 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1238 days old. Consider checking for a newer version.).
+2026-09-23 16:00:02 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-09-23 16:00:02 [main] INFO  io.javalin.Javalin - Javalin started in 153ms \o/
+2026-09-23 16:00:02 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-09-23 16:00:02 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-09-23 16:00:02 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-09-23 16:00:14 [JettyServerThreadPool-44] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: POST, HOST: localhost:8080, PATH: /api/v1/auth/login, CONTENT_LENGTH: 66
+2026-09-23 16:00:14 [JettyServerThreadPool-44] INFO  c.t.t.t.a.service.AuthServiceImpl - Trying login. [email=teste@eemail.com]
+2026-09-23 16:00:15 [JettyServerThreadPool-44] ERROR c.t.t.t.i.p.j.r.UserJpaRepository - Error trying to find user by username and email. [error=getSingleResult() did not retrieve any entities.]
+2026-09-23 16:00:15 [JettyServerThreadPool-44] WARN  c.t.t.t.a.service.AuthServiceImpl - Credentials invalid. [email=teste@eemail.com]
+2026-09-23 16:00:35 [JettyServerThreadPool-33] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: POST, HOST: localhost:8080, PATH: /api/v1/auth/register, CONTENT_LENGTH: 92
+2026-09-23 16:00:35 [JettyServerThreadPool-33] INFO  c.t.t.t.a.service.AuthServiceImpl - Creating a new user. [username=klaua] [email=teste@eemail.com]
+2026-09-23 16:00:35 [JettyServerThreadPool-33] INFO  c.t.t.t.a.service.AuthServiceImpl - User created successfully. [newUserId=a9876944-0518-4057-ba2b-5171c3a8bea7] [createdAt=2026-09-23T16:00:35.666]
+2026-09-23 16:00:41 [JettyServerThreadPool-39] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: POST, HOST: localhost:8080, PATH: /api/v1/auth/login, CONTENT_LENGTH: 66
+2026-09-23 16:00:41 [JettyServerThreadPool-39] INFO  c.t.t.t.a.service.AuthServiceImpl - Trying login. [email=teste@eemail.com]
+2026-09-23 16:00:41 [JettyServerThreadPool-39] INFO  c.t.t.t.a.service.AuthServiceImpl - Login successfully. [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-09-23 16:01:24 [JettyServerThreadPool-34] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: POST, HOST: localhost:8080, PATH: /api/v1/auth/register, CONTENT_LENGTH: 94
+2026-09-23 16:01:24 [JettyServerThreadPool-34] INFO  c.t.t.t.a.service.AuthServiceImpl - Creating a new user. [username=teste] [email=testete@eemail.com]
+2026-09-23 16:01:24 [JettyServerThreadPool-34] INFO  c.t.t.t.a.service.AuthServiceImpl - User created successfully. [newUserId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [createdAt=2026-09-23T16:01:24.072]
+2026-09-23 16:01:29 [JettyServerThreadPool-44] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: POST, HOST: localhost:8080, PATH: /api/v1/auth/login, CONTENT_LENGTH: 68
+2026-09-23 16:01:29 [JettyServerThreadPool-44] INFO  c.t.t.t.a.service.AuthServiceImpl - Trying login. [email=testete@eemail.com]
+2026-09-23 16:01:29 [JettyServerThreadPool-44] INFO  c.t.t.t.a.service.AuthServiceImpl - Login successfully. [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-09-23 16:01:51 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=5f676ad8-1c36-4fab-acf5-d71b9b0a6878] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-09-23 16:01:54 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=e53f8103-71bb-4e63-bf85-8ef1b7bc33a2] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-09-23 16:01:58 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-09-23 16:01:58 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=5f676ad8-1c36-4fab-acf5-d71b9b0a6878] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-09-23 16:01:58 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-09-23 16:01:58 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=5f676ad8-1c36-4fab-acf5-d71b9b0a6878] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-09-23 16:01:58 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=e53f8103-71bb-4e63-bf85-8ef1b7bc33a2] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-09-23 16:02:43 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-09-23 16:02:43 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=e53f8103-71bb-4e63-bf85-8ef1b7bc33a2] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-09-23 16:02:43 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-09-23 16:02:43 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=5f676ad8-1c36-4fab-acf5-d71b9b0a6878] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-09-23 16:02:43 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=e53f8103-71bb-4e63-bf85-8ef1b7bc33a2] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-09-23 16:02:53 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-09-23 16:02:53 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=e53f8103-71bb-4e63-bf85-8ef1b7bc33a2] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-09-23 16:02:53 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=e53f8103-71bb-4e63-bf85-8ef1b7bc33a2] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-09-23 16:02:53 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=e53f8103-71bb-4e63-bf85-8ef1b7bc33a2] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [code=1000] [reason=]
+2026-09-23 16:02:55 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-09-23 16:02:55 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=5f676ad8-1c36-4fab-acf5-d71b9b0a6878] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-09-23 16:02:55 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=5f676ad8-1c36-4fab-acf5-d71b9b0a6878] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-09-23 16:02:55 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=5f676ad8-1c36-4fab-acf5-d71b9b0a6878] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7] [code=1000] [reason=]
+2026-09-23 16:05:16 [JettyServerThreadPool-50] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: POST, HOST: localhost:8080, PATH: /api/v1/auth/register, CONTENT_LENGTH: 94
+2026-09-23 16:05:16 [JettyServerThreadPool-50] INFO  c.t.t.t.a.service.AuthServiceImpl - Creating a new user. [username=teste] [email=testete@eemail.com]
+2026-09-23 16:05:16 [JettyServerThreadPool-50] ERROR c.t.t.t.i.p.j.r.UserJpaRepository - Error trying to save the user. [error=Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.16.v20250613-47773a333b): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Unique index or primary key violation: "PUBLIC.CONSTRAINT_INDEX_4 ON PUBLIC.USERS(EMAIL NULLS FIRST) VALUES ( /* 2 */ 'testete@eemail.com' )"; SQL statement:
+INSERT INTO users (id, created_at, email, password_hash, username) VALUES (?, ?, ?, ?, ?) [23505-224]
+Error Code: 23505
+Call: INSERT INTO users (id, created_at, email, password_hash, username) VALUES (?, ?, ?, ?, ?)
+	bind => [5 parameters bound]
+Query: InsertObjectQuery(com.tic.tac.toe.domain.entity.User@a2aa2a21)]
+2026-09-23 16:05:21 [JettyServerThreadPool-38] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: POST, HOST: localhost:8080, PATH: /api/v1/auth/register, CONTENT_LENGTH: 100
+2026-09-23 16:05:21 [JettyServerThreadPool-38] INFO  c.t.t.t.a.service.AuthServiceImpl - Creating a new user. [username=teste] [email=testetegsdfgs@eemail.com]
+2026-09-23 16:05:21 [JettyServerThreadPool-38] INFO  c.t.t.t.a.service.AuthServiceImpl - User created successfully. [newUserId=5b2bd98b-40da-412d-83b8-14833b48f537] [createdAt=2026-09-23T16:05:21.223]

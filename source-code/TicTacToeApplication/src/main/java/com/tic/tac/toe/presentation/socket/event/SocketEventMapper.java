@@ -3,6 +3,7 @@ package com.tic.tac.toe.presentation.socket.event;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tic.tac.toe.domain.event.DomainEvent;
+import com.tic.tac.toe.domain.event.GlobalMessageEvent;
 import com.tic.tac.toe.domain.event.MessageEvent;
 import com.tic.tac.toe.domain.exception.InputInvalidException;
 import com.tic.tac.toe.presentation.socket.connection.Connection;
@@ -21,6 +22,8 @@ public final class SocketEventMapper {
         switch (eventName) {
             case "message":
                 return message(content, connection);
+            case "global.message":
+                return globalMessage(content, connection);
             default:
                 throw new InputInvalidException("Unknown event: " + eventName);
         }
@@ -29,6 +32,10 @@ public final class SocketEventMapper {
     private static DomainEvent message(JsonNode content, Connection connection) {
         UUID roomId = UUID.randomUUID();
         return new MessageEvent(connection.getUserId(), roomId);
+    }
+
+    private static DomainEvent globalMessage(JsonNode content, Connection connection) {
+        return new GlobalMessageEvent(connection.getUserId(), content.get("message").asText());
     }
 
 }

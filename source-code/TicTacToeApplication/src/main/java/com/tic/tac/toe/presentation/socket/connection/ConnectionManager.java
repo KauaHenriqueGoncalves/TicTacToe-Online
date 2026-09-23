@@ -5,10 +5,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.util.Set;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 public final class ConnectionManager {
     private static final Logger log = LoggerFactory.getLogger(ConnectionManager.class);
     private final Set<Connection> connections;
+
+    public ConnectionManager() {
+        this.connections = ConcurrentHashMap.newKeySet();
+        log.info("Instance {} initialized.", ConnectionManager.class.getSimpleName());
+    }
 
     public ConnectionManager(Set<Connection> connections) {
         this.connections = connections;
