@@ -1,6 +1,7 @@
 package com.tic.tac.toe;
 
 import com.tic.tac.toe.application.service.AuthServiceImpl;
+import com.tic.tac.toe.domain.repositoy.UserRepository;
 import com.tic.tac.toe.domain.service.AuthService;
 import com.tic.tac.toe.infrastructure.persistence.jpa.JpaUtil;
 import com.tic.tac.toe.infrastructure.persistence.jpa.repository.UserJpaRepository;
@@ -14,6 +15,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public final class AppContext {
     private static AppContext instance = null;
     public final JwtService jwtService;
+    public final UserRepository userRepository;
     public final AuthService authService;
     public final AuthorizedHttpMiddleware authorizedHttpMiddleware;
     public final AuthController authController;
@@ -21,11 +23,14 @@ public final class AppContext {
     public final RoomManager roomManager;
 
     private AppContext() {
+        // infrastructure layer
         this.jwtService = JwtService.getFactory();
-        this.authService = new AuthServiceImpl(
-                new UserJpaRepository(JpaUtil.getFactory()),
-                jwtService
-        );
+        this.userRepository = new UserJpaRepository(JpaUtil.getFactory());
+
+        // application layer
+        this.authService = new AuthServiceImpl(userRepository, jwtService);
+
+        // presentation layer
         this.authorizedHttpMiddleware = new AuthorizedHttpMiddleware(this.jwtService);
         this.authController = new AuthController(this.authService, "/auth");
         this.connectionManager = new ConnectionManager(ConcurrentHashMap.newKeySet());
