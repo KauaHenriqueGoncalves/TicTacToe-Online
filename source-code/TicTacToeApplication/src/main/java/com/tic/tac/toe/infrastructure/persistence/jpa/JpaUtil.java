@@ -9,8 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public final class JpaUtil {
-    private static final Logger log =
-            LoggerFactory.getLogger(JpaUtil.class);
+    private static final Logger log = LoggerFactory.getLogger(JpaUtil.class);
     private static final EntityManagerFactory FACTORY;
 
     static {

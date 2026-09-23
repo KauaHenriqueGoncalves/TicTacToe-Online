@@ -1,17 +1,17 @@
 package com.tic.tac.toe.presentation.socket.event;
 
+import com.tic.tac.toe.AppContext;
 import com.tic.tac.toe.application.event.EventDispatcher;
 import com.tic.tac.toe.application.event.handlers.MessageHandler;
 import com.tic.tac.toe.domain.event.MessageEvent;
-import com.tic.tac.toe.presentation.socket.connection.ConnectionManager;
 
 public final class EventRegister {
-    public static EventDispatcher buildDispatcher() {
+    public static EventDispatcher buildDispatcher(AppContext context) {
         EventDispatcher eventDispatcher = new EventDispatcher();
 
         eventDispatcher.register(
                 MessageEvent.class,
-                new MessageHandler(ConnectionManager.getFactory())
+                new MessageHandler(context.connectionManager)
         );
 
         return eventDispatcher;

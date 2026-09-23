@@ -5,25 +5,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.util.Set;
 import java.util.UUID;
-import java.util.concurrent.ConcurrentHashMap;
 
 public final class RoomManager {
-    private static final Logger log =
-            LoggerFactory.getLogger(RoomManager.class);
-    private static final RoomManager FACTORY;
+    private static final Logger log = LoggerFactory.getLogger(RoomManager.class);
     private final Set<Room> rooms;
 
-    static {
-        FACTORY = new RoomManager(ConcurrentHashMap.newKeySet());
-        log.info("Instance {} initialized.", RoomManager.class.getSimpleName());
-    }
-
-    private RoomManager(Set<Room> rooms) {
+    public RoomManager(Set<Room> rooms) {
         this.rooms = rooms;
-    }
-
-    public static RoomManager getFactory() {
-        return FACTORY;
+        log.info("Instance {} initialized.", RoomManager.class.getSimpleName());
     }
 
     public void create(UUID id) {

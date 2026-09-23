@@ -1,6 +1,7 @@
 package com.tic.tac.toe.presentation.socket;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.tic.tac.toe.AppContext;
 import com.tic.tac.toe.application.event.EventDispatcher;
 import com.tic.tac.toe.domain.event.DomainEvent;
 import com.tic.tac.toe.infrastructure.config.Environment;
@@ -22,39 +23,30 @@ import java.net.InetSocketAddress;
 import java.util.UUID;
 
 public final class SocketServer extends WebSocketServer {
-    private static final Logger log =
-            LoggerFactory.getLogger(SocketServer.class);
-    private static final SocketServer SERVER;
-    private static final ConnectionManager CONNECTION_MANAGER;
-    private static final RoomManager ROOM_MANAGER;
-    private static final ExceptionSocketHandler EXCEPTION_HANDLER;
-    private static final JwtService jwtService;
-    private static final ObjectMapper objectMapper;
-    private static final EventDispatcher eventDispatcher;
-    private static final int PORT;
+    private static final Logger log = LoggerFactory.getLogger(SocketServer.class);
+    private static ConnectionManager CONNECTION_MANAGER;
+    private static RoomManager ROOM_MANAGER;
+    private static ExceptionSocketHandler EXCEPTION_HANDLER;
+    private static JwtService jwtService;
+    private static ObjectMapper objectMapper;
+    private static EventDispatcher eventDispatcher;
+    private final int port;
 
-    static {
-        try {
-            PORT = Integer.parseInt(Environment.get("SOCKET_PORT"));
-            SERVER = new SocketServer(PORT);
-            CONNECTION_MANAGER = ConnectionManager.getFactory();
-            ROOM_MANAGER = RoomManager.getFactory();
-            EXCEPTION_HANDLER = ExceptionSocketHandler.getFactory();
-            jwtService = JwtService.getFactory();
-            objectMapper = new ObjectMapper();
-            eventDispatcher = EventRegister.buildDispatcher();
-            SERVER.start();
-        } catch (RuntimeException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public static SocketServer getServer() {
-        return SERVER;
+    public static void start(AppContext context) {
+        int port = Integer.parseInt(Environment.get("SOCKET_PORT"));
+        SocketServer server = new SocketServer(port);
+        CONNECTION_MANAGER = context.connectionManager;
+        ROOM_MANAGER = context.roomManager;
+        EXCEPTION_HANDLER = new ExceptionSocketHandler(new ObjectMapper());
+        jwtService = context.jwtService;
+        objectMapper = new ObjectMapper();
+        eventDispatcher = EventRegister.buildDispatcher(context);
+        server.start();
     }
 
     private SocketServer(int port) {
         super(new InetSocketAddress(port));
+        this.port = port;
     }
 
     @Override
@@ -132,6 +124,6 @@ public final class SocketServer extends WebSocketServer {
     @Override
     public void onStart() {
         log.info("WebSocketServer started successfully. [port={}] [url={}]",
-                PORT, "ws://localhost:" + PORT);
+                port, "ws://localhost:" + port);
     }
 }

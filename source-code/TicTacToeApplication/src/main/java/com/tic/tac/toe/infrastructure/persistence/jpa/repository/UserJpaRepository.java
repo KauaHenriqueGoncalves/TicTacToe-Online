@@ -3,7 +3,6 @@ package com.tic.tac.toe.infrastructure.persistence.jpa.repository;
 import com.tic.tac.toe.domain.entity.User;
 import com.tic.tac.toe.domain.exception.RepositoryException;
 import com.tic.tac.toe.domain.repositoy.UserRepository;
-import com.tic.tac.toe.infrastructure.persistence.jpa.JpaUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import javax.persistence.EntityManager;
@@ -14,22 +13,12 @@ import java.util.Optional;
 import java.util.UUID;
 
 public final class UserJpaRepository implements UserRepository {
-    private static final Logger log =
-            LoggerFactory.getLogger(UserJpaRepository.class);
-    private static final UserJpaRepository FACTORY;
+    private static final Logger log = LoggerFactory.getLogger(UserJpaRepository.class);
     private final EntityManagerFactory emf;
 
-    static {
-        FACTORY = new UserJpaRepository(JpaUtil.getFactory());
-        log.info("Instance {} initialized.", UserJpaRepository.class.getSimpleName());
-    }
-
-    private UserJpaRepository(EntityManagerFactory emf) {
+    public UserJpaRepository(EntityManagerFactory emf) {
         this.emf = emf;
-    }
-
-    public static UserJpaRepository getFactory() {
-        return FACTORY;
+        log.info("Instance {} initialized.", UserJpaRepository.class.getSimpleName());
     }
 
     @Override
@@ -87,11 +76,10 @@ public final class UserJpaRepository implements UserRepository {
             User result = null;
             if (user.getId() == null) {
                 em.persist(user);
-                result = user;
             } else {
                 em.merge(user);
-                result = user;
             }
+            result = user;
             em.getTransaction().commit();
             return result;
         } catch (RuntimeException ex) {

@@ -5,8 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public final class Environment {
-    private static final Logger log =
-            LoggerFactory.getLogger(Environment.class);
+    private static final Logger log = LoggerFactory.getLogger(Environment.class);
     private static final Dotenv DOTENV;
 
     static {

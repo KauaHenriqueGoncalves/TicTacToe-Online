@@ -7,7 +7,6 @@ import com.tic.tac.toe.domain.event.MessageEvent;
 import com.tic.tac.toe.domain.exception.InputInvalidException;
 import com.tic.tac.toe.presentation.socket.connection.Connection;
 import com.tic.tac.toe.presentation.socket.message.SocketMessageReceive;
-
 import java.util.UUID;
 
 public final class SocketEventMapper {
