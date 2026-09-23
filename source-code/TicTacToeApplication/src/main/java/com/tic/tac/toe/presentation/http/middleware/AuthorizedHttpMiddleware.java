@@ -8,22 +8,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public final class AuthorizedHttpMiddleware {
-    private static final Logger log =
-            LoggerFactory.getLogger(AuthorizedHttpMiddleware.class);
-    private static final AuthorizedHttpMiddleware FACTORY;
+    private static final Logger log = LoggerFactory.getLogger(AuthorizedHttpMiddleware.class);
     private final JwtService jwtService;
 
-    static {
-        FACTORY = new AuthorizedHttpMiddleware(JwtService.getFactory());
-        log.info("Instance {} initialized.", AuthorizedHttpMiddleware.class.getSimpleName());
-    }
-
-    private AuthorizedHttpMiddleware(JwtService jwtService) {
+    public AuthorizedHttpMiddleware(JwtService jwtService) {
         this.jwtService = jwtService;
-    }
-
-    public static AuthorizedHttpMiddleware getFactory() {
-        return FACTORY;
     }
 
     public void authenticate(Context ctx) {

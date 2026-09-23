@@ -1,4 +1,4 @@
-package com.tic.tac.toe.application.event.handlers;
+package com.tic.tac.toe.presentation.socket.event.handlers;
 
 import com.tic.tac.toe.application.event.EventHandler;
 import com.tic.tac.toe.domain.event.MessageEvent;

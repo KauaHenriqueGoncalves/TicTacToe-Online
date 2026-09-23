@@ -11,23 +11,13 @@ import org.slf4j.LoggerFactory;
 import java.time.Instant;
 
 public final class ExceptionSocketHandler {
-    private static final Logger log =
-            LoggerFactory.getLogger(ExceptionSocketHandler.class);
-    private static final ExceptionSocketHandler FACTORY;
+    private static final Logger log = LoggerFactory.getLogger(ExceptionSocketHandler.class);
     private final ObjectMapper objectMapper;
 
-    static {
-        FACTORY = new ExceptionSocketHandler(new ObjectMapper());
-        log.info("Instance {} initialized.", ExceptionHttpHandler.class.getSimpleName());
-    }
-
-    private ExceptionSocketHandler(ObjectMapper objectMapper) {
+    public ExceptionSocketHandler(ObjectMapper objectMapper) {
         objectMapper.registerModule(new JavaTimeModule());
         this.objectMapper = objectMapper;
-    }
-
-    public static ExceptionSocketHandler getFactory() {
-        return FACTORY;
+        log.info("Instance {} initialized.", ExceptionHttpHandler.class.getSimpleName());
     }
 
     public void handle(WebSocket conn, String event, Exception exception) {

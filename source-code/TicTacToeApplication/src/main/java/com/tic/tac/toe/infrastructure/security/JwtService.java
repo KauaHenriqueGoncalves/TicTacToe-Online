@@ -13,8 +13,7 @@ import java.security.Key;
 import java.util.Date;
 
 public final class JwtService {
-    private static final Logger log =
-            LoggerFactory.getLogger(JwtService.class);
+    private static final Logger log = LoggerFactory.getLogger(JwtService.class);
     private static final JwtService FACTORY;
     private static final String JWT_SECRET;
     private final Key key;
