@@ -12,12 +12,12 @@ import java.time.Instant;
 
 public final class ExceptionSocketHandler {
     private static final Logger log = LoggerFactory.getLogger(ExceptionSocketHandler.class);
-    private final ObjectMapper objectMapper;
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
-    public ExceptionSocketHandler(ObjectMapper objectMapper) {
+    public ExceptionSocketHandler() {
         objectMapper.registerModule(new JavaTimeModule());
-        this.objectMapper = objectMapper;
-        log.info("Instance {} initialized.", ExceptionHttpHandler.class.getSimpleName());
+        log.info("Instance {} initialized. [InstanceId={}]",
+                ExceptionSocketHandler.class.getSimpleName(), System.identityHashCode(this));
     }
 
     public void handle(WebSocket conn, String event, Exception exception) {

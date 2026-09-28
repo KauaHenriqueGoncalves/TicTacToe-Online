@@ -8,8 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public final class HttpServer {
-    private static final Logger log =
-            LoggerFactory.getLogger(HttpServer.class);
+    private static final Logger log = LoggerFactory.getLogger(HttpServer.class);
 
     public static void start(AppContext context) {
         int port = Integer.parseInt(Environment.get("HTTP_PORT"));

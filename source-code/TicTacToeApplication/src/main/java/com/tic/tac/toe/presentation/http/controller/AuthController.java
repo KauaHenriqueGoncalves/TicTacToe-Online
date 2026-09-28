@@ -20,7 +20,8 @@ public final class AuthController {
     public AuthController(AuthService authService, String prefix) {
         this.authService = authService;
         this.prefix = prefix;
-        log.info("Instance {} initialized.", AuthController.class.getSimpleName());
+        log.info("Instance {} initialized. [InstanceId={}]",
+                AuthController.class.getSimpleName(), System.identityHashCode(this));
     }
 
     public void register(Javalin server, String path) {

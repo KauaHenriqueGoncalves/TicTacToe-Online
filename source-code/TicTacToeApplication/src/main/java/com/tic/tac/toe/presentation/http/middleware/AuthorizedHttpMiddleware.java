@@ -13,6 +13,8 @@ public final class AuthorizedHttpMiddleware {
 
     public AuthorizedHttpMiddleware(JwtService jwtService) {
         this.jwtService = jwtService;
+        log.info("Instance {} initialized. [InstanceId={}]",
+                AuthorizedHttpMiddleware.class.getSimpleName(), System.identityHashCode(this));
     }
 
     public void authenticate(Context ctx) {

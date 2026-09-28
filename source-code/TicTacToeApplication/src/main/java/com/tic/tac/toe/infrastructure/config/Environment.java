@@ -10,7 +10,8 @@ public final class Environment {
 
     static {
         DOTENV = Dotenv.load();
-        log.info("Instance {} initialized.", Environment.class.getSimpleName());
+        log.info("Instance {} initialized. [InstanceId={}]",
+                Environment.class.getSimpleName(), System.identityHashCode(Environment.class));
     }
 
     public static String get(String key) {

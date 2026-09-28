@@ -26,7 +26,11 @@ public final class EventRegister {
 
         eventDispatcher.register(
                 GlobalMessageEvent.class,
-                new GlobalMessageHandler(context.connectionManager, context.userService, objectMapper)
+                new GlobalMessageHandler(
+                        context.connectionManager,
+                        context.userService,
+                        objectMapper
+                )
         );
 
         return eventDispatcher;

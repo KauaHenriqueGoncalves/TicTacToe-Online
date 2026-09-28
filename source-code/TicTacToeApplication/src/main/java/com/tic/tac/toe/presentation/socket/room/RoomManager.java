@@ -13,12 +13,14 @@ public final class RoomManager {
 
     public RoomManager() {
         this.rooms = ConcurrentHashMap.newKeySet();
-        log.info("Instance {} initialized.", RoomManager.class.getSimpleName());
+        log.info("Instance {} initialized. [InstanceId={}]",
+                RoomManager.class.getSimpleName(), System.identityHashCode(this));
     }
 
     public RoomManager(Set<Room> rooms) {
         this.rooms = rooms;
-        log.info("Instance {} initialized.", RoomManager.class.getSimpleName());
+        log.info("Instance {} initialized. [InstanceId={}] [SetClass={}]",
+                RoomManager.class.getSimpleName(), System.identityHashCode(this), rooms.getClass());
     }
 
     public void create(UUID id) {

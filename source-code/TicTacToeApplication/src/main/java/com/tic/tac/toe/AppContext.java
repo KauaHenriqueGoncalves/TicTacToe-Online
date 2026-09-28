@@ -13,7 +13,6 @@ import com.tic.tac.toe.presentation.http.middleware.AuthorizedHttpMiddleware;
 import com.tic.tac.toe.presentation.socket.connection.ConnectionManager;
 import com.tic.tac.toe.presentation.socket.middleware.AuthorizedSocketMiddleware;
 import com.tic.tac.toe.presentation.socket.room.RoomManager;
-import java.util.concurrent.ConcurrentHashMap;
 
 public final class AppContext {
     private static AppContext instance = null;

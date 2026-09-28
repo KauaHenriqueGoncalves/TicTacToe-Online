@@ -21,7 +21,8 @@ public final class JwtService {
     static {
         JWT_SECRET = Environment.get("JWT_SECRET");
         FACTORY = new JwtService(JWT_SECRET);
-        log.info("Instance {} initialized.", JwtService.class.getSimpleName());
+        log.info("Instance {} initialized. [InstanceId={}]",
+                JwtService.class.getSimpleName(), System.identityHashCode(JwtService.class));
     }
 
     private JwtService(String secret) {

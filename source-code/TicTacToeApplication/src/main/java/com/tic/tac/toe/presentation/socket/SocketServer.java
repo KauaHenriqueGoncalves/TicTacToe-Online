@@ -38,7 +38,7 @@ public final class SocketServer extends WebSocketServer {
         CONNECTION_MANAGER = context.connectionManager;
         ROOM_MANAGER = context.roomManager;
         AUTHORIZED_SOCKET_MIDDLEWARE = context.authorizedSocketMiddleware;
-        EXCEPTION_HANDLER = new ExceptionSocketHandler(new ObjectMapper());
+        EXCEPTION_HANDLER = new ExceptionSocketHandler();
         objectMapper = new ObjectMapper();
         eventDispatcher = EventRegister.buildDispatcher(context);
         server.start();

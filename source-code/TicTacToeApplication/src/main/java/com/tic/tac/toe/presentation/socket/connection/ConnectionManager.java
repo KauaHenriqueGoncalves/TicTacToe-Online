@@ -13,12 +13,14 @@ public final class ConnectionManager {
 
     public ConnectionManager() {
         this.connections = ConcurrentHashMap.newKeySet();
-        log.info("Instance {} initialized.", ConnectionManager.class.getSimpleName());
+        log.info("Instance {} initialized. [InstanceId={}]",
+                ConnectionManager.class.getSimpleName(), System.identityHashCode(this));
     }
 
     public ConnectionManager(Set<Connection> connections) {
         this.connections = connections;
-        log.info("Instance {} initialized.", ConnectionManager.class.getSimpleName());
+        log.info("Instance {} initialized. [InstanceId={}] [SetClass={}]",
+                ConnectionManager.class.getSimpleName(), System.identityHashCode(this), connections.getClass());
     }
 
     public void add(Connection c) {
