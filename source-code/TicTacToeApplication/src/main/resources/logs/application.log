@@ -3659,3 +3659,74 @@ Query: InsertObjectQuery(com.tic.tac.toe.domain.entity.User@a2aa2a21)]
 2026-09-28 20:25:06 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
 2026-09-28 20:25:06 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
 2026-09-28 20:25:06 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-09-29 13:53:48 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized. [InstanceId=748658608]
+2026-09-29 13:53:48 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized. [InstanceId=981661423]
+2026-09-29 13:53:48 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized. [InstanceId=1209702763]
+2026-09-29 13:53:48 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized. [InstanceId=1028780142]
+2026-09-29 13:53:48 [main] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - Instance RoomPlayerJpaRepository initialized. [InstanceId=2128029086]
+2026-09-29 13:53:48 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=686466458]
+2026-09-29 13:53:48 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=875016237]
+2026-09-29 13:53:48 [main] INFO  c.t.t.t.p.h.m.AuthorizedHttpMiddleware - Instance AuthorizedHttpMiddleware initialized. [InstanceId=105374791]
+2026-09-29 13:53:48 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized. [InstanceId=1107024580]
+2026-09-29 13:53:48 [main] INFO  c.t.t.t.p.s.m.AuthorizedSocketMiddleware - Instance AuthorizedSocketMiddleware initialized. [InstanceId=1010856212]
+2026-09-29 13:53:48 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized. [InstanceId=904861801]
+2026-09-29 13:53:48 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized. [InstanceId=204715855]
+2026-09-29 13:53:49 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionSocketHandler initialized. [InstanceId=252277567]
+2026-09-29 13:53:49 [main] INFO  c.t.t.t.p.s.e.h.GlobalMessageHandler - Instance GlobalMessageHandler initialized. [InstanceId=1665197552]
+2026-09-29 13:53:49 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-09-29 13:53:49 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1900ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-09-29 13:53:49 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-09-29 13:53:49 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1244 days old. Consider checking for a newer version.).
+2026-09-29 13:53:49 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-09-29 13:53:49 [main] INFO  io.javalin.Javalin - Javalin started in 177ms \o/
+2026-09-29 13:53:49 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-09-29 13:53:49 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-09-29 13:53:49 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-09-29 14:18:53 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized. [InstanceId=748658608]
+2026-09-29 14:18:53 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized. [InstanceId=981661423]
+2026-09-29 14:18:54 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized. [InstanceId=1028780142]
+2026-09-29 14:18:54 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized. [InstanceId=2128029086]
+2026-09-29 14:18:54 [main] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Instance RoomPlayerJpaRepository initialized. [InstanceId=686466458]
+2026-09-29 14:18:54 [main] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - Instance RoomPlayerJpaRepository initialized. [InstanceId=875016237]
+2026-09-29 14:18:54 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=105374791]
+2026-09-29 14:18:54 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=1107024580]
+2026-09-29 14:18:54 [main] INFO  c.t.t.t.p.h.m.AuthorizedHttpMiddleware - Instance AuthorizedHttpMiddleware initialized. [InstanceId=1010856212]
+2026-09-29 14:18:54 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized. [InstanceId=904861801]
+2026-09-29 14:18:54 [main] INFO  c.t.t.t.p.s.m.AuthorizedSocketMiddleware - Instance AuthorizedSocketMiddleware initialized. [InstanceId=204715855]
+2026-09-29 14:18:54 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized. [InstanceId=318857719]
+2026-09-29 14:18:54 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized. [InstanceId=745962066]
+2026-09-29 14:18:54 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionSocketHandler initialized. [InstanceId=1101048445]
+2026-09-29 14:18:54 [main] INFO  c.t.t.t.p.s.e.h.GlobalMessageHandler - Instance GlobalMessageHandler initialized. [InstanceId=20853837]
+2026-09-29 14:18:54 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-09-29 14:18:54 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1135ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-09-29 14:18:54 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-09-29 14:18:54 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1244 days old. Consider checking for a newer version.).
+2026-09-29 14:18:54 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-09-29 14:18:54 [main] INFO  io.javalin.Javalin - Javalin started in 151ms \o/
+2026-09-29 14:18:54 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-09-29 14:18:54 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-09-29 14:18:54 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-09-29 14:19:54 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized. [InstanceId=1394336709]
+2026-09-29 14:19:54 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized. [InstanceId=1566502717]
+2026-09-29 14:19:55 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized. [InstanceId=835227336]
+2026-09-29 14:19:55 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized. [InstanceId=482082765]
+2026-09-29 14:19:55 [main] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Instance RoomJpaRepository initialized. [InstanceId=667821226]
+2026-09-29 14:19:55 [main] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - Instance RoomPlayerJpaRepository initialized. [InstanceId=1209702763]
+2026-09-29 14:19:55 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=1028780142]
+2026-09-29 14:19:55 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=2128029086]
+2026-09-29 14:19:55 [main] INFO  c.t.t.t.p.h.m.AuthorizedHttpMiddleware - Instance AuthorizedHttpMiddleware initialized. [InstanceId=686466458]
+2026-09-29 14:19:55 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized. [InstanceId=875016237]
+2026-09-29 14:19:55 [main] INFO  c.t.t.t.p.s.m.AuthorizedSocketMiddleware - Instance AuthorizedSocketMiddleware initialized. [InstanceId=105374791]
+2026-09-29 14:19:55 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized. [InstanceId=1107024580]
+2026-09-29 14:19:55 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized. [InstanceId=1010856212]
+2026-09-29 14:19:55 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionSocketHandler initialized. [InstanceId=953082513]
+2026-09-29 14:19:55 [main] INFO  c.t.t.t.p.s.e.h.GlobalMessageHandler - Instance GlobalMessageHandler initialized. [InstanceId=1101048445]
+2026-09-29 14:19:55 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-09-29 14:19:55 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1032ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-09-29 14:19:55 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-09-29 14:19:55 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1244 days old. Consider checking for a newer version.).
+2026-09-29 14:19:55 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-09-29 14:19:55 [main] INFO  io.javalin.Javalin - Javalin started in 148ms \o/
+2026-09-29 14:19:55 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-09-29 14:19:55 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-09-29 14:19:55 [main] INFO  com.tic.tac.toe.Application - Started Application

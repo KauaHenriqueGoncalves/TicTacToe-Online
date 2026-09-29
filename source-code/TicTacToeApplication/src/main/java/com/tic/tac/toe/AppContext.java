@@ -2,10 +2,14 @@ package com.tic.tac.toe;
 
 import com.tic.tac.toe.application.service.AuthServiceImpl;
 import com.tic.tac.toe.application.service.UserServiceImpl;
+import com.tic.tac.toe.domain.repositoy.RoomPlayerRepository;
+import com.tic.tac.toe.domain.repositoy.RoomRepository;
 import com.tic.tac.toe.domain.repositoy.UserRepository;
 import com.tic.tac.toe.domain.service.AuthService;
 import com.tic.tac.toe.domain.service.UserService;
 import com.tic.tac.toe.infrastructure.persistence.jpa.JpaUtil;
+import com.tic.tac.toe.infrastructure.persistence.jpa.repository.RoomJpaRepository;
+import com.tic.tac.toe.infrastructure.persistence.jpa.repository.RoomPlayerJpaRepository;
 import com.tic.tac.toe.infrastructure.persistence.jpa.repository.UserJpaRepository;
 import com.tic.tac.toe.infrastructure.security.JwtService;
 import com.tic.tac.toe.presentation.http.controller.AuthController;
@@ -18,6 +22,8 @@ public final class AppContext {
     private static AppContext instance = null;
     public final JwtService jwtService;
     public final UserRepository userRepository;
+    public final RoomRepository roomRepository;
+    public final RoomPlayerRepository roomPlayerRepository;
     public final AuthService authService;
     public final UserService userService;
     public final AuthorizedHttpMiddleware authorizedHttpMiddleware;
@@ -30,6 +36,8 @@ public final class AppContext {
         // infrastructure layer
         this.jwtService = JwtService.getFactory();
         this.userRepository = new UserJpaRepository(JpaUtil.getFactory());
+        this.roomRepository = new RoomJpaRepository(JpaUtil.getFactory());
+        this.roomPlayerRepository = new RoomPlayerJpaRepository(JpaUtil.getFactory());
 
         // application layer
         this.authService = new AuthServiceImpl(userRepository, jwtService);
