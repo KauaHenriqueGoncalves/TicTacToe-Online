@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tic.tac.toe.AppContext;
 import com.tic.tac.toe.application.event.EventDispatcher;
 import com.tic.tac.toe.domain.event.DomainEvent;
+import com.tic.tac.toe.domain.exception.NotFoundException;
 import com.tic.tac.toe.infrastructure.config.Environment;
 import com.tic.tac.toe.presentation.socket.connection.Connection;
 import com.tic.tac.toe.presentation.socket.connection.ConnectionManager;
@@ -30,6 +31,7 @@ public final class SocketServer extends WebSocketServer {
     private static ExceptionSocketHandler EXCEPTION_HANDLER;
     private static ObjectMapper objectMapper;
     private static EventDispatcher eventDispatcher;
+    private static AppContext appContext;
     private final int port;
 
     public static void start(AppContext context) {
@@ -41,6 +43,7 @@ public final class SocketServer extends WebSocketServer {
         EXCEPTION_HANDLER = new ExceptionSocketHandler();
         objectMapper = new ObjectMapper();
         eventDispatcher = EventRegister.buildDispatcher(context);
+        appContext = context;
         server.start();
     }
 
@@ -71,26 +74,37 @@ public final class SocketServer extends WebSocketServer {
 
     @Override
     public void onClose(WebSocket conn, int code, String reason, boolean remote) {
-        try {
-            Connection connection =
-                    CONNECTION_MANAGER.getByConnection(conn);
-            if (connection == null) {
-                log.warn("Close connection. [code={}] [reason={}]",
-                        code, reason);
-                return;
-            }
-            CONNECTION_MANAGER.remove(connection);
-            UUID roomId = connection.getRoomId();
-            if (roomId != null) {
-                ROOM_MANAGER.leave(roomId, connection);
-            }
-            log.warn("Close connection. [connectionId={}] [userId={}] [code={}] [reason={}]",
-                    connection.getId(), connection.getUserId(), code, reason);
-        } catch (Exception ex) {
-            log.warn("Error to close connection on websocket. [message={}]",
-                    ex.getMessage());
-            EXCEPTION_HANDLER.handle(conn, "CLOSE", ex);
+        Connection connection = CONNECTION_MANAGER.getByConnection(conn);
+        if (connection == null) {
+            log.warn("Close connection. [code={}] [reason={}]", code, reason);
+            return;
         }
+        CONNECTION_MANAGER.remove(connection);
+        UUID roomId = connection.getRoomId();
+        if (roomId != null) {
+            try {
+                ROOM_MANAGER.leave(roomId, connection);
+            } catch (Exception ex) {
+                log.warn("Error leaving room in memory. [roomId={}] [error={}]", roomId, ex.getMessage());
+            }
+            try {
+                appContext.roomPlayerService.deleteByRoomIdAndUserId(roomId, connection.getUserId());
+            } catch (NotFoundException ex) {
+                log.warn("RoomPlayer already removed. [roomId={}] [userId={}]", roomId, connection.getUserId());
+            } catch (Exception ex) {
+                log.error("Error deleting RoomPlayer. [roomId={}] [error={}]", roomId, ex.getMessage());
+            }
+            try {
+                if (ROOM_MANAGER.get(roomId).getUsers().isEmpty()) {
+                    appContext.roomManager.removeById(roomId);
+                    appContext.roomService.delete(roomId);
+                }
+            } catch (Exception ex) {
+                log.error("Error removing empty room. [roomId={}] [error={}]", roomId, ex.getMessage());
+            }
+        }
+        log.warn("Close connection. [connectionId={}] [userId={}] [code={}] [reason={}]",
+                connection.getId(), connection.getUserId(), code, reason);
     }
 
     @Override
@@ -107,13 +121,10 @@ public final class SocketServer extends WebSocketServer {
 
     @Override
     public void onError(WebSocket conn, Exception ex) {
-        if (conn != null) {
-            log.error("WebSocket error. [connectionId={}]",
-                    System.identityHashCode(conn), ex);
-        } else {
-            log.error("WebSocket server error.", ex);
+        log.error("WebSocket error.", ex);
+        if (conn != null && conn.isOpen()) {
+            EXCEPTION_HANDLER.handle(conn, "ERROR_CONNECTION", ex);
         }
-        EXCEPTION_HANDLER.handle(conn, "ERROR_CONNECTION", ex);
     }
 
     @Override

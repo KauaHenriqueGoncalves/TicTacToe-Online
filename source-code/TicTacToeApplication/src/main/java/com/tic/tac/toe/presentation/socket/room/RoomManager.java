@@ -3,6 +3,7 @@ package com.tic.tac.toe.presentation.socket.room;
 import com.tic.tac.toe.presentation.socket.connection.Connection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
@@ -23,8 +24,12 @@ public final class RoomManager {
                 RoomManager.class.getSimpleName(), System.identityHashCode(this), rooms.getClass());
     }
 
-    public void create(UUID id) {
-        rooms.add(Room.create(id));
+    public Room create(UUID id) {
+        Room room = Room.create(id);
+        rooms.add(room);
+        log.info("Room created. [RoomId={}] [TotalRooms={}]",
+                room.getId(), rooms.size());
+        return room;
     }
 
     public Room get(UUID id) {
@@ -33,7 +38,8 @@ public final class RoomManager {
                 return room;
             }
         }
-        throw new RuntimeException("error");
+        log.warn("Room not found. [RoomId={}]", id);
+        throw new RuntimeException("Room not found: " + id);
     }
 
     public void join(UUID roomId, Connection socket) {
@@ -41,44 +47,56 @@ public final class RoomManager {
             if (room.getId().equals(roomId)) {
                 room.getUsers().put(socket.getUserId(), socket.getConnection());
                 socket.setRoomId(roomId);
+                log.info("User joined room. [RoomId={}] [UserId={}] [TotalUsers={}]",
+                        roomId, socket.getUserId(), room.getUsers().size());
                 return;
             }
         }
+        log.warn("Join failed: room not found. [RoomId={}] [UserId={}]",
+                roomId, socket.getUserId());
     }
 
     public void leave(UUID roomId, Connection connection) {
         for (Room room : rooms) {
             if (room.getId().equals(roomId)) {
-                for (UUID userId : room.getUsers().keySet()) {
-                    if (userId.equals(connection.getUserId())) {
-                        room.getUsers().remove(userId);
-                        connection.setRoomId(null);
-                        return;
-                    }
+                if (room.getUsers().remove(connection.getUserId()) != null) {
+                    connection.setRoomId(null);
+                    log.info("User left room. [RoomId={}] [UserId={}] [TotalUsers={}]",
+                            roomId, connection.getUserId(), room.getUsers().size());
+                } else {
+                    log.warn("Leave failed: user not in room. [RoomId={}] [UserId={}]]",
+                            roomId, connection.getUserId());
                 }
+                return;
             }
         }
-        // throw user não pertence a room
+        log.warn("Leave failed: room not found. [RoomId={}] [UserId={}]",
+                roomId, connection.getUserId());
     }
 
     public void broadcast(UUID roomId, String message) {
         Room room = get(roomId);
-        room.getUsers().values().forEach(connection -> {
-            connection.send(message);
-        });
+        room.getUsers().values().forEach(connection -> connection.send(message));
+        log.info("Broadcast sent. [RoomId={}] [Recipients={}]",
+                roomId, room.getUsers().size());
     }
 
     public void remove(Room room) {
-        rooms.remove(room);
+        boolean removed = rooms.remove(room);
+        log.info("Room removed. [RoomId={}] [Removed={}] [TotalRooms={}]",
+                room.getId(), removed, rooms.size());
     }
 
     public void removeById(UUID roomId) {
-        for (Room room : rooms) {
-            if (room.getId().equals(roomId)) {
-                rooms.remove(room);
-                return;
-            }
+        Optional<Room> target = rooms.stream()
+                .filter(room -> room.getId().equals(roomId))
+                .findFirst();
+        if (target.isPresent()) {
+            rooms.remove(target.get());
+            log.info("Room removed by id. [RoomId={}] [TotalRooms={}]",
+                    roomId, rooms.size());
+        } else {
+            log.warn("Remove failed: room not found. [RoomId={}]", roomId);
         }
-        //thorw not found
     }
 }

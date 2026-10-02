@@ -2,18 +2,20 @@ package com.tic.tac.toe.domain.event;
 
 import java.util.UUID;
 
-public final class MessageEvent implements DomainEvent {
+public final class RoomMessageEvent implements DomainEvent {
     private final UUID userId;
     private final UUID roomId;
+    private final String message;
 
-    public MessageEvent(UUID userId, UUID roomId) {
+    public RoomMessageEvent(UUID userId, UUID roomId, String message) {
         this.userId = userId;
         this.roomId = roomId;
+        this.message = message;
     }
 
     @Override
     public String getEvent() {
-        return "message";
+        return "room.message";
     }
 
     public UUID getUserId() {
@@ -22,5 +24,9 @@ public final class MessageEvent implements DomainEvent {
 
     public UUID getRoomId() {
         return roomId;
+    }
+
+    public String getMessage() {
+        return message;
     }
 }

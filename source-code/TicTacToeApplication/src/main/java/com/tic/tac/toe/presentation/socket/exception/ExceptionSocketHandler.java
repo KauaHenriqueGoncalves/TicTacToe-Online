@@ -3,7 +3,7 @@ package com.tic.tac.toe.presentation.socket.exception;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import com.tic.tac.toe.domain.exception.EntityAlreadyExistsException;
+import com.tic.tac.toe.domain.exception.*;
 import com.tic.tac.toe.presentation.http.exception.ExceptionHttpHandler;
 import org.java_websocket.WebSocket;
 import org.slf4j.Logger;
@@ -26,6 +26,54 @@ public final class ExceptionSocketHandler {
                     Instant.now(),
                     "ERROR",
                     ((EntityAlreadyExistsException) exception).getError(),
+                    exception.getMessage(),
+                    event
+            );
+            sendTo(conn, standard);
+            return;
+        }
+
+        if (exception instanceof InputInvalidException) {
+            StandardSocketException standard = new StandardSocketException(
+                    Instant.now(),
+                    "ERROR",
+                    ((InputInvalidException) exception).getError(),
+                    exception.getMessage(),
+                    event
+            );
+            sendTo(conn, standard);
+            return;
+        }
+
+        if (exception instanceof NotFoundException) {
+            StandardSocketException standard = new StandardSocketException(
+                    Instant.now(),
+                    "ERROR",
+                    ((NotFoundException) exception).getError(),
+                    exception.getMessage(),
+                    event
+            );
+            sendTo(conn, standard);
+            return;
+        }
+
+        if (exception instanceof RepositoryException) {
+            StandardSocketException standard = new StandardSocketException(
+                    Instant.now(),
+                    "ERROR",
+                    ((RepositoryException) exception).getError(),
+                    exception.getMessage(),
+                    event
+            );
+            sendTo(conn, standard);
+            return;
+        }
+
+        if (exception instanceof UnauthorizedException) {
+            StandardSocketException standard = new StandardSocketException(
+                    Instant.now(),
+                    "ERROR",
+                    ((UnauthorizedException) exception).getError(),
                     exception.getMessage(),
                     event
             );

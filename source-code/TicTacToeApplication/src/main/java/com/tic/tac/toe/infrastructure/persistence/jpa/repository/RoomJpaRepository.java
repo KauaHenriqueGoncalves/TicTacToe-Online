@@ -104,10 +104,16 @@ public final class RoomJpaRepository implements RoomRepository {
         EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
-            Room saved = em.merge(room);
+            Room result = null;
+            if (room.getId() == null) {
+                em.persist(room);
+            } else {
+                em.merge(room);
+            }
+            result = room;
             em.getTransaction().commit();
-            log.info("Room saved successfully. [RoomId={}]", saved.getId());
-            return saved;
+            log.info("Room saved successfully. [RoomId={}]", result.getId());
+            return result;
         } catch (RuntimeException e) {
             if (em.getTransaction().isActive()) {
                 em.getTransaction().rollback();
@@ -128,6 +134,7 @@ public final class RoomJpaRepository implements RoomRepository {
             em.getTransaction().begin();
             Room room = em.find(Room.class, id);
             if (room != null) {
+                em.refresh(room);
                 em.remove(room);
                 log.info("Room deleted successfully. [RoomId={}]", id);
             } else {

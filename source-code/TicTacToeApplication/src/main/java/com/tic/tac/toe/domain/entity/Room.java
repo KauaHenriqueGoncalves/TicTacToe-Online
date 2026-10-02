@@ -6,6 +6,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -43,7 +44,7 @@ public class Room {
     private LocalDateTime createdAt;
 
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL, orphanRemoval = true)
-    private HashSet<RoomPlayer> players = new HashSet<>();
+    private Set<RoomPlayer> players = new HashSet<>();
 
     public Room() {
     }
@@ -52,6 +53,17 @@ public class Room {
         this.id = id;
         this.name = name;
         this.status = status;
+        this.createdAt = createdAt;
+    }
+
+    public Room(UUID id, String name, UUID ownerId, RoomStatus status, UUID currentPlayerId, UUID winnerId, String winnerName, LocalDateTime createdAt) {
+        this.id = id;
+        this.name = name;
+        this.ownerId = ownerId;
+        this.status = status;
+        this.currentPlayerId = currentPlayerId;
+        this.winnerId = winnerId;
+        this.winnerName = winnerName;
         this.createdAt = createdAt;
     }
 
@@ -65,6 +77,22 @@ public class Room {
         this.winnerName = winnerName;
         this.createdAt = createdAt;
         this.players = players;
+    }
+
+    public static Room init(String name, UUID ownerId) {
+        if (name == null && ownerId == null) {
+            throw new RuntimeException("Name and ownerId is required");
+        }
+        return new Room(
+                UUID.randomUUID(),
+                name,
+                ownerId,
+                RoomStatus.WAITING,
+                null,
+                null,
+                null,
+                LocalDateTime.now()
+        );
     }
 
     public UUID getId() {
@@ -131,11 +159,11 @@ public class Room {
         this.createdAt = createdAt;
     }
 
-    public HashSet<RoomPlayer> getPlayers() {
+    public Set<RoomPlayer> getPlayers() {
         return players;
     }
 
-    public void setPlayers(HashSet<RoomPlayer> players) {
+    public void setPlayers(Set<RoomPlayer> players) {
         this.players = players;
     }
 

@@ -9,4 +9,6 @@ public interface RoomPlayerRepository {
     Optional<RoomPlayer> findById(UUID id);
     List<RoomPlayer> findByRoomId(UUID roomId);
     RoomPlayer save(RoomPlayer roomPlayer);
+    void deleteById(UUID id);
+    void deleteByRoomIdAndUserId(UUID roomId, UUID userId);
 }

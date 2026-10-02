@@ -1,11 +1,15 @@
 package com.tic.tac.toe;
 
 import com.tic.tac.toe.application.service.AuthServiceImpl;
+import com.tic.tac.toe.application.service.RoomPlayerServiceImpl;
+import com.tic.tac.toe.application.service.RoomServiceImpl;
 import com.tic.tac.toe.application.service.UserServiceImpl;
 import com.tic.tac.toe.domain.repositoy.RoomPlayerRepository;
 import com.tic.tac.toe.domain.repositoy.RoomRepository;
 import com.tic.tac.toe.domain.repositoy.UserRepository;
 import com.tic.tac.toe.domain.service.AuthService;
+import com.tic.tac.toe.domain.service.RoomPlayerService;
+import com.tic.tac.toe.domain.service.RoomService;
 import com.tic.tac.toe.domain.service.UserService;
 import com.tic.tac.toe.infrastructure.persistence.jpa.JpaUtil;
 import com.tic.tac.toe.infrastructure.persistence.jpa.repository.RoomJpaRepository;
@@ -26,6 +30,8 @@ public final class AppContext {
     public final RoomPlayerRepository roomPlayerRepository;
     public final AuthService authService;
     public final UserService userService;
+    public final RoomService roomService;
+    public final RoomPlayerService roomPlayerService;
     public final AuthorizedHttpMiddleware authorizedHttpMiddleware;
     public final AuthController authController;
     public final AuthorizedSocketMiddleware authorizedSocketMiddleware;
@@ -42,6 +48,8 @@ public final class AppContext {
         // application layer
         this.authService = new AuthServiceImpl(userRepository, jwtService);
         this.userService = new UserServiceImpl(userRepository);
+        this.roomService = new RoomServiceImpl(roomRepository, roomPlayerRepository, userRepository);
+        this.roomPlayerService = new RoomPlayerServiceImpl(roomPlayerRepository);
 
         // presentation layer
         // http
