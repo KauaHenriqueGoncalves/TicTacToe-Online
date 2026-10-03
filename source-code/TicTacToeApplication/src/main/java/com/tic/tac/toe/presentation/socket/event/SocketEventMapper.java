@@ -1,18 +1,14 @@
 package com.tic.tac.toe.presentation.socket.event;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tic.tac.toe.domain.entity.enums.RoomStatus;
 import com.tic.tac.toe.domain.event.*;
 import com.tic.tac.toe.domain.exception.InputInvalidException;
 import com.tic.tac.toe.presentation.socket.connection.Connection;
 import com.tic.tac.toe.presentation.socket.message.SocketMessageReceive;
-
 import java.util.UUID;
 
 public final class SocketEventMapper {
-    private static final ObjectMapper objectMapper = new ObjectMapper();
-
     private SocketEventMapper() {
     }
 
@@ -30,6 +26,10 @@ public final class SocketEventMapper {
                 return roomMessage(content, connection);
             case "room.join":
                 return joinRoom(content, connection);
+            case "room.info":
+                return infoRoom(content, connection);
+            case "room.leave":
+                return leaveRoom(content, connection);
             default:
                 throw new InputInvalidException("Unknown event: " + eventName);
         }
@@ -57,5 +57,13 @@ public final class SocketEventMapper {
 
     private static DomainEvent joinRoom(JsonNode content, Connection connection) {
         return new JoinRoomEvent(UUID.fromString(content.get("roomId").asText()), connection.getUserId());
+    }
+
+    private static DomainEvent infoRoom(JsonNode content, Connection connection) {
+        return new InfoRoomEvent(connection.getRoomId(), connection.getUserId());
+    }
+
+    private static DomainEvent leaveRoom(JsonNode content, Connection connection) {
+        return new LeaveRoomEvent(connection.getRoomId().toString(), connection.getUserId().toString());
     }
 }

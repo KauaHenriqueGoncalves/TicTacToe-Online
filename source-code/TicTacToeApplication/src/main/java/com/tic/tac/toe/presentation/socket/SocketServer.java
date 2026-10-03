@@ -5,6 +5,7 @@ import com.tic.tac.toe.AppContext;
 import com.tic.tac.toe.application.event.EventDispatcher;
 import com.tic.tac.toe.domain.entity.enums.RoomStatus;
 import com.tic.tac.toe.domain.event.DomainEvent;
+import com.tic.tac.toe.domain.event.InfoRoomEvent;
 import com.tic.tac.toe.domain.event.RoomsByStatusEvent;
 import com.tic.tac.toe.domain.exception.NotFoundException;
 import com.tic.tac.toe.infrastructure.config.Environment;
@@ -96,15 +97,20 @@ public final class SocketServer extends WebSocketServer {
             } catch (Exception ex) {
                 log.error("Error deleting RoomPlayer. [roomId={}] [error={}]", roomId, ex.getMessage());
             }
+            boolean roomDeleted = false;
             try {
                 if (ROOM_MANAGER.get(roomId).getUsers().isEmpty()) {
                     appContext.roomManager.removeById(roomId);
                     appContext.roomService.delete(roomId);
+                    roomDeleted = true;
                 }
             } catch (Exception ex) {
                 log.error("Error removing empty room. [roomId={}] [error={}]", roomId, ex.getMessage());
             }
-            eventDispatcher.dispatch(new RoomsByStatusEvent(RoomStatus.WAITING, connection.getUserId(), true));
+            publishSafely(new RoomsByStatusEvent(RoomStatus.WAITING, connection.getUserId(), true));
+            if (!roomDeleted) {
+                publishSafely(new InfoRoomEvent(roomId, connection.getUserId()));
+            }
         }
         log.warn("Close connection. [connectionId={}] [userId={}] [code={}] [reason={}]",
                 connection.getId(), connection.getUserId(), code, reason);
@@ -134,5 +140,13 @@ public final class SocketServer extends WebSocketServer {
     public void onStart() {
         log.info("WebSocketServer started successfully. [port={}] [url={}]",
                 port, "ws://localhost:" + port);
+    }
+
+    private void publishSafely(DomainEvent event) {
+        try {
+            eventDispatcher.publish(event);
+        } catch (Exception ex) {
+            log.error("Error publishing event. [event={}] [error={}]", event.getEvent(), ex.getMessage());
+        }
     }
 }

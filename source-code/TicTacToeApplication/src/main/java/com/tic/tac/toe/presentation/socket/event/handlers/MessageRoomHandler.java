@@ -53,8 +53,8 @@ public final class MessageRoomHandler implements EventHandler<RoomMessageEvent> 
         }
         User user = userService.findById(event.getUserId());
         MessageRoomDeliver deliver = new MessageRoomDeliver(
-                event.getMessage(),
                 user.getUsername(),
+                event.getMessage(),
                 LocalDateTime.now()
         );
         SocketMessageDeliver deliverSocket = new SocketMessageDeliver(

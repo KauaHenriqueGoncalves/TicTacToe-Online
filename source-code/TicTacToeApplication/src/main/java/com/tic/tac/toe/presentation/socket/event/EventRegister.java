@@ -69,6 +69,27 @@ public final class EventRegister {
                 )
         );
 
+        eventDispatcher.register(
+                InfoRoomEvent.class,
+                new InfoRoomHandler(
+                        context.roomManager,
+                        context.roomService,
+                        objectMapper
+                )
+        );
+
+        eventDispatcher.register(
+                LeaveRoomEvent.class,
+                new LeaveRoomHandler(
+                        context.connectionManager,
+                        context.roomManager,
+                        context.roomService,
+                        context.roomPlayerService,
+                        eventDispatcher,
+                        objectMapper
+                )
+        );
+
         return eventDispatcher;
     }
 }

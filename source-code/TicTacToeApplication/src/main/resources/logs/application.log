@@ -6397,3 +6397,855 @@ com.tic.tac.toe.domain.exception.UnauthorizedException: Connection not found for
 2026-10-03 11:35:39 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=7c9f9b29-c9b9-45d6-a26f-1924cb2bb711] [userId=5b2bd98b-40da-412d-83b8-14833b48f537]
 2026-10-03 11:35:39 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=7c9f9b29-c9b9-45d6-a26f-1924cb2bb711] [userId=5b2bd98b-40da-412d-83b8-14833b48f537]
 2026-10-03 11:35:39 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=7c9f9b29-c9b9-45d6-a26f-1924cb2bb711] [userId=5b2bd98b-40da-412d-83b8-14833b48f537] [code=1000] [reason=Client initiated close]
+2026-10-03 12:03:19 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized. [InstanceId=1394336709]
+2026-10-03 12:03:19 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized. [InstanceId=1566502717]
+2026-10-03 12:03:20 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized. [InstanceId=1164440413]
+2026-10-03 12:03:20 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized. [InstanceId=1610525991]
+2026-10-03 12:03:20 [main] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Instance RoomJpaRepository initialized. [InstanceId=1666607455]
+2026-10-03 12:03:20 [main] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - Instance RoomPlayerJpaRepository initialized. [InstanceId=1327006586]
+2026-10-03 12:03:20 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=899644639]
+2026-10-03 12:03:20 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=530737374]
+2026-10-03 12:03:20 [main] INFO  c.t.t.t.a.service.RoomServiceImpl - Instance RoomServiceImpl initialized. [InstanceId=1332668132]
+2026-10-03 12:03:20 [main] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - Instance RoomPlayerServiceImpl initialized. [InstanceId=1147580192]
+2026-10-03 12:03:20 [main] INFO  c.t.t.t.p.h.m.AuthorizedHttpMiddleware - Instance AuthorizedHttpMiddleware initialized. [InstanceId=173099767]
+2026-10-03 12:03:20 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized. [InstanceId=112797691]
+2026-10-03 12:03:20 [main] INFO  c.t.t.t.p.s.m.AuthorizedSocketMiddleware - Instance AuthorizedSocketMiddleware initialized. [InstanceId=1045997582]
+2026-10-03 12:03:20 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized. [InstanceId=1337335626]
+2026-10-03 12:03:20 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized. [InstanceId=1336996537]
+2026-10-03 12:03:20 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionSocketHandler initialized. [InstanceId=1715248762]
+2026-10-03 12:03:20 [main] INFO  c.t.t.t.p.s.e.h.GlobalMessageHandler - Instance GlobalMessageHandler initialized. [InstanceId=1392794732]
+2026-10-03 12:03:20 [main] INFO  c.t.t.t.p.s.e.h.RoomsByStatusHandler - Instance RoomsByStatusHandler initialized. [InstanceId=1807648168]
+2026-10-03 12:03:20 [main] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Instance CreateRoomHandler initialized. [InstanceId=1273143001]
+2026-10-03 12:03:20 [main] INFO  c.t.t.t.p.s.e.h.MessageRoomHandler - Instance MessageRoomHandler initialized. [InstanceId=1258372214]
+2026-10-03 12:03:20 [main] INFO  c.t.t.t.p.s.e.h.JoinRoomHandler - Instance JoinRoomHandler initialized. [InstanceId=212890971]
+2026-10-03 12:03:20 [main] INFO  c.t.t.t.p.s.e.h.InfoRoomHandler - Instance InfoRoomHandler initialized. [InstanceId=1898325501]
+2026-10-03 12:03:20 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-10-03 12:03:20 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1037ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-10-03 12:03:20 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-10-03 12:03:20 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1248 days old. Consider checking for a newer version.).
+2026-10-03 12:03:20 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-10-03 12:03:20 [main] INFO  io.javalin.Javalin - Javalin started in 128ms \o/
+2026-10-03 12:03:20 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-10-03 12:03:20 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-10-03 12:03:20 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-10-03 12:03:40 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=540a62a5-40d3-410d-a803-e194a61aff9e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:03:41 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=7463cb46-c9e1-4ed0-9c93-0c8707ed8255] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:03:43 [WebSocketWorker-19] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=7c2640bf-9884-4136-9b0d-694c370403e3] [userId=5b2bd98b-40da-412d-83b8-14833b48f537]
+2026-10-03 12:03:45 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:03:45 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=540a62a5-40d3-410d-a803-e194a61aff9e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:03:45 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:03:45 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=540a62a5-40d3-410d-a803-e194a61aff9e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:03:46 [WebSocketWorker-17] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Room saved successfully. [RoomId=92295d20-8dd6-4f86-b082-c1366b6c437f]
+2026-10-03 12:03:46 [WebSocketWorker-17] INFO  c.t.t.t.a.service.RoomServiceImpl - Room created. [roomId=92295d20-8dd6-4f86-b082-c1366b6c437f] [ownerId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:03:46 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Room created. [RoomId=92295d20-8dd6-4f86-b082-c1366b6c437f] [TotalRooms=1]
+2026-10-03 12:03:46 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - User joined room. [RoomId=92295d20-8dd6-4f86-b082-c1366b6c437f] [UserId=a9876944-0518-4057-ba2b-5171c3a8bea7] [TotalUsers=1]
+2026-10-03 12:03:46 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=92295d20-8dd6-4f86-b082-c1366b6c437f] [Recipients=1]
+2026-10-03 12:03:46 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:03:46 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=540a62a5-40d3-410d-a803-e194a61aff9e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:03:46 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=7463cb46-c9e1-4ed0-9c93-0c8707ed8255] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:03:46 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=7c2640bf-9884-4136-9b0d-694c370403e3] [userId=5b2bd98b-40da-412d-83b8-14833b48f537]
+2026-10-03 12:03:46 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:03:46 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=540a62a5-40d3-410d-a803-e194a61aff9e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:03:46 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=92295d20-8dd6-4f86-b082-c1366b6c437f] [Recipients=1]
+2026-10-03 12:03:46 [WebSocketWorker-17] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Room created and owner joined. [roomId=92295d20-8dd6-4f86-b082-c1366b6c437f] [ownerId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:04:26 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:04:26 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=7463cb46-c9e1-4ed0-9c93-0c8707ed8255] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:04:26 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:04:26 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=7463cb46-c9e1-4ed0-9c93-0c8707ed8255] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:04:26 [WebSocketWorker-18] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - RoomPlayer created. [roomPlayerId=c89801da-bb73-4f0c-bc22-ab58b47dd265]
+2026-10-03 12:04:26 [WebSocketWorker-18] INFO  c.t.t.t.p.socket.room.RoomManager - User joined room. [RoomId=92295d20-8dd6-4f86-b082-c1366b6c437f] [UserId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [TotalUsers=2]
+2026-10-03 12:04:26 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:04:26 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=540a62a5-40d3-410d-a803-e194a61aff9e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:04:26 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=7463cb46-c9e1-4ed0-9c93-0c8707ed8255] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:04:26 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=7c2640bf-9884-4136-9b0d-694c370403e3] [userId=5b2bd98b-40da-412d-83b8-14833b48f537]
+2026-10-03 12:04:26 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:04:26 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=7463cb46-c9e1-4ed0-9c93-0c8707ed8255] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:04:26 [WebSocketWorker-18] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=92295d20-8dd6-4f86-b082-c1366b6c437f] [Recipients=2]
+2026-10-03 12:04:55 [WebSocketWorker-19] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:04:55 [WebSocketWorker-19] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=7c2640bf-9884-4136-9b0d-694c370403e3] [userId=5b2bd98b-40da-412d-83b8-14833b48f537]
+2026-10-03 12:04:55 [WebSocketWorker-19] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=5b2bd98b-40da-412d-83b8-14833b48f537]
+2026-10-03 12:04:55 [WebSocketWorker-19] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=7c2640bf-9884-4136-9b0d-694c370403e3] [userId=5b2bd98b-40da-412d-83b8-14833b48f537]
+2026-10-03 12:04:55 [WebSocketWorker-19] WARN  c.t.t.t.p.s.e.h.JoinRoomHandler - Room is full. [roomId=92295d20-8dd6-4f86-b082-c1366b6c437f]
+2026-10-03 12:05:07 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:05:07 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=7463cb46-c9e1-4ed0-9c93-0c8707ed8255] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:05:07 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=7463cb46-c9e1-4ed0-9c93-0c8707ed8255] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:05:07 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - User left room. [RoomId=92295d20-8dd6-4f86-b082-c1366b6c437f] [UserId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [TotalUsers=1]
+2026-10-03 12:05:07 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - RoomPlayer deleted successfully. [RoomPlayerId=c89801da-bb73-4f0c-bc22-ab58b47dd265]
+2026-10-03 12:05:07 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:05:07 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=540a62a5-40d3-410d-a803-e194a61aff9e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:05:07 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=7c2640bf-9884-4136-9b0d-694c370403e3] [userId=5b2bd98b-40da-412d-83b8-14833b48f537]
+2026-10-03 12:05:07 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=7463cb46-c9e1-4ed0-9c93-0c8707ed8255] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [code=1000] [reason=Client initiated close]
+2026-10-03 12:05:43 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:05:43 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=540a62a5-40d3-410d-a803-e194a61aff9e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:05:53 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:05:53 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=540a62a5-40d3-410d-a803-e194a61aff9e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:06:15 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:06:15 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=540a62a5-40d3-410d-a803-e194a61aff9e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:06:49 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:06:49 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=540a62a5-40d3-410d-a803-e194a61aff9e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:06:49 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=540a62a5-40d3-410d-a803-e194a61aff9e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:06:49 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - User left room. [RoomId=92295d20-8dd6-4f86-b082-c1366b6c437f] [UserId=a9876944-0518-4057-ba2b-5171c3a8bea7] [TotalUsers=0]
+2026-10-03 12:06:49 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - RoomPlayer deleted successfully. [RoomPlayerId=94ade299-a305-4089-a034-27a9b0b5a6a8]
+2026-10-03 12:06:49 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - Room removed by id. [RoomId=92295d20-8dd6-4f86-b082-c1366b6c437f] [TotalRooms=0]
+2026-10-03 12:06:49 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Room deleted successfully. [RoomId=92295d20-8dd6-4f86-b082-c1366b6c437f]
+2026-10-03 12:06:49 [WebSocketSelector-29] INFO  c.t.t.t.a.service.RoomServiceImpl - Room deleted. [roomId=92295d20-8dd6-4f86-b082-c1366b6c437f]
+2026-10-03 12:06:49 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:06:49 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=7c2640bf-9884-4136-9b0d-694c370403e3] [userId=5b2bd98b-40da-412d-83b8-14833b48f537]
+2026-10-03 12:06:49 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=540a62a5-40d3-410d-a803-e194a61aff9e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7] [code=1000] [reason=Client initiated close]
+2026-10-03 12:06:54 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:06:54 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=7c2640bf-9884-4136-9b0d-694c370403e3] [userId=5b2bd98b-40da-412d-83b8-14833b48f537]
+2026-10-03 12:06:54 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=7c2640bf-9884-4136-9b0d-694c370403e3] [userId=5b2bd98b-40da-412d-83b8-14833b48f537]
+2026-10-03 12:06:54 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=7c2640bf-9884-4136-9b0d-694c370403e3] [userId=5b2bd98b-40da-412d-83b8-14833b48f537] [code=1000] [reason=Client initiated close]
+2026-10-03 12:08:23 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized. [InstanceId=1516369375]
+2026-10-03 12:08:23 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized. [InstanceId=1576861390]
+2026-10-03 12:08:23 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized. [InstanceId=1156304131]
+2026-10-03 12:08:23 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized. [InstanceId=1766505436]
+2026-10-03 12:08:23 [main] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Instance RoomJpaRepository initialized. [InstanceId=771775563]
+2026-10-03 12:08:23 [main] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - Instance RoomPlayerJpaRepository initialized. [InstanceId=1164440413]
+2026-10-03 12:08:23 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=1610525991]
+2026-10-03 12:08:23 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=1666607455]
+2026-10-03 12:08:23 [main] INFO  c.t.t.t.a.service.RoomServiceImpl - Instance RoomServiceImpl initialized. [InstanceId=1327006586]
+2026-10-03 12:08:23 [main] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - Instance RoomPlayerServiceImpl initialized. [InstanceId=899644639]
+2026-10-03 12:08:23 [main] INFO  c.t.t.t.p.h.m.AuthorizedHttpMiddleware - Instance AuthorizedHttpMiddleware initialized. [InstanceId=530737374]
+2026-10-03 12:08:23 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized. [InstanceId=1332668132]
+2026-10-03 12:08:23 [main] INFO  c.t.t.t.p.s.m.AuthorizedSocketMiddleware - Instance AuthorizedSocketMiddleware initialized. [InstanceId=1147580192]
+2026-10-03 12:08:23 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized. [InstanceId=173099767]
+2026-10-03 12:08:23 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized. [InstanceId=112797691]
+2026-10-03 12:08:24 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionSocketHandler initialized. [InstanceId=1902237905]
+2026-10-03 12:08:24 [main] INFO  c.t.t.t.p.s.e.h.GlobalMessageHandler - Instance GlobalMessageHandler initialized. [InstanceId=1715248762]
+2026-10-03 12:08:24 [main] INFO  c.t.t.t.p.s.e.h.RoomsByStatusHandler - Instance RoomsByStatusHandler initialized. [InstanceId=2035616217]
+2026-10-03 12:08:24 [main] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Instance CreateRoomHandler initialized. [InstanceId=1363793720]
+2026-10-03 12:08:24 [main] INFO  c.t.t.t.p.s.e.h.MessageRoomHandler - Instance MessageRoomHandler initialized. [InstanceId=980697799]
+2026-10-03 12:08:24 [main] INFO  c.t.t.t.p.s.e.h.JoinRoomHandler - Instance JoinRoomHandler initialized. [InstanceId=1418555530]
+2026-10-03 12:08:24 [main] INFO  c.t.t.t.p.s.e.h.InfoRoomHandler - Instance InfoRoomHandler initialized. [InstanceId=1408974251]
+2026-10-03 12:08:24 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-10-03 12:08:24 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1006ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-10-03 12:08:24 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-10-03 12:08:24 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1248 days old. Consider checking for a newer version.).
+2026-10-03 12:08:24 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-10-03 12:08:24 [main] INFO  io.javalin.Javalin - Javalin started in 134ms \o/
+2026-10-03 12:08:24 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-10-03 12:08:24 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-10-03 12:08:24 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-10-03 12:08:26 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=8a8b8e02-a80e-4aa1-b0df-2e3bdd7a97b4] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized. [InstanceId=922151033]
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized. [InstanceId=1144648478]
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized. [InstanceId=842741472]
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized. [InstanceId=1156304131]
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Instance RoomJpaRepository initialized. [InstanceId=1766505436]
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - Instance RoomPlayerJpaRepository initialized. [InstanceId=771775563]
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=1164440413]
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=1610525991]
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.a.service.RoomServiceImpl - Instance RoomServiceImpl initialized. [InstanceId=1666607455]
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - Instance RoomPlayerServiceImpl initialized. [InstanceId=1327006586]
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.p.h.m.AuthorizedHttpMiddleware - Instance AuthorizedHttpMiddleware initialized. [InstanceId=899644639]
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized. [InstanceId=530737374]
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.p.s.m.AuthorizedSocketMiddleware - Instance AuthorizedSocketMiddleware initialized. [InstanceId=1332668132]
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized. [InstanceId=1147580192]
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized. [InstanceId=173099767]
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionSocketHandler initialized. [InstanceId=1959910454]
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.p.s.e.h.GlobalMessageHandler - Instance GlobalMessageHandler initialized. [InstanceId=485937598]
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.p.s.e.h.RoomsByStatusHandler - Instance RoomsByStatusHandler initialized. [InstanceId=434398524]
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Instance CreateRoomHandler initialized. [InstanceId=1392794732]
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.p.s.e.h.MessageRoomHandler - Instance MessageRoomHandler initialized. [InstanceId=1807648168]
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.p.s.e.h.JoinRoomHandler - Instance JoinRoomHandler initialized. [InstanceId=1273143001]
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.p.s.e.h.InfoRoomHandler - Instance InfoRoomHandler initialized. [InstanceId=1258372214]
+2026-10-03 12:10:56 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-10-03 12:10:56 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @951ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-10-03 12:10:56 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-10-03 12:10:56 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1248 days old. Consider checking for a newer version.).
+2026-10-03 12:10:56 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-10-03 12:10:56 [main] INFO  io.javalin.Javalin - Javalin started in 149ms \o/
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-10-03 12:10:56 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-10-03 12:10:56 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-10-03 12:10:59 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=1de9ec88-e5fd-43db-9bf0-e3aac6e8ee00] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:11:00 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=8452dba9-29da-4cca-9bd2-9904307e97fa] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:11:02 [WebSocketWorker-19] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=c51ff841-d16d-493b-89a5-a67f0aa1794d] [userId=5b2bd98b-40da-412d-83b8-14833b48f537]
+2026-10-03 12:11:11 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:11:11 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=1de9ec88-e5fd-43db-9bf0-e3aac6e8ee00] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:11:11 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:11:11 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=1de9ec88-e5fd-43db-9bf0-e3aac6e8ee00] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:11:11 [WebSocketWorker-17] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Room saved successfully. [RoomId=5082a22a-531e-4285-9a3c-5130f4a3a23a]
+2026-10-03 12:11:11 [WebSocketWorker-17] INFO  c.t.t.t.a.service.RoomServiceImpl - Room created. [roomId=5082a22a-531e-4285-9a3c-5130f4a3a23a] [ownerId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:11:11 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Room created. [RoomId=5082a22a-531e-4285-9a3c-5130f4a3a23a] [TotalRooms=1]
+2026-10-03 12:11:11 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - User joined room. [RoomId=5082a22a-531e-4285-9a3c-5130f4a3a23a] [UserId=a9876944-0518-4057-ba2b-5171c3a8bea7] [TotalUsers=1]
+2026-10-03 12:11:11 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=5082a22a-531e-4285-9a3c-5130f4a3a23a] [Recipients=1]
+2026-10-03 12:11:12 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:11:12 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=1de9ec88-e5fd-43db-9bf0-e3aac6e8ee00] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:11:12 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=8452dba9-29da-4cca-9bd2-9904307e97fa] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:11:12 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=c51ff841-d16d-493b-89a5-a67f0aa1794d] [userId=5b2bd98b-40da-412d-83b8-14833b48f537]
+2026-10-03 12:11:12 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:11:12 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=1de9ec88-e5fd-43db-9bf0-e3aac6e8ee00] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:11:12 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=5082a22a-531e-4285-9a3c-5130f4a3a23a] [Recipients=1]
+2026-10-03 12:11:12 [WebSocketWorker-17] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Room created and owner joined. [roomId=5082a22a-531e-4285-9a3c-5130f4a3a23a] [ownerId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:11:20 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:11:20 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=1de9ec88-e5fd-43db-9bf0-e3aac6e8ee00] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:11:20 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=1de9ec88-e5fd-43db-9bf0-e3aac6e8ee00] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:11:20 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - User left room. [RoomId=5082a22a-531e-4285-9a3c-5130f4a3a23a] [UserId=a9876944-0518-4057-ba2b-5171c3a8bea7] [TotalUsers=0]
+2026-10-03 12:11:20 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - RoomPlayer deleted successfully. [RoomPlayerId=d17b0db6-cbeb-4ae7-b5ee-0a08ae316f8e]
+2026-10-03 12:11:20 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - Room removed by id. [RoomId=5082a22a-531e-4285-9a3c-5130f4a3a23a] [TotalRooms=0]
+2026-10-03 12:11:20 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Room deleted successfully. [RoomId=5082a22a-531e-4285-9a3c-5130f4a3a23a]
+2026-10-03 12:11:20 [WebSocketSelector-29] INFO  c.t.t.t.a.service.RoomServiceImpl - Room deleted. [roomId=5082a22a-531e-4285-9a3c-5130f4a3a23a]
+2026-10-03 12:11:20 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:11:20 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=8452dba9-29da-4cca-9bd2-9904307e97fa] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:11:20 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=c51ff841-d16d-493b-89a5-a67f0aa1794d] [userId=5b2bd98b-40da-412d-83b8-14833b48f537]
+2026-10-03 12:11:20 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=1de9ec88-e5fd-43db-9bf0-e3aac6e8ee00] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7] [code=1000] [reason=Client initiated close]
+2026-10-03 12:11:27 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:11:27 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=8452dba9-29da-4cca-9bd2-9904307e97fa] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:11:27 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=8452dba9-29da-4cca-9bd2-9904307e97fa] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:11:27 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=8452dba9-29da-4cca-9bd2-9904307e97fa] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [code=1000] [reason=Client initiated close]
+2026-10-03 12:11:32 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:11:32 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=c51ff841-d16d-493b-89a5-a67f0aa1794d] [userId=5b2bd98b-40da-412d-83b8-14833b48f537]
+2026-10-03 12:11:32 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=c51ff841-d16d-493b-89a5-a67f0aa1794d] [userId=5b2bd98b-40da-412d-83b8-14833b48f537]
+2026-10-03 12:11:32 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=c51ff841-d16d-493b-89a5-a67f0aa1794d] [userId=5b2bd98b-40da-412d-83b8-14833b48f537] [code=1000] [reason=Client initiated close]
+2026-10-03 12:12:24 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized. [InstanceId=1516369375]
+2026-10-03 12:12:24 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized. [InstanceId=1576861390]
+2026-10-03 12:12:25 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized. [InstanceId=1156304131]
+2026-10-03 12:12:25 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized. [InstanceId=1766505436]
+2026-10-03 12:12:25 [main] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Instance RoomJpaRepository initialized. [InstanceId=771775563]
+2026-10-03 12:12:25 [main] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - Instance RoomPlayerJpaRepository initialized. [InstanceId=1164440413]
+2026-10-03 12:12:25 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=1610525991]
+2026-10-03 12:12:25 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=1666607455]
+2026-10-03 12:12:25 [main] INFO  c.t.t.t.a.service.RoomServiceImpl - Instance RoomServiceImpl initialized. [InstanceId=1327006586]
+2026-10-03 12:12:25 [main] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - Instance RoomPlayerServiceImpl initialized. [InstanceId=899644639]
+2026-10-03 12:12:25 [main] INFO  c.t.t.t.p.h.m.AuthorizedHttpMiddleware - Instance AuthorizedHttpMiddleware initialized. [InstanceId=530737374]
+2026-10-03 12:12:25 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized. [InstanceId=1332668132]
+2026-10-03 12:12:25 [main] INFO  c.t.t.t.p.s.m.AuthorizedSocketMiddleware - Instance AuthorizedSocketMiddleware initialized. [InstanceId=1147580192]
+2026-10-03 12:12:25 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized. [InstanceId=173099767]
+2026-10-03 12:12:25 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized. [InstanceId=112797691]
+2026-10-03 12:12:25 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionSocketHandler initialized. [InstanceId=1902237905]
+2026-10-03 12:12:25 [main] INFO  c.t.t.t.p.s.e.h.GlobalMessageHandler - Instance GlobalMessageHandler initialized. [InstanceId=1715248762]
+2026-10-03 12:12:25 [main] INFO  c.t.t.t.p.s.e.h.RoomsByStatusHandler - Instance RoomsByStatusHandler initialized. [InstanceId=2035616217]
+2026-10-03 12:12:25 [main] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Instance CreateRoomHandler initialized. [InstanceId=1363793720]
+2026-10-03 12:12:25 [main] INFO  c.t.t.t.p.s.e.h.MessageRoomHandler - Instance MessageRoomHandler initialized. [InstanceId=980697799]
+2026-10-03 12:12:25 [main] INFO  c.t.t.t.p.s.e.h.JoinRoomHandler - Instance JoinRoomHandler initialized. [InstanceId=1418555530]
+2026-10-03 12:12:25 [main] INFO  c.t.t.t.p.s.e.h.InfoRoomHandler - Instance InfoRoomHandler initialized. [InstanceId=1408974251]
+2026-10-03 12:12:25 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-10-03 12:12:25 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1011ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-10-03 12:12:25 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-10-03 12:12:25 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1248 days old. Consider checking for a newer version.).
+2026-10-03 12:12:25 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-10-03 12:12:25 [main] INFO  io.javalin.Javalin - Javalin started in 132ms \o/
+2026-10-03 12:12:25 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-10-03 12:12:25 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-10-03 12:12:25 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-10-03 12:12:30 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=43817e58-82fe-40e1-b85b-eeecff00e45e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:12:32 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=2f1059f3-caec-47d7-ae1d-2d12e9a3763b] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:12:33 [WebSocketWorker-19] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=5e859082-42b5-488a-8773-fb1d3bced8a2] [userId=5b2bd98b-40da-412d-83b8-14833b48f537]
+2026-10-03 12:12:37 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:12:37 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=43817e58-82fe-40e1-b85b-eeecff00e45e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:12:37 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:12:37 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=43817e58-82fe-40e1-b85b-eeecff00e45e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:12:37 [WebSocketWorker-17] WARN  c.t.t.t.p.s.e.h.InfoRoomHandler - User don't have a room. [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:12:41 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:12:41 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=43817e58-82fe-40e1-b85b-eeecff00e45e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:12:41 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:12:41 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=43817e58-82fe-40e1-b85b-eeecff00e45e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:12:41 [WebSocketWorker-17] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Room saved successfully. [RoomId=efb45369-7338-4dfd-9a36-a5ddf1ec682e]
+2026-10-03 12:12:41 [WebSocketWorker-17] INFO  c.t.t.t.a.service.RoomServiceImpl - Room created. [roomId=efb45369-7338-4dfd-9a36-a5ddf1ec682e] [ownerId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:12:41 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Room created. [RoomId=efb45369-7338-4dfd-9a36-a5ddf1ec682e] [TotalRooms=1]
+2026-10-03 12:12:41 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - User joined room. [RoomId=efb45369-7338-4dfd-9a36-a5ddf1ec682e] [UserId=a9876944-0518-4057-ba2b-5171c3a8bea7] [TotalUsers=1]
+2026-10-03 12:12:41 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=efb45369-7338-4dfd-9a36-a5ddf1ec682e] [Recipients=1]
+2026-10-03 12:12:41 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:12:41 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=5e859082-42b5-488a-8773-fb1d3bced8a2] [userId=5b2bd98b-40da-412d-83b8-14833b48f537]
+2026-10-03 12:12:41 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=43817e58-82fe-40e1-b85b-eeecff00e45e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:12:41 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=2f1059f3-caec-47d7-ae1d-2d12e9a3763b] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:12:41 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:12:41 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=43817e58-82fe-40e1-b85b-eeecff00e45e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:12:41 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=efb45369-7338-4dfd-9a36-a5ddf1ec682e] [Recipients=1]
+2026-10-03 12:12:41 [WebSocketWorker-17] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Room created and owner joined. [roomId=efb45369-7338-4dfd-9a36-a5ddf1ec682e] [ownerId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:13:00 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:13:00 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=2f1059f3-caec-47d7-ae1d-2d12e9a3763b] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:13:00 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:13:00 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=2f1059f3-caec-47d7-ae1d-2d12e9a3763b] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:13:00 [WebSocketWorker-18] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - RoomPlayer created. [roomPlayerId=160832ca-42f3-4594-88c2-9d1ce1b4e324]
+2026-10-03 12:13:00 [WebSocketWorker-18] INFO  c.t.t.t.p.socket.room.RoomManager - User joined room. [RoomId=efb45369-7338-4dfd-9a36-a5ddf1ec682e] [UserId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [TotalUsers=2]
+2026-10-03 12:13:00 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:13:00 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=5e859082-42b5-488a-8773-fb1d3bced8a2] [userId=5b2bd98b-40da-412d-83b8-14833b48f537]
+2026-10-03 12:13:00 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=43817e58-82fe-40e1-b85b-eeecff00e45e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:13:00 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=2f1059f3-caec-47d7-ae1d-2d12e9a3763b] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:13:00 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:13:00 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=2f1059f3-caec-47d7-ae1d-2d12e9a3763b] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:13:00 [WebSocketWorker-18] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=efb45369-7338-4dfd-9a36-a5ddf1ec682e] [Recipients=2]
+2026-10-03 12:14:00 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:14:00 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=43817e58-82fe-40e1-b85b-eeecff00e45e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:14:00 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:14:00 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=43817e58-82fe-40e1-b85b-eeecff00e45e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:14:00 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=efb45369-7338-4dfd-9a36-a5ddf1ec682e] [Recipients=2]
+2026-10-03 12:14:11 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:14:11 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=2f1059f3-caec-47d7-ae1d-2d12e9a3763b] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:14:11 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=2f1059f3-caec-47d7-ae1d-2d12e9a3763b] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:14:11 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - User left room. [RoomId=efb45369-7338-4dfd-9a36-a5ddf1ec682e] [UserId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [TotalUsers=1]
+2026-10-03 12:14:11 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - RoomPlayer deleted successfully. [RoomPlayerId=160832ca-42f3-4594-88c2-9d1ce1b4e324]
+2026-10-03 12:14:11 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:14:11 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=5e859082-42b5-488a-8773-fb1d3bced8a2] [userId=5b2bd98b-40da-412d-83b8-14833b48f537]
+2026-10-03 12:14:11 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=43817e58-82fe-40e1-b85b-eeecff00e45e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:14:11 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:14:11 [WebSocketSelector-29] WARN  c.t.t.t.p.s.c.ConnectionManager - Not found connection by userId
+2026-10-03 12:14:11 [WebSocketSelector-29] WARN  c.t.t.t.p.s.e.h.InfoRoomHandler - User has no active connection. [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:14:11 [WebSocketSelector-29] ERROR c.t.t.t.p.socket.SocketServer - WebSocket error.
+java.lang.RuntimeException: Connection not found for user
+	at com.tic.tac.toe.presentation.socket.event.handlers.InfoRoomHandler.handle(InfoRoomHandler.java:45)
+	at com.tic.tac.toe.presentation.socket.event.handlers.InfoRoomHandler.handle(InfoRoomHandler.java:19)
+	at com.tic.tac.toe.application.event.EventDispatcher.dispatch(EventDispatcher.java:28)
+	at com.tic.tac.toe.application.event.EventDispatcher.publish(EventDispatcher.java:15)
+	at com.tic.tac.toe.presentation.socket.SocketServer.onClose(SocketServer.java:112)
+	at org.java_websocket.server.WebSocketServer.onWebsocketClose(WebSocketServer.java:784)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:557)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:577)
+	at org.java_websocket.SocketChannelIOHelper.batch(SocketChannelIOHelper.java:112)
+	at org.java_websocket.server.WebSocketServer.doWrite(WebSocketServer.java:586)
+	at org.java_websocket.server.WebSocketServer.run(WebSocketServer.java:443)
+	at java.lang.Thread.run(Thread.java:750)
+2026-10-03 12:16:09 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:16:09 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=43817e58-82fe-40e1-b85b-eeecff00e45e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:16:09 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:16:09 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=43817e58-82fe-40e1-b85b-eeecff00e45e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:16:09 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=efb45369-7338-4dfd-9a36-a5ddf1ec682e] [Recipients=1]
+2026-10-03 12:16:13 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:16:14 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=43817e58-82fe-40e1-b85b-eeecff00e45e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:16:14 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=43817e58-82fe-40e1-b85b-eeecff00e45e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:16:14 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - User left room. [RoomId=efb45369-7338-4dfd-9a36-a5ddf1ec682e] [UserId=a9876944-0518-4057-ba2b-5171c3a8bea7] [TotalUsers=0]
+2026-10-03 12:16:14 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - RoomPlayer deleted successfully. [RoomPlayerId=adbb15d1-bf10-4e4a-8c55-acd0134d4098]
+2026-10-03 12:16:14 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - Room removed by id. [RoomId=efb45369-7338-4dfd-9a36-a5ddf1ec682e] [TotalRooms=0]
+2026-10-03 12:16:14 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Room deleted successfully. [RoomId=efb45369-7338-4dfd-9a36-a5ddf1ec682e]
+2026-10-03 12:16:14 [WebSocketSelector-29] INFO  c.t.t.t.a.service.RoomServiceImpl - Room deleted. [roomId=efb45369-7338-4dfd-9a36-a5ddf1ec682e]
+2026-10-03 12:16:14 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:16:14 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=5e859082-42b5-488a-8773-fb1d3bced8a2] [userId=5b2bd98b-40da-412d-83b8-14833b48f537]
+2026-10-03 12:16:14 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=43817e58-82fe-40e1-b85b-eeecff00e45e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7] [code=1000] [reason=Client initiated close]
+2026-10-03 12:17:21 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized. [InstanceId=1516369375]
+2026-10-03 12:17:21 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized. [InstanceId=1576861390]
+2026-10-03 12:17:22 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized. [InstanceId=1156304131]
+2026-10-03 12:17:22 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized. [InstanceId=1766505436]
+2026-10-03 12:17:22 [main] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Instance RoomJpaRepository initialized. [InstanceId=771775563]
+2026-10-03 12:17:22 [main] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - Instance RoomPlayerJpaRepository initialized. [InstanceId=1164440413]
+2026-10-03 12:17:22 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=1610525991]
+2026-10-03 12:17:22 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=1666607455]
+2026-10-03 12:17:22 [main] INFO  c.t.t.t.a.service.RoomServiceImpl - Instance RoomServiceImpl initialized. [InstanceId=1327006586]
+2026-10-03 12:17:22 [main] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - Instance RoomPlayerServiceImpl initialized. [InstanceId=899644639]
+2026-10-03 12:17:22 [main] INFO  c.t.t.t.p.h.m.AuthorizedHttpMiddleware - Instance AuthorizedHttpMiddleware initialized. [InstanceId=530737374]
+2026-10-03 12:17:22 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized. [InstanceId=1332668132]
+2026-10-03 12:17:22 [main] INFO  c.t.t.t.p.s.m.AuthorizedSocketMiddleware - Instance AuthorizedSocketMiddleware initialized. [InstanceId=1147580192]
+2026-10-03 12:17:22 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized. [InstanceId=173099767]
+2026-10-03 12:17:22 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized. [InstanceId=112797691]
+2026-10-03 12:17:22 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionSocketHandler initialized. [InstanceId=1902237905]
+2026-10-03 12:17:22 [main] INFO  c.t.t.t.p.s.e.h.GlobalMessageHandler - Instance GlobalMessageHandler initialized. [InstanceId=1715248762]
+2026-10-03 12:17:22 [main] INFO  c.t.t.t.p.s.e.h.RoomsByStatusHandler - Instance RoomsByStatusHandler initialized. [InstanceId=2035616217]
+2026-10-03 12:17:22 [main] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Instance CreateRoomHandler initialized. [InstanceId=1363793720]
+2026-10-03 12:17:22 [main] INFO  c.t.t.t.p.s.e.h.MessageRoomHandler - Instance MessageRoomHandler initialized. [InstanceId=980697799]
+2026-10-03 12:17:22 [main] INFO  c.t.t.t.p.s.e.h.JoinRoomHandler - Instance JoinRoomHandler initialized. [InstanceId=1418555530]
+2026-10-03 12:17:22 [main] INFO  c.t.t.t.p.s.e.h.InfoRoomHandler - Instance InfoRoomHandler initialized. [InstanceId=1408974251]
+2026-10-03 12:17:22 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-10-03 12:17:22 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1072ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-10-03 12:17:22 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-10-03 12:17:22 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1248 days old. Consider checking for a newer version.).
+2026-10-03 12:17:22 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-10-03 12:17:22 [main] INFO  io.javalin.Javalin - Javalin started in 138ms \o/
+2026-10-03 12:17:22 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-10-03 12:17:22 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-10-03 12:17:22 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-10-03 12:17:25 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=caa67826-b1a2-4f54-9728-de29fed034f0] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:17:27 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=5db326dd-2242-4bc4-a76c-703a659dafda] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:17:30 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:17:30 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=caa67826-b1a2-4f54-9728-de29fed034f0] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:17:30 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:17:30 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=caa67826-b1a2-4f54-9728-de29fed034f0] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:17:30 [WebSocketWorker-17] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Room saved successfully. [RoomId=20eb1004-1dcb-482f-bdfd-cf876a7325ef]
+2026-10-03 12:17:30 [WebSocketWorker-17] INFO  c.t.t.t.a.service.RoomServiceImpl - Room created. [roomId=20eb1004-1dcb-482f-bdfd-cf876a7325ef] [ownerId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:17:30 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Room created. [RoomId=20eb1004-1dcb-482f-bdfd-cf876a7325ef] [TotalRooms=1]
+2026-10-03 12:17:30 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - User joined room. [RoomId=20eb1004-1dcb-482f-bdfd-cf876a7325ef] [UserId=a9876944-0518-4057-ba2b-5171c3a8bea7] [TotalUsers=1]
+2026-10-03 12:17:30 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=20eb1004-1dcb-482f-bdfd-cf876a7325ef] [Recipients=1]
+2026-10-03 12:17:30 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:17:30 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=caa67826-b1a2-4f54-9728-de29fed034f0] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:17:30 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=5db326dd-2242-4bc4-a76c-703a659dafda] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:17:30 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:17:30 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=caa67826-b1a2-4f54-9728-de29fed034f0] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:17:30 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=20eb1004-1dcb-482f-bdfd-cf876a7325ef] [Recipients=1]
+2026-10-03 12:17:30 [WebSocketWorker-17] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Room created and owner joined. [roomId=20eb1004-1dcb-482f-bdfd-cf876a7325ef] [ownerId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:17:44 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:17:44 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=5db326dd-2242-4bc4-a76c-703a659dafda] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:17:44 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:17:44 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=5db326dd-2242-4bc4-a76c-703a659dafda] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:17:44 [WebSocketWorker-18] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - RoomPlayer created. [roomPlayerId=00676650-07d3-4a4f-b48f-b3fdfee81b3e]
+2026-10-03 12:17:44 [WebSocketWorker-18] INFO  c.t.t.t.p.socket.room.RoomManager - User joined room. [RoomId=20eb1004-1dcb-482f-bdfd-cf876a7325ef] [UserId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [TotalUsers=2]
+2026-10-03 12:17:44 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:17:44 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=caa67826-b1a2-4f54-9728-de29fed034f0] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:17:44 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=5db326dd-2242-4bc4-a76c-703a659dafda] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:17:44 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:17:44 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=5db326dd-2242-4bc4-a76c-703a659dafda] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:17:44 [WebSocketWorker-18] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=20eb1004-1dcb-482f-bdfd-cf876a7325ef] [Recipients=2]
+2026-10-03 12:17:53 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:17:53 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=5db326dd-2242-4bc4-a76c-703a659dafda] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:17:53 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=5db326dd-2242-4bc4-a76c-703a659dafda] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:17:53 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - User left room. [RoomId=20eb1004-1dcb-482f-bdfd-cf876a7325ef] [UserId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [TotalUsers=1]
+2026-10-03 12:17:53 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - RoomPlayer deleted successfully. [RoomPlayerId=00676650-07d3-4a4f-b48f-b3fdfee81b3e]
+2026-10-03 12:17:53 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:17:53 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=caa67826-b1a2-4f54-9728-de29fed034f0] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:17:53 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:17:53 [WebSocketSelector-29] WARN  c.t.t.t.p.s.c.ConnectionManager - Not found connection by userId
+2026-10-03 12:17:53 [WebSocketSelector-29] WARN  c.t.t.t.p.s.e.h.InfoRoomHandler - User has no active connection. [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:17:53 [WebSocketSelector-29] ERROR c.t.t.t.p.socket.SocketServer - WebSocket error.
+java.lang.RuntimeException: Connection not found for user
+	at com.tic.tac.toe.presentation.socket.event.handlers.InfoRoomHandler.handle(InfoRoomHandler.java:45)
+	at com.tic.tac.toe.presentation.socket.event.handlers.InfoRoomHandler.handle(InfoRoomHandler.java:19)
+	at com.tic.tac.toe.application.event.EventDispatcher.dispatch(EventDispatcher.java:28)
+	at com.tic.tac.toe.application.event.EventDispatcher.publish(EventDispatcher.java:15)
+	at com.tic.tac.toe.presentation.socket.SocketServer.onClose(SocketServer.java:112)
+	at org.java_websocket.server.WebSocketServer.onWebsocketClose(WebSocketServer.java:784)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:557)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:577)
+	at org.java_websocket.SocketChannelIOHelper.batch(SocketChannelIOHelper.java:112)
+	at org.java_websocket.server.WebSocketServer.doWrite(WebSocketServer.java:586)
+	at org.java_websocket.server.WebSocketServer.run(WebSocketServer.java:443)
+	at java.lang.Thread.run(Thread.java:750)
+2026-10-03 12:18:04 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:18:04 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=caa67826-b1a2-4f54-9728-de29fed034f0] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:18:04 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=caa67826-b1a2-4f54-9728-de29fed034f0] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:18:04 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - User left room. [RoomId=20eb1004-1dcb-482f-bdfd-cf876a7325ef] [UserId=a9876944-0518-4057-ba2b-5171c3a8bea7] [TotalUsers=0]
+2026-10-03 12:18:04 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - RoomPlayer deleted successfully. [RoomPlayerId=24fd7e76-c97e-4229-bb5c-cc4838e1d81a]
+2026-10-03 12:18:04 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - Room removed by id. [RoomId=20eb1004-1dcb-482f-bdfd-cf876a7325ef] [TotalRooms=0]
+2026-10-03 12:18:04 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Room deleted successfully. [RoomId=20eb1004-1dcb-482f-bdfd-cf876a7325ef]
+2026-10-03 12:18:04 [WebSocketSelector-29] INFO  c.t.t.t.a.service.RoomServiceImpl - Room deleted. [roomId=20eb1004-1dcb-482f-bdfd-cf876a7325ef]
+2026-10-03 12:18:04 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:18:04 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=caa67826-b1a2-4f54-9728-de29fed034f0] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7] [code=1000] [reason=Client initiated close]
+2026-10-03 12:18:14 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized. [InstanceId=922151033]
+2026-10-03 12:18:14 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized. [InstanceId=1144648478]
+2026-10-03 12:18:15 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized. [InstanceId=842741472]
+2026-10-03 12:18:15 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized. [InstanceId=1156304131]
+2026-10-03 12:18:15 [main] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Instance RoomJpaRepository initialized. [InstanceId=1766505436]
+2026-10-03 12:18:15 [main] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - Instance RoomPlayerJpaRepository initialized. [InstanceId=771775563]
+2026-10-03 12:18:15 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=1164440413]
+2026-10-03 12:18:15 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=1610525991]
+2026-10-03 12:18:15 [main] INFO  c.t.t.t.a.service.RoomServiceImpl - Instance RoomServiceImpl initialized. [InstanceId=1666607455]
+2026-10-03 12:18:15 [main] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - Instance RoomPlayerServiceImpl initialized. [InstanceId=1327006586]
+2026-10-03 12:18:15 [main] INFO  c.t.t.t.p.h.m.AuthorizedHttpMiddleware - Instance AuthorizedHttpMiddleware initialized. [InstanceId=899644639]
+2026-10-03 12:18:15 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized. [InstanceId=530737374]
+2026-10-03 12:18:15 [main] INFO  c.t.t.t.p.s.m.AuthorizedSocketMiddleware - Instance AuthorizedSocketMiddleware initialized. [InstanceId=1332668132]
+2026-10-03 12:18:15 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized. [InstanceId=1147580192]
+2026-10-03 12:18:15 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized. [InstanceId=173099767]
+2026-10-03 12:18:15 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionSocketHandler initialized. [InstanceId=1959910454]
+2026-10-03 12:18:15 [main] INFO  c.t.t.t.p.s.e.h.GlobalMessageHandler - Instance GlobalMessageHandler initialized. [InstanceId=485937598]
+2026-10-03 12:18:15 [main] INFO  c.t.t.t.p.s.e.h.RoomsByStatusHandler - Instance RoomsByStatusHandler initialized. [InstanceId=434398524]
+2026-10-03 12:18:15 [main] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Instance CreateRoomHandler initialized. [InstanceId=1392794732]
+2026-10-03 12:18:15 [main] INFO  c.t.t.t.p.s.e.h.MessageRoomHandler - Instance MessageRoomHandler initialized. [InstanceId=1807648168]
+2026-10-03 12:18:15 [main] INFO  c.t.t.t.p.s.e.h.JoinRoomHandler - Instance JoinRoomHandler initialized. [InstanceId=1273143001]
+2026-10-03 12:18:15 [main] INFO  c.t.t.t.p.s.e.h.InfoRoomHandler - Instance InfoRoomHandler initialized. [InstanceId=1258372214]
+2026-10-03 12:18:15 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-10-03 12:18:15 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @943ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-10-03 12:18:15 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-10-03 12:18:15 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1248 days old. Consider checking for a newer version.).
+2026-10-03 12:18:15 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-10-03 12:18:15 [main] INFO  io.javalin.Javalin - Javalin started in 131ms \o/
+2026-10-03 12:18:15 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-10-03 12:18:15 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-10-03 12:18:15 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-10-03 12:18:19 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=bed89f00-6fc7-45a3-9f48-7d17d3817bc1] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:18:22 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=23877854-9691-4900-8991-fe39f31ba874] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:18:25 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:18:25 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=bed89f00-6fc7-45a3-9f48-7d17d3817bc1] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:18:25 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:18:25 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=bed89f00-6fc7-45a3-9f48-7d17d3817bc1] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:18:25 [WebSocketWorker-17] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Room saved successfully. [RoomId=e9902f9d-cc48-4b73-8ae2-8dfafdfb1d09]
+2026-10-03 12:18:25 [WebSocketWorker-17] INFO  c.t.t.t.a.service.RoomServiceImpl - Room created. [roomId=e9902f9d-cc48-4b73-8ae2-8dfafdfb1d09] [ownerId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:18:25 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Room created. [RoomId=e9902f9d-cc48-4b73-8ae2-8dfafdfb1d09] [TotalRooms=1]
+2026-10-03 12:18:25 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - User joined room. [RoomId=e9902f9d-cc48-4b73-8ae2-8dfafdfb1d09] [UserId=a9876944-0518-4057-ba2b-5171c3a8bea7] [TotalUsers=1]
+2026-10-03 12:18:25 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=e9902f9d-cc48-4b73-8ae2-8dfafdfb1d09] [Recipients=1]
+2026-10-03 12:18:26 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:18:26 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=bed89f00-6fc7-45a3-9f48-7d17d3817bc1] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:18:26 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=23877854-9691-4900-8991-fe39f31ba874] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:18:26 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:18:26 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=bed89f00-6fc7-45a3-9f48-7d17d3817bc1] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:18:26 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=e9902f9d-cc48-4b73-8ae2-8dfafdfb1d09] [Recipients=1]
+2026-10-03 12:18:26 [WebSocketWorker-17] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Room created and owner joined. [roomId=e9902f9d-cc48-4b73-8ae2-8dfafdfb1d09] [ownerId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:18:35 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:18:35 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=23877854-9691-4900-8991-fe39f31ba874] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:18:35 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:18:35 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=23877854-9691-4900-8991-fe39f31ba874] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:18:35 [WebSocketWorker-18] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - RoomPlayer created. [roomPlayerId=26d966e6-1b95-464e-a458-56c311c06425]
+2026-10-03 12:18:35 [WebSocketWorker-18] INFO  c.t.t.t.p.socket.room.RoomManager - User joined room. [RoomId=e9902f9d-cc48-4b73-8ae2-8dfafdfb1d09] [UserId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [TotalUsers=2]
+2026-10-03 12:18:35 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:18:35 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=bed89f00-6fc7-45a3-9f48-7d17d3817bc1] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:18:35 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=23877854-9691-4900-8991-fe39f31ba874] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:18:35 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:18:35 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=23877854-9691-4900-8991-fe39f31ba874] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:18:35 [WebSocketWorker-18] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=e9902f9d-cc48-4b73-8ae2-8dfafdfb1d09] [Recipients=2]
+2026-10-03 12:18:39 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:18:39 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=23877854-9691-4900-8991-fe39f31ba874] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:18:39 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=23877854-9691-4900-8991-fe39f31ba874] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:18:39 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - User left room. [RoomId=e9902f9d-cc48-4b73-8ae2-8dfafdfb1d09] [UserId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [TotalUsers=1]
+2026-10-03 12:18:39 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - RoomPlayer deleted successfully. [RoomPlayerId=26d966e6-1b95-464e-a458-56c311c06425]
+2026-10-03 12:18:39 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:18:39 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=bed89f00-6fc7-45a3-9f48-7d17d3817bc1] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:18:39 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=23877854-9691-4900-8991-fe39f31ba874] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [code=1000] [reason=Client initiated close]
+2026-10-03 12:18:46 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:18:46 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=bed89f00-6fc7-45a3-9f48-7d17d3817bc1] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:18:46 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=bed89f00-6fc7-45a3-9f48-7d17d3817bc1] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:18:46 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - User left room. [RoomId=e9902f9d-cc48-4b73-8ae2-8dfafdfb1d09] [UserId=a9876944-0518-4057-ba2b-5171c3a8bea7] [TotalUsers=0]
+2026-10-03 12:18:46 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - RoomPlayer deleted successfully. [RoomPlayerId=908d00ad-6dcf-488d-ae93-3f375951f6be]
+2026-10-03 12:18:46 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - Room removed by id. [RoomId=e9902f9d-cc48-4b73-8ae2-8dfafdfb1d09] [TotalRooms=0]
+2026-10-03 12:18:46 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Room deleted successfully. [RoomId=e9902f9d-cc48-4b73-8ae2-8dfafdfb1d09]
+2026-10-03 12:18:46 [WebSocketSelector-29] INFO  c.t.t.t.a.service.RoomServiceImpl - Room deleted. [roomId=e9902f9d-cc48-4b73-8ae2-8dfafdfb1d09]
+2026-10-03 12:18:46 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:18:46 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:18:46 [WebSocketSelector-29] WARN  c.t.t.t.p.s.c.ConnectionManager - Not found connection by userId
+2026-10-03 12:18:46 [WebSocketSelector-29] WARN  c.t.t.t.p.s.e.h.InfoRoomHandler - User has no active connection. [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:18:46 [WebSocketSelector-29] ERROR c.t.t.t.p.socket.SocketServer - WebSocket error.
+java.lang.RuntimeException: Connection not found for user
+	at com.tic.tac.toe.presentation.socket.event.handlers.InfoRoomHandler.handle(InfoRoomHandler.java:45)
+	at com.tic.tac.toe.presentation.socket.event.handlers.InfoRoomHandler.handle(InfoRoomHandler.java:19)
+	at com.tic.tac.toe.application.event.EventDispatcher.dispatch(EventDispatcher.java:28)
+	at com.tic.tac.toe.application.event.EventDispatcher.publish(EventDispatcher.java:15)
+	at com.tic.tac.toe.presentation.socket.SocketServer.onClose(SocketServer.java:112)
+	at org.java_websocket.server.WebSocketServer.onWebsocketClose(WebSocketServer.java:784)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:557)
+	at org.java_websocket.WebSocketImpl.closeConnection(WebSocketImpl.java:577)
+	at org.java_websocket.SocketChannelIOHelper.batch(SocketChannelIOHelper.java:112)
+	at org.java_websocket.server.WebSocketServer.doWrite(WebSocketServer.java:586)
+	at org.java_websocket.server.WebSocketServer.run(WebSocketServer.java:443)
+	at java.lang.Thread.run(Thread.java:750)
+2026-10-03 12:21:49 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized. [InstanceId=922151033]
+2026-10-03 12:21:49 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized. [InstanceId=1144648478]
+2026-10-03 12:21:49 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized. [InstanceId=842741472]
+2026-10-03 12:21:49 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized. [InstanceId=1156304131]
+2026-10-03 12:21:49 [main] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Instance RoomJpaRepository initialized. [InstanceId=1766505436]
+2026-10-03 12:21:49 [main] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - Instance RoomPlayerJpaRepository initialized. [InstanceId=771775563]
+2026-10-03 12:21:49 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=1164440413]
+2026-10-03 12:21:49 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=1610525991]
+2026-10-03 12:21:49 [main] INFO  c.t.t.t.a.service.RoomServiceImpl - Instance RoomServiceImpl initialized. [InstanceId=1666607455]
+2026-10-03 12:21:49 [main] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - Instance RoomPlayerServiceImpl initialized. [InstanceId=1327006586]
+2026-10-03 12:21:49 [main] INFO  c.t.t.t.p.h.m.AuthorizedHttpMiddleware - Instance AuthorizedHttpMiddleware initialized. [InstanceId=899644639]
+2026-10-03 12:21:49 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized. [InstanceId=530737374]
+2026-10-03 12:21:49 [main] INFO  c.t.t.t.p.s.m.AuthorizedSocketMiddleware - Instance AuthorizedSocketMiddleware initialized. [InstanceId=1332668132]
+2026-10-03 12:21:49 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized. [InstanceId=1147580192]
+2026-10-03 12:21:49 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized. [InstanceId=173099767]
+2026-10-03 12:21:50 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionSocketHandler initialized. [InstanceId=1959910454]
+2026-10-03 12:21:50 [main] INFO  c.t.t.t.p.s.e.h.GlobalMessageHandler - Instance GlobalMessageHandler initialized. [InstanceId=485937598]
+2026-10-03 12:21:50 [main] INFO  c.t.t.t.p.s.e.h.RoomsByStatusHandler - Instance RoomsByStatusHandler initialized. [InstanceId=434398524]
+2026-10-03 12:21:50 [main] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Instance CreateRoomHandler initialized. [InstanceId=1392794732]
+2026-10-03 12:21:50 [main] INFO  c.t.t.t.p.s.e.h.MessageRoomHandler - Instance MessageRoomHandler initialized. [InstanceId=1807648168]
+2026-10-03 12:21:50 [main] INFO  c.t.t.t.p.s.e.h.JoinRoomHandler - Instance JoinRoomHandler initialized. [InstanceId=1273143001]
+2026-10-03 12:21:50 [main] INFO  c.t.t.t.p.s.e.h.InfoRoomHandler - Instance InfoRoomHandler initialized. [InstanceId=1258372214]
+2026-10-03 12:21:50 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-10-03 12:21:50 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @932ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-10-03 12:21:50 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-10-03 12:21:50 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1248 days old. Consider checking for a newer version.).
+2026-10-03 12:21:50 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-10-03 12:21:50 [main] INFO  io.javalin.Javalin - Javalin started in 137ms \o/
+2026-10-03 12:21:50 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-10-03 12:21:50 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-10-03 12:21:50 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-10-03 12:21:53 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=d09241f4-209d-467f-9686-4c6c16ddb77c] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:21:56 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:21:56 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=d09241f4-209d-467f-9686-4c6c16ddb77c] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:21:56 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:21:56 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=d09241f4-209d-467f-9686-4c6c16ddb77c] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:21:57 [WebSocketWorker-17] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Room saved successfully. [RoomId=37611ca4-d74a-45a7-a06e-cc2b60c21b1c]
+2026-10-03 12:21:57 [WebSocketWorker-17] INFO  c.t.t.t.a.service.RoomServiceImpl - Room created. [roomId=37611ca4-d74a-45a7-a06e-cc2b60c21b1c] [ownerId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:21:57 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Room created. [RoomId=37611ca4-d74a-45a7-a06e-cc2b60c21b1c] [TotalRooms=1]
+2026-10-03 12:21:57 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - User joined room. [RoomId=37611ca4-d74a-45a7-a06e-cc2b60c21b1c] [UserId=a9876944-0518-4057-ba2b-5171c3a8bea7] [TotalUsers=1]
+2026-10-03 12:21:57 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=37611ca4-d74a-45a7-a06e-cc2b60c21b1c] [Recipients=1]
+2026-10-03 12:21:57 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:21:57 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=d09241f4-209d-467f-9686-4c6c16ddb77c] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:21:57 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:21:57 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=d09241f4-209d-467f-9686-4c6c16ddb77c] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:21:57 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=37611ca4-d74a-45a7-a06e-cc2b60c21b1c] [Recipients=1]
+2026-10-03 12:21:57 [WebSocketWorker-17] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Room created and owner joined. [roomId=37611ca4-d74a-45a7-a06e-cc2b60c21b1c] [ownerId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:22:05 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=da8086da-d8f8-4e11-8641-829dc62b2d9d] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:22:05 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:22:05 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=da8086da-d8f8-4e11-8641-829dc62b2d9d] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:22:05 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:22:05 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=da8086da-d8f8-4e11-8641-829dc62b2d9d] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:22:05 [WebSocketWorker-18] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - RoomPlayer created. [roomPlayerId=dd14bb31-e0c5-4533-abab-480367382dab]
+2026-10-03 12:22:05 [WebSocketWorker-18] INFO  c.t.t.t.p.socket.room.RoomManager - User joined room. [RoomId=37611ca4-d74a-45a7-a06e-cc2b60c21b1c] [UserId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [TotalUsers=2]
+2026-10-03 12:22:05 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:22:05 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=da8086da-d8f8-4e11-8641-829dc62b2d9d] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:22:05 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=d09241f4-209d-467f-9686-4c6c16ddb77c] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:22:05 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:22:05 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=da8086da-d8f8-4e11-8641-829dc62b2d9d] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:22:05 [WebSocketWorker-18] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=37611ca4-d74a-45a7-a06e-cc2b60c21b1c] [Recipients=2]
+2026-10-03 12:22:07 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:22:07 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=da8086da-d8f8-4e11-8641-829dc62b2d9d] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:22:07 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=da8086da-d8f8-4e11-8641-829dc62b2d9d] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:22:07 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - User left room. [RoomId=37611ca4-d74a-45a7-a06e-cc2b60c21b1c] [UserId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [TotalUsers=1]
+2026-10-03 12:22:07 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - RoomPlayer deleted successfully. [RoomPlayerId=dd14bb31-e0c5-4533-abab-480367382dab]
+2026-10-03 12:22:07 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:22:07 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=d09241f4-209d-467f-9686-4c6c16ddb77c] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:22:07 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:22:07 [WebSocketSelector-29] WARN  c.t.t.t.p.s.c.ConnectionManager - Not found connection by userId
+2026-10-03 12:22:07 [WebSocketSelector-29] WARN  c.t.t.t.p.s.e.h.InfoRoomHandler - User has no active connection. [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:22:07 [WebSocketSelector-29] ERROR c.t.t.t.p.socket.SocketServer - Error publishing event. [event=room.info] [error=Connection not found for user]
+2026-10-03 12:22:07 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=da8086da-d8f8-4e11-8641-829dc62b2d9d] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [code=1000] [reason=Client initiated close]
+2026-10-03 12:24:06 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized. [InstanceId=922151033]
+2026-10-03 12:24:06 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized. [InstanceId=1144648478]
+2026-10-03 12:24:06 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized. [InstanceId=842741472]
+2026-10-03 12:24:06 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized. [InstanceId=1156304131]
+2026-10-03 12:24:06 [main] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Instance RoomJpaRepository initialized. [InstanceId=1766505436]
+2026-10-03 12:24:06 [main] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - Instance RoomPlayerJpaRepository initialized. [InstanceId=771775563]
+2026-10-03 12:24:06 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=1164440413]
+2026-10-03 12:24:06 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=1610525991]
+2026-10-03 12:24:06 [main] INFO  c.t.t.t.a.service.RoomServiceImpl - Instance RoomServiceImpl initialized. [InstanceId=1666607455]
+2026-10-03 12:24:06 [main] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - Instance RoomPlayerServiceImpl initialized. [InstanceId=1327006586]
+2026-10-03 12:24:06 [main] INFO  c.t.t.t.p.h.m.AuthorizedHttpMiddleware - Instance AuthorizedHttpMiddleware initialized. [InstanceId=899644639]
+2026-10-03 12:24:06 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized. [InstanceId=530737374]
+2026-10-03 12:24:06 [main] INFO  c.t.t.t.p.s.m.AuthorizedSocketMiddleware - Instance AuthorizedSocketMiddleware initialized. [InstanceId=1332668132]
+2026-10-03 12:24:06 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized. [InstanceId=1147580192]
+2026-10-03 12:24:06 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized. [InstanceId=173099767]
+2026-10-03 12:24:07 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionSocketHandler initialized. [InstanceId=1959910454]
+2026-10-03 12:24:07 [main] INFO  c.t.t.t.p.s.e.h.GlobalMessageHandler - Instance GlobalMessageHandler initialized. [InstanceId=485937598]
+2026-10-03 12:24:07 [main] INFO  c.t.t.t.p.s.e.h.RoomsByStatusHandler - Instance RoomsByStatusHandler initialized. [InstanceId=434398524]
+2026-10-03 12:24:07 [main] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Instance CreateRoomHandler initialized. [InstanceId=1392794732]
+2026-10-03 12:24:07 [main] INFO  c.t.t.t.p.s.e.h.MessageRoomHandler - Instance MessageRoomHandler initialized. [InstanceId=1807648168]
+2026-10-03 12:24:07 [main] INFO  c.t.t.t.p.s.e.h.JoinRoomHandler - Instance JoinRoomHandler initialized. [InstanceId=1273143001]
+2026-10-03 12:24:07 [main] INFO  c.t.t.t.p.s.e.h.InfoRoomHandler - Instance InfoRoomHandler initialized. [InstanceId=1258372214]
+2026-10-03 12:24:07 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-10-03 12:24:07 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1005ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-10-03 12:24:07 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-10-03 12:24:07 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1248 days old. Consider checking for a newer version.).
+2026-10-03 12:24:07 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-10-03 12:24:07 [main] INFO  io.javalin.Javalin - Javalin started in 141ms \o/
+2026-10-03 12:24:07 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-10-03 12:24:07 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-10-03 12:24:07 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-10-03 12:24:10 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=deb3bb4c-4fed-4f91-a7ac-896cb42bd686] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:24:12 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=4012efb8-686f-4116-ac64-de100ad92409] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:24:17 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:24:17 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=deb3bb4c-4fed-4f91-a7ac-896cb42bd686] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:24:17 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:24:17 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=deb3bb4c-4fed-4f91-a7ac-896cb42bd686] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:24:18 [WebSocketWorker-17] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Room saved successfully. [RoomId=b995ab94-295a-45a8-bae7-3f44da3f52dd]
+2026-10-03 12:24:18 [WebSocketWorker-17] INFO  c.t.t.t.a.service.RoomServiceImpl - Room created. [roomId=b995ab94-295a-45a8-bae7-3f44da3f52dd] [ownerId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:24:18 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Room created. [RoomId=b995ab94-295a-45a8-bae7-3f44da3f52dd] [TotalRooms=1]
+2026-10-03 12:24:18 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - User joined room. [RoomId=b995ab94-295a-45a8-bae7-3f44da3f52dd] [UserId=a9876944-0518-4057-ba2b-5171c3a8bea7] [TotalUsers=1]
+2026-10-03 12:24:18 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=b995ab94-295a-45a8-bae7-3f44da3f52dd] [Recipients=1]
+2026-10-03 12:24:18 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:24:18 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=4012efb8-686f-4116-ac64-de100ad92409] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:24:18 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=deb3bb4c-4fed-4f91-a7ac-896cb42bd686] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:24:18 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=b995ab94-295a-45a8-bae7-3f44da3f52dd] [Recipients=1]
+2026-10-03 12:24:18 [WebSocketWorker-17] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Room created and owner joined. [roomId=b995ab94-295a-45a8-bae7-3f44da3f52dd] [ownerId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:24:38 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:24:38 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=4012efb8-686f-4116-ac64-de100ad92409] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:24:38 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:24:38 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=4012efb8-686f-4116-ac64-de100ad92409] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:24:38 [WebSocketWorker-18] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - RoomPlayer created. [roomPlayerId=e5c33ab2-3104-4a30-bfcb-4ad9ba9c586f]
+2026-10-03 12:24:38 [WebSocketWorker-18] INFO  c.t.t.t.p.socket.room.RoomManager - User joined room. [RoomId=b995ab94-295a-45a8-bae7-3f44da3f52dd] [UserId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [TotalUsers=2]
+2026-10-03 12:24:38 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:24:38 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=4012efb8-686f-4116-ac64-de100ad92409] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:24:38 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=deb3bb4c-4fed-4f91-a7ac-896cb42bd686] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:24:38 [WebSocketWorker-18] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=b995ab94-295a-45a8-bae7-3f44da3f52dd] [Recipients=2]
+2026-10-03 12:24:41 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:24:41 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=4012efb8-686f-4116-ac64-de100ad92409] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:24:41 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=4012efb8-686f-4116-ac64-de100ad92409] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:24:41 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - User left room. [RoomId=b995ab94-295a-45a8-bae7-3f44da3f52dd] [UserId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [TotalUsers=1]
+2026-10-03 12:24:41 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - RoomPlayer deleted successfully. [RoomPlayerId=e5c33ab2-3104-4a30-bfcb-4ad9ba9c586f]
+2026-10-03 12:24:41 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:24:41 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=deb3bb4c-4fed-4f91-a7ac-896cb42bd686] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:24:41 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=b995ab94-295a-45a8-bae7-3f44da3f52dd] [Recipients=1]
+2026-10-03 12:24:41 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=4012efb8-686f-4116-ac64-de100ad92409] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [code=1000] [reason=Client initiated close]
+2026-10-03 12:25:03 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:25:03 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=deb3bb4c-4fed-4f91-a7ac-896cb42bd686] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:25:03 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=deb3bb4c-4fed-4f91-a7ac-896cb42bd686] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:25:03 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - User left room. [RoomId=b995ab94-295a-45a8-bae7-3f44da3f52dd] [UserId=a9876944-0518-4057-ba2b-5171c3a8bea7] [TotalUsers=0]
+2026-10-03 12:25:03 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - RoomPlayer deleted successfully. [RoomPlayerId=fd584b06-02cb-4eb4-87ec-fadd5f6f5f9e]
+2026-10-03 12:25:03 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - Room removed by id. [RoomId=b995ab94-295a-45a8-bae7-3f44da3f52dd] [TotalRooms=0]
+2026-10-03 12:25:03 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Room deleted successfully. [RoomId=b995ab94-295a-45a8-bae7-3f44da3f52dd]
+2026-10-03 12:25:03 [WebSocketSelector-29] INFO  c.t.t.t.a.service.RoomServiceImpl - Room deleted. [roomId=b995ab94-295a-45a8-bae7-3f44da3f52dd]
+2026-10-03 12:25:03 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:25:03 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=deb3bb4c-4fed-4f91-a7ac-896cb42bd686] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7] [code=1000] [reason=Client initiated close]
+2026-10-03 12:33:09 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized. [InstanceId=1516369375]
+2026-10-03 12:33:09 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized. [InstanceId=1576861390]
+2026-10-03 12:33:10 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized. [InstanceId=1156304131]
+2026-10-03 12:33:10 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized. [InstanceId=1766505436]
+2026-10-03 12:33:10 [main] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Instance RoomJpaRepository initialized. [InstanceId=771775563]
+2026-10-03 12:33:10 [main] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - Instance RoomPlayerJpaRepository initialized. [InstanceId=1164440413]
+2026-10-03 12:33:10 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=1610525991]
+2026-10-03 12:33:10 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=1666607455]
+2026-10-03 12:33:10 [main] INFO  c.t.t.t.a.service.RoomServiceImpl - Instance RoomServiceImpl initialized. [InstanceId=1327006586]
+2026-10-03 12:33:10 [main] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - Instance RoomPlayerServiceImpl initialized. [InstanceId=899644639]
+2026-10-03 12:33:10 [main] INFO  c.t.t.t.p.h.m.AuthorizedHttpMiddleware - Instance AuthorizedHttpMiddleware initialized. [InstanceId=530737374]
+2026-10-03 12:33:10 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized. [InstanceId=1332668132]
+2026-10-03 12:33:10 [main] INFO  c.t.t.t.p.s.m.AuthorizedSocketMiddleware - Instance AuthorizedSocketMiddleware initialized. [InstanceId=1147580192]
+2026-10-03 12:33:10 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized. [InstanceId=173099767]
+2026-10-03 12:33:10 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized. [InstanceId=112797691]
+2026-10-03 12:33:10 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionSocketHandler initialized. [InstanceId=1902237905]
+2026-10-03 12:33:10 [main] INFO  c.t.t.t.p.s.e.h.GlobalMessageHandler - Instance GlobalMessageHandler initialized. [InstanceId=1715248762]
+2026-10-03 12:33:10 [main] INFO  c.t.t.t.p.s.e.h.RoomsByStatusHandler - Instance RoomsByStatusHandler initialized. [InstanceId=2035616217]
+2026-10-03 12:33:10 [main] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Instance CreateRoomHandler initialized. [InstanceId=1363793720]
+2026-10-03 12:33:10 [main] INFO  c.t.t.t.p.s.e.h.MessageRoomHandler - Instance MessageRoomHandler initialized. [InstanceId=980697799]
+2026-10-03 12:33:10 [main] INFO  c.t.t.t.p.s.e.h.JoinRoomHandler - Instance JoinRoomHandler initialized. [InstanceId=1418555530]
+2026-10-03 12:33:10 [main] INFO  c.t.t.t.p.s.e.h.InfoRoomHandler - Instance InfoRoomHandler initialized. [InstanceId=1408974251]
+2026-10-03 12:33:10 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-10-03 12:33:10 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1087ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-10-03 12:33:10 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-10-03 12:33:10 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1248 days old. Consider checking for a newer version.).
+2026-10-03 12:33:10 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-10-03 12:33:10 [main] INFO  io.javalin.Javalin - Javalin started in 172ms \o/
+2026-10-03 12:33:10 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-10-03 12:33:10 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-10-03 12:33:10 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized. [InstanceId=922151033]
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized. [InstanceId=1144648478]
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized. [InstanceId=842741472]
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized. [InstanceId=1156304131]
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Instance RoomJpaRepository initialized. [InstanceId=1766505436]
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - Instance RoomPlayerJpaRepository initialized. [InstanceId=771775563]
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=1164440413]
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=1610525991]
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.a.service.RoomServiceImpl - Instance RoomServiceImpl initialized. [InstanceId=1666607455]
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - Instance RoomPlayerServiceImpl initialized. [InstanceId=1327006586]
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.p.h.m.AuthorizedHttpMiddleware - Instance AuthorizedHttpMiddleware initialized. [InstanceId=899644639]
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized. [InstanceId=530737374]
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.p.s.m.AuthorizedSocketMiddleware - Instance AuthorizedSocketMiddleware initialized. [InstanceId=1332668132]
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized. [InstanceId=1147580192]
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized. [InstanceId=173099767]
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionSocketHandler initialized. [InstanceId=1959910454]
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.p.s.e.h.GlobalMessageHandler - Instance GlobalMessageHandler initialized. [InstanceId=485937598]
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.p.s.e.h.RoomsByStatusHandler - Instance RoomsByStatusHandler initialized. [InstanceId=434398524]
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Instance CreateRoomHandler initialized. [InstanceId=1392794732]
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.p.s.e.h.MessageRoomHandler - Instance MessageRoomHandler initialized. [InstanceId=1807648168]
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.p.s.e.h.JoinRoomHandler - Instance JoinRoomHandler initialized. [InstanceId=1273143001]
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.p.s.e.h.InfoRoomHandler - Instance InfoRoomHandler initialized. [InstanceId=1258372214]
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.p.s.e.h.LeaveRoomHandler - Instance LeaveRoomHandler initialized. [InstanceId=212890971]
+2026-10-03 12:33:33 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-10-03 12:33:33 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @969ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-10-03 12:33:33 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-10-03 12:33:33 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1248 days old. Consider checking for a newer version.).
+2026-10-03 12:33:33 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-10-03 12:33:33 [main] INFO  io.javalin.Javalin - Javalin started in 133ms \o/
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-10-03 12:33:33 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-10-03 12:33:33 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-10-03 12:33:37 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=096fcbe5-4714-4a55-91d3-ba3890075a9e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:33:38 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=8abe5586-2dd5-4067-afa2-a11af92ede73] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:33:40 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:33:40 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=096fcbe5-4714-4a55-91d3-ba3890075a9e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:33:40 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:33:40 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=096fcbe5-4714-4a55-91d3-ba3890075a9e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:33:40 [WebSocketWorker-17] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Room saved successfully. [RoomId=84f3bac0-97c7-4f11-aab3-bc45d7fffdef]
+2026-10-03 12:33:40 [WebSocketWorker-17] INFO  c.t.t.t.a.service.RoomServiceImpl - Room created. [roomId=84f3bac0-97c7-4f11-aab3-bc45d7fffdef] [ownerId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:33:40 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Room created. [RoomId=84f3bac0-97c7-4f11-aab3-bc45d7fffdef] [TotalRooms=1]
+2026-10-03 12:33:40 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - User joined room. [RoomId=84f3bac0-97c7-4f11-aab3-bc45d7fffdef] [UserId=a9876944-0518-4057-ba2b-5171c3a8bea7] [TotalUsers=1]
+2026-10-03 12:33:40 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=84f3bac0-97c7-4f11-aab3-bc45d7fffdef] [Recipients=1]
+2026-10-03 12:33:41 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:33:41 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=096fcbe5-4714-4a55-91d3-ba3890075a9e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:33:41 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=8abe5586-2dd5-4067-afa2-a11af92ede73] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:33:41 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=84f3bac0-97c7-4f11-aab3-bc45d7fffdef] [Recipients=1]
+2026-10-03 12:33:41 [WebSocketWorker-17] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Room created and owner joined. [roomId=84f3bac0-97c7-4f11-aab3-bc45d7fffdef] [ownerId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:33:53 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:33:53 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=8abe5586-2dd5-4067-afa2-a11af92ede73] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:33:53 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:33:53 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=8abe5586-2dd5-4067-afa2-a11af92ede73] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:33:53 [WebSocketWorker-18] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - RoomPlayer created. [roomPlayerId=54410b21-d531-4495-aaa7-7d964ed43cb1]
+2026-10-03 12:33:53 [WebSocketWorker-18] INFO  c.t.t.t.p.socket.room.RoomManager - User joined room. [RoomId=84f3bac0-97c7-4f11-aab3-bc45d7fffdef] [UserId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [TotalUsers=2]
+2026-10-03 12:33:53 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:33:53 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=096fcbe5-4714-4a55-91d3-ba3890075a9e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:33:53 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=8abe5586-2dd5-4067-afa2-a11af92ede73] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:33:53 [WebSocketWorker-18] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=84f3bac0-97c7-4f11-aab3-bc45d7fffdef] [Recipients=2]
+2026-10-03 12:34:34 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:34:34 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=8abe5586-2dd5-4067-afa2-a11af92ede73] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:34:43 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:34:43 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=8abe5586-2dd5-4067-afa2-a11af92ede73] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:34:43 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=8abe5586-2dd5-4067-afa2-a11af92ede73] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:34:43 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - User left room. [RoomId=84f3bac0-97c7-4f11-aab3-bc45d7fffdef] [UserId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [TotalUsers=1]
+2026-10-03 12:34:43 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - RoomPlayer deleted successfully. [RoomPlayerId=54410b21-d531-4495-aaa7-7d964ed43cb1]
+2026-10-03 12:34:43 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:34:43 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=096fcbe5-4714-4a55-91d3-ba3890075a9e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:34:43 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=84f3bac0-97c7-4f11-aab3-bc45d7fffdef] [Recipients=1]
+2026-10-03 12:34:43 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=8abe5586-2dd5-4067-afa2-a11af92ede73] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [code=1000] [reason=Client initiated close]
+2026-10-03 12:34:46 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:34:46 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=096fcbe5-4714-4a55-91d3-ba3890075a9e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:34:46 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=096fcbe5-4714-4a55-91d3-ba3890075a9e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:34:46 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - User left room. [RoomId=84f3bac0-97c7-4f11-aab3-bc45d7fffdef] [UserId=a9876944-0518-4057-ba2b-5171c3a8bea7] [TotalUsers=0]
+2026-10-03 12:34:46 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - RoomPlayer deleted successfully. [RoomPlayerId=ce93abe3-4676-49c1-bcdc-1bc87a658bea]
+2026-10-03 12:34:46 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - Room removed by id. [RoomId=84f3bac0-97c7-4f11-aab3-bc45d7fffdef] [TotalRooms=0]
+2026-10-03 12:34:46 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Room deleted successfully. [RoomId=84f3bac0-97c7-4f11-aab3-bc45d7fffdef]
+2026-10-03 12:34:46 [WebSocketSelector-29] INFO  c.t.t.t.a.service.RoomServiceImpl - Room deleted. [roomId=84f3bac0-97c7-4f11-aab3-bc45d7fffdef]
+2026-10-03 12:34:46 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:34:46 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=096fcbe5-4714-4a55-91d3-ba3890075a9e] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7] [code=1000] [reason=Client initiated close]
+2026-10-03 12:35:05 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized. [InstanceId=1516369375]
+2026-10-03 12:35:05 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized. [InstanceId=1576861390]
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized. [InstanceId=1156304131]
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized. [InstanceId=1766505436]
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Instance RoomJpaRepository initialized. [InstanceId=771775563]
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - Instance RoomPlayerJpaRepository initialized. [InstanceId=1164440413]
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=1610525991]
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=1666607455]
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.a.service.RoomServiceImpl - Instance RoomServiceImpl initialized. [InstanceId=1327006586]
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - Instance RoomPlayerServiceImpl initialized. [InstanceId=899644639]
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.p.h.m.AuthorizedHttpMiddleware - Instance AuthorizedHttpMiddleware initialized. [InstanceId=530737374]
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized. [InstanceId=1332668132]
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.p.s.m.AuthorizedSocketMiddleware - Instance AuthorizedSocketMiddleware initialized. [InstanceId=1147580192]
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized. [InstanceId=173099767]
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized. [InstanceId=112797691]
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionSocketHandler initialized. [InstanceId=1902237905]
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.p.s.e.h.GlobalMessageHandler - Instance GlobalMessageHandler initialized. [InstanceId=1715248762]
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.p.s.e.h.RoomsByStatusHandler - Instance RoomsByStatusHandler initialized. [InstanceId=2035616217]
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Instance CreateRoomHandler initialized. [InstanceId=1363793720]
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.p.s.e.h.MessageRoomHandler - Instance MessageRoomHandler initialized. [InstanceId=980697799]
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.p.s.e.h.JoinRoomHandler - Instance JoinRoomHandler initialized. [InstanceId=1418555530]
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.p.s.e.h.InfoRoomHandler - Instance InfoRoomHandler initialized. [InstanceId=1408974251]
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.p.s.e.h.LeaveRoomHandler - Instance LeaveRoomHandler initialized. [InstanceId=856055143]
+2026-10-03 12:35:06 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-10-03 12:35:06 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @986ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-10-03 12:35:06 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-10-03 12:35:06 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1248 days old. Consider checking for a newer version.).
+2026-10-03 12:35:06 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-10-03 12:35:06 [main] INFO  io.javalin.Javalin - Javalin started in 128ms \o/
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-10-03 12:35:06 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-10-03 12:35:06 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-10-03 12:35:24 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=d0a95951-a829-4cd4-b12f-e653876d5dd1] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:35:24 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:35:24 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=d0a95951-a829-4cd4-b12f-e653876d5dd1] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:35:24 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:35:24 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=d0a95951-a829-4cd4-b12f-e653876d5dd1] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:35:25 [WebSocketWorker-17] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Room saved successfully. [RoomId=8cf07d1c-15b9-42fa-ab75-f5e5882ae312]
+2026-10-03 12:35:25 [WebSocketWorker-17] INFO  c.t.t.t.a.service.RoomServiceImpl - Room created. [roomId=8cf07d1c-15b9-42fa-ab75-f5e5882ae312] [ownerId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:35:25 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Room created. [RoomId=8cf07d1c-15b9-42fa-ab75-f5e5882ae312] [TotalRooms=1]
+2026-10-03 12:35:25 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - User joined room. [RoomId=8cf07d1c-15b9-42fa-ab75-f5e5882ae312] [UserId=a9876944-0518-4057-ba2b-5171c3a8bea7] [TotalUsers=1]
+2026-10-03 12:35:25 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=8cf07d1c-15b9-42fa-ab75-f5e5882ae312] [Recipients=1]
+2026-10-03 12:35:25 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:35:25 [WebSocketWorker-17] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=d0a95951-a829-4cd4-b12f-e653876d5dd1] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:35:25 [WebSocketWorker-17] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=8cf07d1c-15b9-42fa-ab75-f5e5882ae312] [Recipients=1]
+2026-10-03 12:35:25 [WebSocketWorker-17] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Room created and owner joined. [roomId=8cf07d1c-15b9-42fa-ab75-f5e5882ae312] [ownerId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:35:37 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - A connection added on manager. [connectionId=feb62a57-9125-4a25-b709-555cca6be055] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:35:37 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:35:37 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=feb62a57-9125-4a25-b709-555cca6be055] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:35:37 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:35:37 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=feb62a57-9125-4a25-b709-555cca6be055] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:35:37 [WebSocketWorker-18] ERROR c.t.t.t.i.p.j.r.RoomJpaRepository - Error finding room by id=8cf07d1c-15b9-42fa-ab7f-5e5882ae312f; [error=Cannot refresh unmanaged object: null.]
+2026-10-03 12:35:58 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:35:58 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=feb62a57-9125-4a25-b709-555cca6be055] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:35:58 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:35:58 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=feb62a57-9125-4a25-b709-555cca6be055] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:35:58 [WebSocketWorker-18] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - RoomPlayer created. [roomPlayerId=e0899017-8b9a-4d82-b578-a64343591d23]
+2026-10-03 12:35:58 [WebSocketWorker-18] INFO  c.t.t.t.p.socket.room.RoomManager - User joined room. [RoomId=8cf07d1c-15b9-42fa-ab75-f5e5882ae312] [UserId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [TotalUsers=2]
+2026-10-03 12:35:58 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:35:58 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=d0a95951-a829-4cd4-b12f-e653876d5dd1] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:35:58 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=feb62a57-9125-4a25-b709-555cca6be055] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:35:58 [WebSocketWorker-18] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=8cf07d1c-15b9-42fa-ab75-f5e5882ae312] [Recipients=2]
+2026-10-03 12:36:19 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:36:19 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=feb62a57-9125-4a25-b709-555cca6be055] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:36:19 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by userId. [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:36:19 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by userId. [connectionId=feb62a57-9125-4a25-b709-555cca6be055] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:36:19 [WebSocketWorker-18] INFO  c.t.t.t.p.socket.room.RoomManager - User left room. [RoomId=8cf07d1c-15b9-42fa-ab75-f5e5882ae312] [UserId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [TotalUsers=1]
+2026-10-03 12:36:19 [WebSocketWorker-18] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - RoomPlayer deleted successfully. [RoomPlayerId=e0899017-8b9a-4d82-b578-a64343591d23]
+2026-10-03 12:36:19 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:36:19 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=d0a95951-a829-4cd4-b12f-e653876d5dd1] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:36:19 [WebSocketWorker-18] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=feb62a57-9125-4a25-b709-555cca6be055] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:36:19 [WebSocketWorker-18] INFO  c.t.t.t.p.socket.room.RoomManager - Broadcast sent. [RoomId=8cf07d1c-15b9-42fa-ab75-f5e5882ae312] [Recipients=1]
+2026-10-03 12:36:33 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:36:33 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=d0a95951-a829-4cd4-b12f-e653876d5dd1] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:36:33 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=d0a95951-a829-4cd4-b12f-e653876d5dd1] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7]
+2026-10-03 12:36:33 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - User left room. [RoomId=8cf07d1c-15b9-42fa-ab75-f5e5882ae312] [UserId=a9876944-0518-4057-ba2b-5171c3a8bea7] [TotalUsers=0]
+2026-10-03 12:36:33 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - RoomPlayer deleted successfully. [RoomPlayerId=58a7cad3-2743-438d-b126-0d6819ecfe3f]
+2026-10-03 12:36:33 [WebSocketSelector-29] INFO  c.t.t.t.p.socket.room.RoomManager - Room removed by id. [RoomId=8cf07d1c-15b9-42fa-ab75-f5e5882ae312] [TotalRooms=0]
+2026-10-03 12:36:33 [WebSocketSelector-29] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Room deleted successfully. [RoomId=8cf07d1c-15b9-42fa-ab75-f5e5882ae312]
+2026-10-03 12:36:33 [WebSocketSelector-29] INFO  c.t.t.t.a.service.RoomServiceImpl - Room deleted. [roomId=8cf07d1c-15b9-42fa-ab75-f5e5882ae312]
+2026-10-03 12:36:33 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
+2026-10-03 12:36:33 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Send message to connection. [connectionId=feb62a57-9125-4a25-b709-555cca6be055] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:36:33 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=d0a95951-a829-4cd4-b12f-e653876d5dd1] [userId=a9876944-0518-4057-ba2b-5171c3a8bea7] [code=1000] [reason=Client initiated close]
+2026-10-03 12:36:40 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-03 12:36:40 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Got connection by websocket. [connectionId=feb62a57-9125-4a25-b709-555cca6be055] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:36:40 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Connection removed successfully. [connectionId=feb62a57-9125-4a25-b709-555cca6be055] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920]
+2026-10-03 12:36:40 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=feb62a57-9125-4a25-b709-555cca6be055] [userId=64f51ab2-6a09-44f6-8606-bf4a0718d920] [code=1006] [reason=]

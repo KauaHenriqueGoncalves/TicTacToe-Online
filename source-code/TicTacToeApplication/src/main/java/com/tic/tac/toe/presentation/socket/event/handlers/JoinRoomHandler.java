@@ -6,6 +6,7 @@ import com.tic.tac.toe.domain.entity.Room;
 import com.tic.tac.toe.domain.entity.User;
 import com.tic.tac.toe.domain.entity.enums.RoomStatus;
 import com.tic.tac.toe.domain.entity.pk.RoomPlayer;
+import com.tic.tac.toe.domain.event.InfoRoomEvent;
 import com.tic.tac.toe.domain.event.JoinRoomEvent;
 import com.tic.tac.toe.domain.event.RoomsByStatusEvent;
 import com.tic.tac.toe.domain.service.RoomPlayerService;
@@ -66,6 +67,6 @@ public final class JoinRoomHandler implements EventHandler<JoinRoomEvent> {
         RoomPlayer player = roomPlayerService.create(RoomPlayer.init(room, user));
         roomManager.join(room.getId(), connection);
         eventDispatcher.publish(new RoomsByStatusEvent(RoomStatus.WAITING, connection.getUserId(), true));
-        // evento de atualizar estado atual da sala
+        eventDispatcher.publish(new InfoRoomEvent(room.getId(), user.getId()));
     }
 }

@@ -9,6 +9,7 @@ import com.tic.tac.toe.application.event.EventHandler;
 import com.tic.tac.toe.domain.entity.Room;
 import com.tic.tac.toe.domain.entity.enums.RoomStatus;
 import com.tic.tac.toe.domain.event.CreateRoomEvent;
+import com.tic.tac.toe.domain.event.InfoRoomEvent;
 import com.tic.tac.toe.domain.event.RoomsByStatusEvent;
 import com.tic.tac.toe.domain.exception.InputInvalidException;
 import com.tic.tac.toe.domain.exception.UnauthorizedException;
@@ -63,7 +64,8 @@ public final class CreateRoomHandler implements EventHandler<CreateRoomEvent> {
             roomManager.join(room.getId(), connection);
             roomManager.broadcast(room.getId(), toJson(event.getEvent(),
                     new CreateRoomSuccessfulDeliver("Sala criada com sucesso")));
-            eventDispatcher.dispatch(new RoomsByStatusEvent(RoomStatus.WAITING, connection.getUserId(), true));
+            eventDispatcher.publish(new RoomsByStatusEvent(RoomStatus.WAITING, connection.getUserId(), true));
+            eventDispatcher.publish(new InfoRoomEvent(room.getId(), event.getOwnerId()));
             log.info("Room created and owner joined. [roomId={}] [ownerId={}]",
                     room.getId(), event.getOwnerId());
         } catch (RuntimeException e) {
