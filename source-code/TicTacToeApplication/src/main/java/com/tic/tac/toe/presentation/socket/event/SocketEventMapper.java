@@ -30,6 +30,8 @@ public final class SocketEventMapper {
                 return infoRoom(content, connection);
             case "room.leave":
                 return leaveRoom(content, connection);
+            case "room.ready":
+                return readyRoom(content, connection);
             default:
                 throw new InputInvalidException("Unknown event: " + eventName);
         }
@@ -65,5 +67,9 @@ public final class SocketEventMapper {
 
     private static DomainEvent leaveRoom(JsonNode content, Connection connection) {
         return new LeaveRoomEvent(connection.getRoomId().toString(), connection.getUserId().toString());
+    }
+
+    private static DomainEvent readyRoom(JsonNode content, Connection connection) {
+        return new ReadyRoomEvent(connection.getRoomId().toString(), connection.getUserId().toString());
     }
 }

@@ -8,6 +8,7 @@ import java.util.UUID;
 public interface RoomPlayerService {
     Map<UUID, Long> countGroupedByRoomId();
     RoomPlayer create(RoomPlayer roomPlayer);
+    RoomPlayer toggleReady(UUID roomId, UUID userId);
     void deleteById(UUID playerId);
     void deleteByRoomIdAndUserId(UUID roomId, UUID userId);
 }

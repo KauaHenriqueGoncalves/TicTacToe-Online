@@ -90,6 +90,14 @@ public final class EventRegister {
                 )
         );
 
+        eventDispatcher.register(
+                ReadyRoomEvent.class,
+                new ReadyRoomHandler(
+                        context.roomPlayerService,
+                        eventDispatcher
+                )
+        );
+
         return eventDispatcher;
     }
 }

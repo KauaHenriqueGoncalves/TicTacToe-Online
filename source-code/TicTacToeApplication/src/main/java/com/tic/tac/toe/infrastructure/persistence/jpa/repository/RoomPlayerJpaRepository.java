@@ -101,6 +101,36 @@ public final class RoomPlayerJpaRepository implements RoomPlayerRepository {
     }
 
     @Override
+    public RoomPlayer toggleReady(UUID roomId, UUID userId) {
+        EntityManager em = emf.createEntityManager();
+        try {
+            em.getTransaction().begin();
+            List<RoomPlayer> list = em.createQuery(
+                            "SELECT rp FROM RoomPlayer rp WHERE rp.room.id = :r AND rp.user.id = :u",
+                            RoomPlayer.class)
+                    .setParameter("r", roomId)
+                    .setParameter("u", userId)
+                    .getResultList();
+            if (list.isEmpty()) {
+                throw new NotFoundException("RoomPlayer not found");
+            }
+            RoomPlayer rp = list.get(0);
+            rp.setReady(!rp.getReady());
+            em.getTransaction().commit();
+            return rp;
+        } catch (NotFoundException ex) {
+            if (em.getTransaction().isActive()) em.getTransaction().rollback();
+            throw ex;
+        } catch (RuntimeException ex) {
+            if (em.getTransaction().isActive()) em.getTransaction().rollback();
+            log.error("Error toggling ready. [error={}]", ex.getMessage());
+            throw new RepositoryException("Error toggling ready");
+        } finally {
+            em.close();
+        }
+    }
+
+    @Override
     public void deleteById(UUID id) {
         log.debug("Deleting roomPlayer by id={}", id);
         EntityManager em = emf.createEntityManager();

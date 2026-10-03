@@ -43,6 +43,11 @@ public final class RoomPlayerServiceImpl implements RoomPlayerService {
     }
 
     @Override
+    public RoomPlayer toggleReady(UUID roomId, UUID userId) {
+        return roomPlayerRepository.toggleReady(roomId, userId);
+    }
+
+    @Override
     public void deleteById(UUID playerId) {
         roomPlayerRepository.findById(playerId)
                 .orElseThrow(() -> new NotFoundException("RoomPlayer not found"));

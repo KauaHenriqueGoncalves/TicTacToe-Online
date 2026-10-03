@@ -11,6 +11,7 @@ public interface RoomPlayerRepository {
     List<RoomPlayer> findByRoomId(UUID roomId);
     RoomPlayer save(RoomPlayer roomPlayer);
     Map<UUID, Long> countGroupedByRoomId();
+    RoomPlayer toggleReady(UUID roomId, UUID userId);
     void deleteById(UUID id);
     void deleteByRoomIdAndUserId(UUID roomId, UUID userId);
 }
