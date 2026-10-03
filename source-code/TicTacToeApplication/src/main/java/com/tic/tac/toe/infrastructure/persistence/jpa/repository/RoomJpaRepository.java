@@ -5,6 +5,9 @@ import com.tic.tac.toe.domain.entity.User;
 import com.tic.tac.toe.domain.entity.enums.RoomStatus;
 import com.tic.tac.toe.domain.exception.RepositoryException;
 import com.tic.tac.toe.domain.repositoy.RoomRepository;
+import org.eclipse.persistence.config.CascadePolicy;
+import org.eclipse.persistence.config.HintValues;
+import org.eclipse.persistence.config.QueryHints;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import javax.persistence.EntityManager;
@@ -48,8 +51,12 @@ public final class RoomJpaRepository implements RoomRepository {
         EntityManager em = emf.createEntityManager();
         try {
             TypedQuery<Room> query = em.createQuery(
-                    "SELECT r FROM Room r WHERE r.status = :status", Room.class);
+                    "SELECT DISTINCT r FROM Room r " +
+                            "LEFT JOIN FETCH r.players " +
+                            "WHERE r.status = :status", Room.class);
             query.setParameter("status", status);
+            query.setHint(QueryHints.REFRESH, HintValues.TRUE);
+            query.setHint(QueryHints.REFRESH_CASCADE, CascadePolicy.CascadeAllParts);
             List<Room> result = query.getResultList();
             log.debug("Found {} rooms with status={}", result.size(), status);
             return result;
@@ -88,6 +95,7 @@ public final class RoomJpaRepository implements RoomRepository {
         EntityManager em = emf.createEntityManager();
         try {
             Room room = em.find(Room.class, id);
+            em.refresh(room);
             log.debug("Room {} found: {}", id, room != null);
             return Optional.ofNullable(room);
         } catch (RuntimeException e) {

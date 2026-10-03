@@ -4,12 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.tic.tac.toe.AppContext;
 import com.tic.tac.toe.application.event.EventDispatcher;
-import com.tic.tac.toe.domain.event.CreateRoomEvent;
-import com.tic.tac.toe.domain.event.GlobalMessageEvent;
-import com.tic.tac.toe.domain.event.RoomMessageEvent;
-import com.tic.tac.toe.presentation.socket.event.handlers.CreateRoomHandler;
-import com.tic.tac.toe.presentation.socket.event.handlers.GlobalMessageHandler;
-import com.tic.tac.toe.presentation.socket.event.handlers.MessageRoomHandler;
+import com.tic.tac.toe.domain.event.*;
+import com.tic.tac.toe.presentation.socket.event.handlers.*;
 
 public final class EventRegister {
     private static final ObjectMapper objectMapper = new ObjectMapper();
@@ -31,8 +27,19 @@ public final class EventRegister {
         );
 
         eventDispatcher.register(
+                RoomsByStatusEvent.class,
+                new RoomsByStatusHandler(
+                        context.connectionManager,
+                        context.roomPlayerService,
+                        context.roomService,
+                        objectMapper
+                )
+        );
+
+        eventDispatcher.register(
                 CreateRoomEvent.class,
                 new CreateRoomHandler(
+                        eventDispatcher,
                         context.connectionManager,
                         context.roomManager,
                         context.roomService,
@@ -47,6 +54,18 @@ public final class EventRegister {
                         context.roomManager,
                         context.userService,
                         objectMapper
+                )
+        );
+
+        eventDispatcher.register(
+                JoinRoomEvent.class,
+                new JoinRoomHandler(
+                        eventDispatcher,
+                        context.connectionManager,
+                        context.roomManager,
+                        context.roomService,
+                        context.userService,
+                        context.roomPlayerService
                 )
         );
 

@@ -6,6 +6,9 @@ import com.tic.tac.toe.domain.repositoy.RoomPlayerRepository;
 import com.tic.tac.toe.domain.service.RoomPlayerService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Collections;
+import java.util.Map;
 import java.util.UUID;
 
 public final class RoomPlayerServiceImpl implements RoomPlayerService {
@@ -19,6 +22,27 @@ public final class RoomPlayerServiceImpl implements RoomPlayerService {
     }
 
     @Override
+    public Map<UUID, Long> countGroupedByRoomId() {
+        return roomPlayerRepository.countGroupedByRoomId();
+    }
+
+    @Override
+    public RoomPlayer create(RoomPlayer roomPlayer) {
+        if (
+                roomPlayer == null ||
+                roomPlayer.getId() == null ||
+                roomPlayer.getRoom() == null ||
+                roomPlayer.getUser() == null
+        ) {
+            log.warn("RoomPlayer is required");
+            throw new RuntimeException("RoomPlayer is required");
+        }
+        RoomPlayer created = roomPlayerRepository.save(roomPlayer);
+        log.info("RoomPlayer created. [roomPlayerId={}]", created.getId());
+        return created;
+    }
+
+    @Override
     public void deleteById(UUID playerId) {
         roomPlayerRepository.findById(playerId)
                 .orElseThrow(() -> new NotFoundException("RoomPlayer not found"));
@@ -28,12 +52,10 @@ public final class RoomPlayerServiceImpl implements RoomPlayerService {
 
     @Override
     public void deleteByRoomIdAndUserId(UUID roomId, UUID userId) {
-        RoomPlayer player = roomPlayerRepository.findById(roomId)
+        RoomPlayer rp = roomPlayerRepository.findByRoomId(roomId).stream()
+                .filter(p -> p.getUser().getId().equals(userId))
+                .findFirst()
                 .orElseThrow(() -> new NotFoundException("RoomPlayer not found"));
-        if (!player.getUser().getId().equals(userId)) {
-            throw new RuntimeException("User is not the belong of the room");
-        }
-        roomPlayerRepository.deleteByRoomIdAndUserId(roomId, userId);
-        log.info("RoomPlayer deleted by roomId and userId. [roomId={}] [userId={}]", roomId, userId);
+        roomPlayerRepository.deleteById(rp.getId());
     }
 }

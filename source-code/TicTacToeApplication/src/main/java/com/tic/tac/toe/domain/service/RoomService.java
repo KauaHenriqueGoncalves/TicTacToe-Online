@@ -8,7 +8,9 @@ import java.util.UUID;
 public interface RoomService {
     List<Room> findAll();
     List<Room> findAllByStatus(String status);
+    Room findById(UUID id);
     Room findAllUsersByRoomId(UUID roomId);
     Room create(CreateRoomRequestDto dto);
+    Room update(Room room);
     void delete(UUID roomId);
 }

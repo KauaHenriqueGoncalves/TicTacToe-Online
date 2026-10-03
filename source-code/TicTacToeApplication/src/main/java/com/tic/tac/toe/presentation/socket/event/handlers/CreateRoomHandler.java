@@ -4,9 +4,12 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tic.tac.toe.application.dto.message.CreateRoomSuccessfulDeliver;
 import com.tic.tac.toe.application.dto.request.CreateRoomRequestDto;
+import com.tic.tac.toe.application.event.EventDispatcher;
 import com.tic.tac.toe.application.event.EventHandler;
 import com.tic.tac.toe.domain.entity.Room;
+import com.tic.tac.toe.domain.entity.enums.RoomStatus;
 import com.tic.tac.toe.domain.event.CreateRoomEvent;
+import com.tic.tac.toe.domain.event.RoomsByStatusEvent;
 import com.tic.tac.toe.domain.exception.InputInvalidException;
 import com.tic.tac.toe.domain.exception.UnauthorizedException;
 import com.tic.tac.toe.domain.service.RoomService;
@@ -19,17 +22,20 @@ import org.slf4j.LoggerFactory;
 
 public final class CreateRoomHandler implements EventHandler<CreateRoomEvent> {
     private static final Logger log = LoggerFactory.getLogger(CreateRoomHandler.class);
+    private final EventDispatcher eventDispatcher;
     private final ConnectionManager connectionManager;
     private final RoomManager roomManager;
     private final RoomService roomService;
     private final ObjectMapper objectMapper;
 
     public CreateRoomHandler(
+            EventDispatcher eventDispatcher,
             ConnectionManager connectionManager,
             RoomManager roomManager,
             RoomService roomService,
             ObjectMapper objectMapper
     ) {
+        this.eventDispatcher = eventDispatcher;
         this.connectionManager = connectionManager;
         this.roomManager = roomManager;
         this.roomService = roomService;
@@ -57,6 +63,7 @@ public final class CreateRoomHandler implements EventHandler<CreateRoomEvent> {
             roomManager.join(room.getId(), connection);
             roomManager.broadcast(room.getId(), toJson(event.getEvent(),
                     new CreateRoomSuccessfulDeliver("Sala criada com sucesso")));
+            eventDispatcher.dispatch(new RoomsByStatusEvent(RoomStatus.WAITING, connection.getUserId(), true));
             log.info("Room created and owner joined. [roomId={}] [ownerId={}]",
                     room.getId(), event.getOwnerId());
         } catch (RuntimeException e) {

@@ -3,13 +3,9 @@ package com.tic.tac.toe.domain.entity;
 import com.tic.tac.toe.application.dto.request.CreateUserRequestDto;
 import com.tic.tac.toe.infrastructure.security.PasswordHasher;
 import javax.persistence.*;
-import org.eclipse.persistence.annotations.Cache;
-import org.eclipse.persistence.annotations.CacheType;
-import org.eclipse.persistence.config.CacheIsolationType;
 import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.UUID;
-import static org.eclipse.persistence.annotations.CacheCoordinationType.INVALIDATE_CHANGED_OBJECTS;
 
 @Entity
 @Table(
@@ -20,15 +16,6 @@ import static org.eclipse.persistence.annotations.CacheCoordinationType.INVALIDA
                         columnList = "username, email"
                 )
         }
-)
-@Cache(
-        type = CacheType.WEAK,
-        isolation = CacheIsolationType.ISOLATED,
-        expiry = 600000,
-        alwaysRefresh = true,
-        disableHits = true,
-        coordinationType = INVALIDATE_CHANGED_OBJECTS
-
 )
 public class User {
     @Id

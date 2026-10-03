@@ -1,9 +1,9 @@
 package com.tic.tac.toe.domain.entity.enums;
 
 public enum RoomStatus {
-    WAITING("waiting"),
-    IN_GAME("in_game"),
-    FINISHED("finished");
+    WAITING("WAITING"),
+    IN_GAME("IN_GAME"),
+    FINISHED("FINISHED");
 
     private final String status;
 
@@ -15,7 +15,16 @@ public enum RoomStatus {
         return status;
     }
 
-    public boolean isEqual(RoomStatus status) {
+    public static RoomStatus fromString(String status) {
+        for (RoomStatus roomStatus : RoomStatus.values()) {
+            if (roomStatus.getStatus().equals(status)) {
+                return roomStatus;
+            }
+        }
+        return null;
+    }
+
+    public static boolean constains(RoomStatus status) {
         for (RoomStatus roomStatus : RoomStatus.values()) {
             if (roomStatus.getStatus().equals(status.getStatus())) {
                 return true;

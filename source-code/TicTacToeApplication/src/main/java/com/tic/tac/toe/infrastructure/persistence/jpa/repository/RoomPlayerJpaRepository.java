@@ -1,6 +1,7 @@
 package com.tic.tac.toe.infrastructure.persistence.jpa.repository;
 
 import com.tic.tac.toe.domain.entity.pk.RoomPlayer;
+import com.tic.tac.toe.domain.exception.NotFoundException;
 import com.tic.tac.toe.domain.exception.RepositoryException;
 import com.tic.tac.toe.domain.repositoy.RoomPlayerRepository;
 import org.slf4j.Logger;
@@ -8,10 +9,7 @@ import org.slf4j.LoggerFactory;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.TypedQuery;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 
 public final class RoomPlayerJpaRepository implements RoomPlayerRepository {
     private static final Logger log = LoggerFactory.getLogger(RoomPlayerJpaRepository.class);
@@ -83,6 +81,26 @@ public final class RoomPlayerJpaRepository implements RoomPlayerRepository {
     }
 
     @Override
+    public Map<UUID, Long> countGroupedByRoomId() {
+        EntityManager em = emf.createEntityManager();
+        try {
+            List<Object[]> rows = em.createQuery(
+                    "SELECT rp.room.id, COUNT(rp) FROM RoomPlayer rp GROUP BY rp.room.id",
+                    Object[].class).getResultList();
+            Map<UUID, Long> map = new HashMap<>();
+            for (Object[] r : rows) {
+                map.put((UUID) r[0], (Long) r[1]);
+            }
+            return map;
+        } catch (RuntimeException ex) {
+            log.error("Error counting players by room. [error={}]", ex.getMessage());
+            throw new RepositoryException("Error counting players by room");
+        } finally {
+            em.close();
+        }
+    }
+
+    @Override
     public void deleteById(UUID id) {
         log.debug("Deleting roomPlayer by id={}", id);
         EntityManager em = emf.createEntityManager();
@@ -113,13 +131,20 @@ public final class RoomPlayerJpaRepository implements RoomPlayerRepository {
         EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
-            TypedQuery<RoomPlayer> query = em.createQuery(
-                    "SELECT rp FROM " + RoomPlayer.class.getSimpleName() + " rp " +
+            List<RoomPlayer> list = em.createQuery(
+                    "SELECT rp FROM RoomPlayer rp " +
                     "WHERE rp.room.id = :roomId AND rp.user.id = :userId",
                     RoomPlayer.class
-            );
-            query.setParameter("roomId", roomId);
-            query.setParameter("userId", userId);
+                    )
+                    .setParameter("roomId", roomId)
+                    .setParameter("userId", userId)
+                    .getResultList();
+            if (list.isEmpty()) {
+                throw new NotFoundException("RoomPlayer not found");
+            }
+            for (RoomPlayer rp : list) {
+                em.remove(rp);
+            }
             em.getTransaction().commit();
         } catch (RuntimeException ex) {
             log.error("Error trying to delete the RoomPlayer by roomId and userId. [error={}]", ex.getMessage());

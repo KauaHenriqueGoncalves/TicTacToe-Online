@@ -2,6 +2,7 @@ package com.tic.tac.toe.domain.repositoy;
 
 import com.tic.tac.toe.domain.entity.pk.RoomPlayer;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -9,6 +10,7 @@ public interface RoomPlayerRepository {
     Optional<RoomPlayer> findById(UUID id);
     List<RoomPlayer> findByRoomId(UUID roomId);
     RoomPlayer save(RoomPlayer roomPlayer);
+    Map<UUID, Long> countGroupedByRoomId();
     void deleteById(UUID id);
     void deleteByRoomIdAndUserId(UUID roomId, UUID userId);
 }

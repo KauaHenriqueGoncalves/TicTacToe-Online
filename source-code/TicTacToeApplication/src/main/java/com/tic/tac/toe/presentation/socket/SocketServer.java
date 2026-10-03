@@ -3,7 +3,9 @@ package com.tic.tac.toe.presentation.socket;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tic.tac.toe.AppContext;
 import com.tic.tac.toe.application.event.EventDispatcher;
+import com.tic.tac.toe.domain.entity.enums.RoomStatus;
 import com.tic.tac.toe.domain.event.DomainEvent;
+import com.tic.tac.toe.domain.event.RoomsByStatusEvent;
 import com.tic.tac.toe.domain.exception.NotFoundException;
 import com.tic.tac.toe.infrastructure.config.Environment;
 import com.tic.tac.toe.presentation.socket.connection.Connection;
@@ -102,6 +104,7 @@ public final class SocketServer extends WebSocketServer {
             } catch (Exception ex) {
                 log.error("Error removing empty room. [roomId={}] [error={}]", roomId, ex.getMessage());
             }
+            eventDispatcher.dispatch(new RoomsByStatusEvent(RoomStatus.WAITING, connection.getUserId(), true));
         }
         log.warn("Close connection. [connectionId={}] [userId={}] [code={}] [reason={}]",
                 connection.getId(), connection.getUserId(), code, reason);

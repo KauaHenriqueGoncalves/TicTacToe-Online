@@ -46,6 +46,8 @@ public class Room {
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<RoomPlayer> players = new HashSet<>();
 
+    public static final int MAX_PLAYERS = 2;
+
     public Room() {
     }
 

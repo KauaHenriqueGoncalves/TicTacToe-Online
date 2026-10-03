@@ -2,10 +2,8 @@ package com.tic.tac.toe.presentation.socket.event;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.tic.tac.toe.domain.event.CreateRoomEvent;
-import com.tic.tac.toe.domain.event.DomainEvent;
-import com.tic.tac.toe.domain.event.GlobalMessageEvent;
-import com.tic.tac.toe.domain.event.RoomMessageEvent;
+import com.tic.tac.toe.domain.entity.enums.RoomStatus;
+import com.tic.tac.toe.domain.event.*;
 import com.tic.tac.toe.domain.exception.InputInvalidException;
 import com.tic.tac.toe.presentation.socket.connection.Connection;
 import com.tic.tac.toe.presentation.socket.message.SocketMessageReceive;
@@ -24,10 +22,14 @@ public final class SocketEventMapper {
         switch (eventName) {
             case "global.message":
                 return globalMessage(content, connection);
+            case "global.rooms.by.status":
+                return globalRooms(content, connection);
             case "room.create":
                 return roomCreate(content, connection);
             case "room.message":
                 return roomMessage(content, connection);
+            case "room.join":
+                return joinRoom(content, connection);
             default:
                 throw new InputInvalidException("Unknown event: " + eventName);
         }
@@ -35,6 +37,10 @@ public final class SocketEventMapper {
 
     private static DomainEvent globalMessage(JsonNode content, Connection connection) {
         return new GlobalMessageEvent(connection.getUserId(), content.get("message").asText());
+    }
+
+    private static DomainEvent globalRooms(JsonNode content, Connection connection) {
+        return new RoomsByStatusEvent(RoomStatus.fromString(content.get("status").asText()), connection.getUserId(), false);
     }
 
     private static DomainEvent roomCreate(JsonNode content, Connection connection) {
@@ -47,5 +53,9 @@ public final class SocketEventMapper {
                 connection.getRoomId(),
                 content.get("message").asText()
         );
+    }
+
+    private static DomainEvent joinRoom(JsonNode content, Connection connection) {
+        return new JoinRoomEvent(UUID.fromString(content.get("roomId").asText()), connection.getUserId());
     }
 }
