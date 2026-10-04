@@ -98,6 +98,17 @@ public final class EventRegister {
                 )
         );
 
+        eventDispatcher.register(
+                StartGameEvent.class,
+                new StartGameRoomHandler(
+                        context.connectionManager,
+                        context.roomManager,
+                        context.gameService,
+                        eventDispatcher,
+                        objectMapper
+                )
+        );
+
         return eventDispatcher;
     }
 }

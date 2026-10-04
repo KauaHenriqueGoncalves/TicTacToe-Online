@@ -43,6 +43,9 @@ public class Room {
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
+    @OneToOne(mappedBy = "room", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Game game;
+
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<RoomPlayer> players = new HashSet<>();
 
@@ -69,7 +72,7 @@ public class Room {
         this.createdAt = createdAt;
     }
 
-    public Room(UUID id, String name, UUID ownerId, RoomStatus status, UUID currentPlayerId, UUID winnerId, String winnerName, LocalDateTime createdAt, HashSet<RoomPlayer> players) {
+    public Room(UUID id, String name, UUID ownerId, RoomStatus status, UUID currentPlayerId, UUID winnerId, String winnerName, LocalDateTime createdAt, Game game, Set<RoomPlayer> players) {
         this.id = id;
         this.name = name;
         this.ownerId = ownerId;
@@ -78,6 +81,7 @@ public class Room {
         this.winnerId = winnerId;
         this.winnerName = winnerName;
         this.createdAt = createdAt;
+        this.game = game;
         this.players = players;
     }
 
@@ -159,6 +163,14 @@ public class Room {
 
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
     }
 
     public Set<RoomPlayer> getPlayers() {

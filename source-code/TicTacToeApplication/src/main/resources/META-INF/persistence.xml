@@ -6,6 +6,7 @@
         <class>com.tic.tac.toe.domain.entity.User</class>
         <class>com.tic.tac.toe.domain.entity.Room</class>
         <class>com.tic.tac.toe.domain.entity.pk.RoomPlayer</class>
+        <class>com.tic.tac.toe.domain.entity.Game</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver"
