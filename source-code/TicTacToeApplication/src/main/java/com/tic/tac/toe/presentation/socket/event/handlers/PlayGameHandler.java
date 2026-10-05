@@ -8,10 +8,11 @@ import com.tic.tac.toe.application.event.EventHandler;
 import com.tic.tac.toe.application.event.EventPublisher;
 import com.tic.tac.toe.domain.entity.Game;
 import com.tic.tac.toe.domain.entity.enums.Mark;
-import com.tic.tac.toe.domain.entity.pk.RoomPlayer;
+import com.tic.tac.toe.domain.entity.enums.RoomStatus;
 import com.tic.tac.toe.domain.event.DomainEvent;
 import com.tic.tac.toe.domain.event.InfoRoomEvent;
 import com.tic.tac.toe.domain.event.PlayGameEvent;
+import com.tic.tac.toe.domain.event.RoomsByStatusEvent;
 import com.tic.tac.toe.domain.exception.InputInvalidException;
 import com.tic.tac.toe.domain.exception.UnauthorizedException;
 import com.tic.tac.toe.domain.service.GameService;
@@ -19,11 +20,11 @@ import com.tic.tac.toe.domain.service.RoomService;
 import com.tic.tac.toe.presentation.socket.connection.Connection;
 import com.tic.tac.toe.presentation.socket.connection.ConnectionManager;
 import com.tic.tac.toe.presentation.socket.message.SocketMessageDeliver;
-import com.tic.tac.toe.presentation.socket.room.Room;
 import com.tic.tac.toe.presentation.socket.room.RoomManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import javax.persistence.OptimisticLockException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -78,14 +79,7 @@ public final class PlayGameHandler implements EventHandler<PlayGameEvent> {
             String username = game.getRoom().getWinnerName();
             send(roomId, "room.game.winner", new GameWinnerDeliver(username, winnerId.toString()));
             log.info("Game finished. [roomId={}] [winner={}]", roomId, winnerId);
-
-            // TODO: remover sala da conexão
-
-            List<Connection> connections = connectionManager.getAllByRoomId(roomId);
-            for (Connection c : connections) {
-                roomManager.leave(roomId, c);
-                c.setRoomId(null);
-            }
+            finishRoom(roomId, userId);
         } else if (game.isDraw()) {
             send(roomId, "room.game.draw", new GameDrawDeliver("Empate"));
         }
@@ -107,5 +101,31 @@ public final class PlayGameHandler implements EventHandler<PlayGameEvent> {
         } catch (RuntimeException ex) {
             log.error("Error publishing event. [event={}] [error={}]", e.getEvent(), ex.getMessage());
         }
+    }
+
+    private void finishRoom(UUID roomId, UUID userId) {
+        send(roomId, "room.kicked", new GameDrawDeliver("Partida encerrada"));
+
+        try {
+            List<UUID> userIds = new ArrayList<>(roomManager.get(roomId).getUsers().keySet());
+            log.info("Kicking players. [roomId={}] [count={}]", roomId, userIds.size());
+            for (UUID uid : userIds) {
+                Connection c = connectionManager.getByUserId(uid);
+                if (c != null) {
+                    roomManager.leave(roomId, c);
+                }
+            }
+            roomManager.removeById(roomId);
+        } catch (RuntimeException e) {
+            log.error("Error kicking players. [roomId={}] [error={}]", roomId, e.getMessage());
+        }
+
+        try {
+            roomService.delete(roomId);
+        } catch (RuntimeException e) {
+            log.error("Error deleting finished room. [roomId={}] [error={}]", roomId, e.getMessage());
+        }
+
+        publishSafely(new RoomsByStatusEvent(RoomStatus.WAITING, userId, true));
     }
 }
