@@ -78,14 +78,15 @@ public final class GameServiceImpl implements GameService {
             room.setWinnerId(winnerId);
             room.setWinnerName(userNameOf(roomId, winnerId));
             room.setStatus(RoomStatus.FINISHED);
+
+        // remover todo mundo a sala pelo roommanager
+
         } else if (game.isDraw()) {
             room.setStatus(RoomStatus.FINISHED);
         } else {
             room.setCurrentPlayerId(game.getTurn() == Mark.X ? game.getXPlayerId() : game.getOPlayerId());
         }
-        Game saved = gameRepository.save(game);
-        roomRepository.save(room);
-        return saved;
+        return gameRepository.save(game);
     }
 
     private String userNameOf(UUID roomId, UUID userId) {

@@ -12,7 +12,7 @@ public class Game {
     @Column(name = "id", nullable = false, updatable = false)
     private UUID id;
 
-    @OneToOne(optional = false)
+    @OneToOne(optional = false, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "room_id", nullable = false, unique = true, updatable = false)
     private Room room;
 

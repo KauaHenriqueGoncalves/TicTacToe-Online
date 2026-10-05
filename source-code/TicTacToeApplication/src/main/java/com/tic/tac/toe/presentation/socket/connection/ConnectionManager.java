@@ -3,6 +3,9 @@ package com.tic.tac.toe.presentation.socket.connection;
 import org.java_websocket.WebSocket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
@@ -81,6 +84,19 @@ public final class ConnectionManager {
         log.info("Got connection by userId. [connectionId={}] [userId={}]",
                 connection.getId(), connection.getUserId());
         return connection;
+    }
+
+    public List<Connection> getAllByRoomId(UUID roomId) {
+        log.info("Getting connection by roomId. [roomId={}]", roomId);
+        List<Connection> list = new ArrayList<>();
+        for (Connection c : connections) {
+            if (c.getRoomId().equals(roomId)) {
+                list.add(c);
+            }
+        }
+        log.info("Got connection by roomId. [size={}] [roomId={}]",
+                list.size(), roomId);
+        return list;
     }
 
     public Connection getByConnection(WebSocket ws) {
