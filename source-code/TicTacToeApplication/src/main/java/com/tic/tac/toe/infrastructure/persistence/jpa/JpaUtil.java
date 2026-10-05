@@ -21,7 +21,8 @@ public final class JpaUtil {
                 Environment.get("ORM_PERSISTENCE"),
                 properties
         );
-        log.info("Instance {} initialized.", JpaUtil.class.getSimpleName());
+        log.info("Instance {} initialized. [InstanceId={}]",
+                JpaUtil.class.getSimpleName(), System.identityHashCode(JpaUtil.class));
     }
 
     public static EntityManagerFactory getFactory() {

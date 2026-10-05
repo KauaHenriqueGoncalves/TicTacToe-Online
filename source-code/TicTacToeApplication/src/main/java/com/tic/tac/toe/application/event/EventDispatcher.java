@@ -4,11 +4,16 @@ import com.tic.tac.toe.domain.event.DomainEvent;
 import java.util.HashMap;
 import java.util.Map;
 
-public final class EventDispatcher {
+public final class EventDispatcher implements EventPublisher {
     private final Map<
             Class<? extends DomainEvent>,
             EventHandler<? extends DomainEvent>
     > handlers = new HashMap<>();
+
+    @Override
+    public void publish(DomainEvent event) {
+        dispatch(event);
+    }
 
     public <T extends DomainEvent> void register(Class<T> eventType, EventHandler<T> handler) {
         handlers.put(eventType, handler);

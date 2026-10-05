@@ -18,10 +18,16 @@ public final class GlobalMessageHandler implements EventHandler<GlobalMessageEve
     private final UserService userService;
     private final ObjectMapper objectMapper;
 
-    public GlobalMessageHandler(ConnectionManager connectionManager, UserService userService, ObjectMapper objectMapper) {
+    public GlobalMessageHandler(
+            ConnectionManager connectionManager,
+            UserService userService,
+            ObjectMapper objectMapper
+    ) {
         this.connectionManager = connectionManager;
         this.userService = userService;
         this.objectMapper = objectMapper;
+        log.info("Instance {} initialized. [InstanceId={}]",
+                GlobalMessageHandler.class.getSimpleName(), System.identityHashCode(this));
     }
 
     @Override

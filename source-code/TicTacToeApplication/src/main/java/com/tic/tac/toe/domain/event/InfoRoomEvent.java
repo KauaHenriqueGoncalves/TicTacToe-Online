@@ -1,0 +1,26 @@
+package com.tic.tac.toe.domain.event;
+
+import java.util.UUID;
+
+public final class InfoRoomEvent implements DomainEvent {
+    private final UUID roomId;
+    private final UUID userId;
+
+    public InfoRoomEvent(UUID roomId, UUID userId) {
+        this.roomId = roomId;
+        this.userId = userId;
+    }
+
+    @Override
+    public String getEvent() {
+        return "room.info";
+    }
+
+    public UUID getRoomId() {
+        return roomId;
+    }
+
+    public UUID getUserId() {
+        return userId;
+    }
+}

@@ -29,6 +29,14 @@ public final class Room {
         return users;
     }
 
+    public void addUser(UUID userId, WebSocket user) {
+        users.put(userId, user);
+    }
+
+    public void removeUser(UUID userId) {
+        users.remove(userId);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;

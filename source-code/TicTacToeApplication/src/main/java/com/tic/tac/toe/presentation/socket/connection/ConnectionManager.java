@@ -3,9 +3,11 @@ package com.tic.tac.toe.presentation.socket.connection;
 import org.java_websocket.WebSocket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Collectors;
 
 public final class ConnectionManager {
     private static final Logger log = LoggerFactory.getLogger(ConnectionManager.class);
@@ -13,12 +15,14 @@ public final class ConnectionManager {
 
     public ConnectionManager() {
         this.connections = ConcurrentHashMap.newKeySet();
-        log.info("Instance {} initialized.", ConnectionManager.class.getSimpleName());
+        log.info("Instance {} initialized. [InstanceId={}]",
+                ConnectionManager.class.getSimpleName(), System.identityHashCode(this));
     }
 
     public ConnectionManager(Set<Connection> connections) {
         this.connections = connections;
-        log.info("Instance {} initialized.", ConnectionManager.class.getSimpleName());
+        log.info("Instance {} initialized. [InstanceId={}] [SetClass={}]",
+                ConnectionManager.class.getSimpleName(), System.identityHashCode(this), connections.getClass());
     }
 
     public void add(Connection c) {
@@ -79,6 +83,12 @@ public final class ConnectionManager {
         log.info("Got connection by userId. [connectionId={}] [userId={}]",
                 connection.getId(), connection.getUserId());
         return connection;
+    }
+
+    public List<Connection> getAllByRoomId(UUID roomId) {
+        return connections.stream()
+                .filter(c -> roomId.equals(c.getRoomId()))
+                .collect(Collectors.toList());
     }
 
     public Connection getByConnection(WebSocket ws) {

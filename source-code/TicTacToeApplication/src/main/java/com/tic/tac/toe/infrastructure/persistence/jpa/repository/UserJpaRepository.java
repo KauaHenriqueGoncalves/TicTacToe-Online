@@ -18,7 +18,8 @@ public final class UserJpaRepository implements UserRepository {
 
     public UserJpaRepository(EntityManagerFactory emf) {
         this.emf = emf;
-        log.info("Instance {} initialized.", UserJpaRepository.class.getSimpleName());
+        log.info("Instance {} initialized. [InstanceId={}]",
+                UserJpaRepository.class.getSimpleName(), System.identityHashCode(this));
     }
 
     @Override

@@ -14,6 +14,8 @@ public final class AuthorizedSocketMiddleware {
 
     public AuthorizedSocketMiddleware(JwtService jwtService) {
         this.jwtService = jwtService;
+        log.info("Instance {} initialized. [InstanceId={}]",
+                AuthorizedSocketMiddleware.class.getSimpleName(), System.identityHashCode(this));
     }
 
     public String authenticate(WebSocket conn, ClientHandshake handshake) throws JwtException, Exception {
