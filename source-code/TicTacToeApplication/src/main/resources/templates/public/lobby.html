@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lobby</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="card">
+        <h2>Salas</h2>
+        <input id="roomName" placeholder="Nome da sala">
+        <button id="create">Criar sala</button>
+        <div id="rooms"></div>
+        <p><a id="logout">Sair</a></p>
+    </div>
+</body>
+
+<script src="./lib/jquery-4.0.0.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        const ws = new WebSocket("ws://" + location.hostname + ":8081"); // falta accessToken
+
+        ws.onmessage = function (e) {
+            const msg = JSON.parse(e.data);
+            if (msg.event === "global.rooms.by.status") renderRooms(msg.content.rooms);
+            else console.log(msg);
+        };
+
+        function renderRooms(rooms) {
+            $("#rooms").html(rooms.map(r =>
+                `<div class="room">
+                <span>
+                    ${$("<i>").text(r.name).html()} (${r.currentPlayer}/${r.maxPlayers})
+                </span>
+            </div>`
+            ).join(""));
+        }
+
+        $("#create").click(function () {
+            ws.send(JSON.stringify(
+                {
+                    event: "room.create",
+                    content: {
+                        name: $("#roomName").val()
+                    }
+                }
+            ));
+        });
+
+        $("#logout").click(function () {
+            $.post("/api/v1/auth/logout", () => location.href = "/index.html");
+        });
+    });
+</script>
+
+</html>

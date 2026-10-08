@@ -4,6 +4,7 @@ import com.tic.tac.toe.AppContext;
 import com.tic.tac.toe.infrastructure.config.Environment;
 import com.tic.tac.toe.presentation.http.exception.ExceptionHttpHandler;
 import io.javalin.Javalin;
+import io.javalin.http.staticfiles.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,6 +18,7 @@ public final class HttpServer {
                 config -> {
                     config.enableCorsForOrigin("*");
                     config.showJavalinBanner = false;
+                    config.addStaticFiles("/templates/public", Location.CLASSPATH);
                 }
         ).start(port);
         server.before(ctx -> {

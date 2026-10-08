@@ -1,0 +1,13 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #f2f4f8; margin: 0;
+    display: flex; justify-content: center; padding-top: 60px; }
+.card { background: #fff; padding: 24px; border-radius: 8px; width: 340px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1); }
+h2 { margin-top: 0; }
+input, button { width: 100%; padding: 10px; margin-top: 10px; font-size: 14px; }
+button { background: #3b82f6; color: #fff; border: 0; border-radius: 4px; cursor: pointer; }
+button:hover { background: #2563eb; }
+.msg { margin-top: 10px; color: #dc2626; font-size: 13px; }
+.room { display: flex; justify-content: space-between; padding: 8px 0;
+    border-bottom: 1px solid #eee; }
+a { color: #3b82f6; cursor: pointer; }
