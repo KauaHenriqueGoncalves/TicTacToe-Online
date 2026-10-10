@@ -8918,3 +8918,224 @@ Class> com.tic.tac.toe.domain.entity.Game]
 2026-10-05 17:22:22 [WebSocketSelector-29] INFO  c.t.t.t.a.service.RoomServiceImpl - Room deleted. [roomId=49ff1590-a86c-4ff5-8f5b-cd04c9f35ef2]
 2026-10-05 17:22:22 [WebSocketSelector-29] INFO  c.t.t.t.p.s.c.ConnectionManager - Sending message on broadcast
 2026-10-05 17:22:22 [WebSocketSelector-29] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [connectionId=03f58e73-4046-4a73-834a-85ac368833fb] [userId=5b2bd98b-40da-412d-83b8-14833b48f537] [code=1000] [reason=Client initiated close]
+2026-10-07 22:28:07 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized. [InstanceId=1725097945]
+2026-10-07 22:28:07 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized. [InstanceId=1182320432]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized. [InstanceId=2114444063]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized. [InstanceId=294247762]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Instance RoomJpaRepository initialized. [InstanceId=918312414]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - Instance RoomPlayerJpaRepository initialized. [InstanceId=1448061896]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.i.p.j.r.GameJpaRepository - Instance GameJpaRepository initialized. [InstanceId=382750013]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=1240232440]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=489349054]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.a.service.RoomServiceImpl - Instance RoomServiceImpl initialized. [InstanceId=915416632]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - Instance RoomPlayerServiceImpl initialized. [InstanceId=574434418]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.p.h.m.AuthorizedHttpMiddleware - Instance AuthorizedHttpMiddleware initialized. [InstanceId=150268540]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized. [InstanceId=1130894323]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.p.s.m.AuthorizedSocketMiddleware - Instance AuthorizedSocketMiddleware initialized. [InstanceId=1962826816]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized. [InstanceId=1072410641]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized. [InstanceId=283318938]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionSocketHandler initialized. [InstanceId=443934570]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.p.s.e.h.GlobalMessageHandler - Instance GlobalMessageHandler initialized. [InstanceId=4766562]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.p.s.e.h.RoomsByStatusHandler - Instance RoomsByStatusHandler initialized. [InstanceId=1182908789]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Instance CreateRoomHandler initialized. [InstanceId=1076641925]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.p.s.e.h.MessageRoomHandler - Instance MessageRoomHandler initialized. [InstanceId=661119548]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.p.s.e.h.JoinRoomHandler - Instance JoinRoomHandler initialized. [InstanceId=1401316767]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.p.s.e.h.InfoRoomHandler - Instance InfoRoomHandler initialized. [InstanceId=216856121]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.p.s.e.h.LeaveRoomHandler - Instance LeaveRoomHandler initialized. [InstanceId=2095064787]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.p.s.e.h.ReadyRoomHandler - Instance ReadyRoomHandler initialized. [InstanceId=391183339]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.p.s.e.h.StartGameRoomHandler - Instance StartGameRoomHandler initialized. [InstanceId=646910062]
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.p.s.e.h.PlayGameHandler - Instance PlayGameHandler initialized. [InstanceId=1485891705]
+2026-10-07 22:28:08 [WebSocketSelector-23] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-10-07 22:28:08 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1506ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-10-07 22:28:08 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-10-07 22:28:08 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1252 days old. Consider checking for a newer version.).
+2026-10-07 22:28:08 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-10-07 22:28:08 [main] INFO  io.javalin.Javalin - Javalin started in 225ms \o/
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-10-07 22:28:08 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-10-07 22:28:08 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-10-08 16:58:42 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized. [InstanceId=519821334]
+2026-10-08 16:58:42 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized. [InstanceId=1734853116]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized. [InstanceId=294247762]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized. [InstanceId=918312414]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Instance RoomJpaRepository initialized. [InstanceId=1448061896]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - Instance RoomPlayerJpaRepository initialized. [InstanceId=382750013]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.i.p.j.r.GameJpaRepository - Instance GameJpaRepository initialized. [InstanceId=1240232440]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=489349054]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=915416632]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.a.service.RoomServiceImpl - Instance RoomServiceImpl initialized. [InstanceId=574434418]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - Instance RoomPlayerServiceImpl initialized. [InstanceId=150268540]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.p.h.m.AuthorizedHttpMiddleware - Instance AuthorizedHttpMiddleware initialized. [InstanceId=1130894323]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized. [InstanceId=1962826816]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.p.s.m.AuthorizedSocketMiddleware - Instance AuthorizedSocketMiddleware initialized. [InstanceId=1072410641]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized. [InstanceId=283318938]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized. [InstanceId=320304382]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionSocketHandler initialized. [InstanceId=1428475041]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.p.s.e.h.GlobalMessageHandler - Instance GlobalMessageHandler initialized. [InstanceId=892555958]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.p.s.e.h.RoomsByStatusHandler - Instance RoomsByStatusHandler initialized. [InstanceId=91912419]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Instance CreateRoomHandler initialized. [InstanceId=1873091796]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.p.s.e.h.MessageRoomHandler - Instance MessageRoomHandler initialized. [InstanceId=1896622931]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.p.s.e.h.JoinRoomHandler - Instance JoinRoomHandler initialized. [InstanceId=335708295]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.p.s.e.h.InfoRoomHandler - Instance InfoRoomHandler initialized. [InstanceId=480903748]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.p.s.e.h.LeaveRoomHandler - Instance LeaveRoomHandler initialized. [InstanceId=2095486832]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.p.s.e.h.ReadyRoomHandler - Instance ReadyRoomHandler initialized. [InstanceId=1529115495]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.p.s.e.h.StartGameRoomHandler - Instance StartGameRoomHandler initialized. [InstanceId=1855610584]
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.p.s.e.h.PlayGameHandler - Instance PlayGameHandler initialized. [InstanceId=1681920301]
+2026-10-08 16:58:43 [WebSocketSelector-23] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-10-08 16:58:43 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @946ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-10-08 16:58:43 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-10-08 16:58:43 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1253 days old. Consider checking for a newer version.).
+2026-10-08 16:58:43 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-10-08 16:58:43 [main] INFO  io.javalin.Javalin - Javalin started in 144ms \o/
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-10-08 16:58:43 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-10-08 16:58:43 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized. [InstanceId=519821334]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized. [InstanceId=1734853116]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized. [InstanceId=294247762]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized. [InstanceId=918312414]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Instance RoomJpaRepository initialized. [InstanceId=1448061896]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - Instance RoomPlayerJpaRepository initialized. [InstanceId=382750013]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.i.p.j.r.GameJpaRepository - Instance GameJpaRepository initialized. [InstanceId=1240232440]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=489349054]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=915416632]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.a.service.RoomServiceImpl - Instance RoomServiceImpl initialized. [InstanceId=574434418]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - Instance RoomPlayerServiceImpl initialized. [InstanceId=150268540]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.p.h.m.AuthorizedHttpMiddleware - Instance AuthorizedHttpMiddleware initialized. [InstanceId=1130894323]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized. [InstanceId=1962826816]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.p.s.m.AuthorizedSocketMiddleware - Instance AuthorizedSocketMiddleware initialized. [InstanceId=1072410641]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized. [InstanceId=283318938]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized. [InstanceId=320304382]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionSocketHandler initialized. [InstanceId=1428475041]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.p.s.e.h.GlobalMessageHandler - Instance GlobalMessageHandler initialized. [InstanceId=892555958]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.p.s.e.h.RoomsByStatusHandler - Instance RoomsByStatusHandler initialized. [InstanceId=91912419]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Instance CreateRoomHandler initialized. [InstanceId=1873091796]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.p.s.e.h.MessageRoomHandler - Instance MessageRoomHandler initialized. [InstanceId=1896622931]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.p.s.e.h.JoinRoomHandler - Instance JoinRoomHandler initialized. [InstanceId=335708295]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.p.s.e.h.InfoRoomHandler - Instance InfoRoomHandler initialized. [InstanceId=480903748]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.p.s.e.h.LeaveRoomHandler - Instance LeaveRoomHandler initialized. [InstanceId=2095486832]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.p.s.e.h.ReadyRoomHandler - Instance ReadyRoomHandler initialized. [InstanceId=1529115495]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.p.s.e.h.StartGameRoomHandler - Instance StartGameRoomHandler initialized. [InstanceId=1855610584]
+2026-10-08 17:11:13 [main] INFO  c.t.t.t.p.s.e.h.PlayGameHandler - Instance PlayGameHandler initialized. [InstanceId=1681920301]
+2026-10-08 17:11:13 [WebSocketSelector-23] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-10-08 17:11:14 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @837ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-10-08 17:11:14 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-10-08 17:11:14 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1253 days old. Consider checking for a newer version.).
+2026-10-08 17:11:14 [main] INFO  io.javalin.Javalin - Static file handler added: StaticFileConfig(hostedPath=/, directory=/templates/public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, skipFileFunction=Function1<javax.servlet.http.HttpServletRequest, java.lang.Boolean>). File system location: 'file:///var/mnt/HD/Workspace/ws-jala/computer-network-2/capstone/TicTacToe/source-code/TicTacToeApplication/target/classes/templates/public/'
+2026-10-08 17:11:14 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-10-08 17:11:14 [main] INFO  io.javalin.Javalin - Javalin started in 110ms \o/
+2026-10-08 17:11:14 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-10-08 17:11:14 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-10-08 17:11:14 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-10-08 17:11:50 [JettyServerThreadPool-38] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: GET, HOST: localhost:8080, PATH: /index.html, CONTENT_LENGTH: -1
+2026-10-08 17:11:50 [JettyServerThreadPool-27] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: GET, HOST: localhost:8080, PATH: /css/style.css, CONTENT_LENGTH: -1
+2026-10-08 17:11:51 [JettyServerThreadPool-33] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: GET, HOST: localhost:8080, PATH: /favicon.ico, CONTENT_LENGTH: -1
+2026-10-08 17:12:16 [JettyServerThreadPool-38] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: POST, HOST: localhost:8080, PATH: /api/v1/auth/register, CONTENT_LENGTH: 76
+2026-10-08 17:12:16 [JettyServerThreadPool-38] INFO  c.t.t.t.a.service.AuthServiceImpl - Creating a new user. [username=kauatestepage] [email=email@email.com]
+2026-10-08 17:12:17 [JettyServerThreadPool-38] INFO  c.t.t.t.a.service.AuthServiceImpl - User created successfully. [newUserId=8d9ec8fd-2c1e-44aa-b37c-93983d2b2a9f] [createdAt=2026-10-08T17:12:16.992]
+2026-10-08 17:12:17 [JettyServerThreadPool-33] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: POST, HOST: localhost:8080, PATH: /api/v1/auth/login, CONTENT_LENGTH: 49
+2026-10-08 17:12:17 [JettyServerThreadPool-33] INFO  c.t.t.t.a.service.AuthServiceImpl - Trying login. [email=email@email.com]
+2026-10-08 17:12:17 [JettyServerThreadPool-33] INFO  c.t.t.t.a.service.AuthServiceImpl - Login successfully. [userId=8d9ec8fd-2c1e-44aa-b37c-93983d2b2a9f]
+2026-10-08 17:12:17 [JettyServerThreadPool-38] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: GET, HOST: localhost:8080, PATH: /lobby.html, CONTENT_LENGTH: -1
+2026-10-08 17:12:17 [JettyServerThreadPool-33] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: GET, HOST: localhost:8080, PATH: /css/style.css, CONTENT_LENGTH: -1
+2026-10-08 17:12:17 [WebSocketWorker-11] WARN  c.t.t.t.p.s.m.AuthorizedSocketMiddleware - Authentication required
+2026-10-08 17:12:17 [WebSocketWorker-11] WARN  c.t.t.t.p.socket.SocketServer - Error to connection on websocket. [message=Authentication required]
+2026-10-08 17:12:17 [WebSocketSelector-23] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-08 17:12:17 [WebSocketSelector-23] WARN  c.t.t.t.p.s.c.ConnectionManager - Not found connection by websocket
+2026-10-08 17:12:17 [WebSocketSelector-23] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [code=1008] [reason=Authentication required]
+2026-10-08 17:12:49 [JettyServerThreadPool-28] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: POST, HOST: localhost:8080, PATH: /api/v1/auth/logout, CONTENT_LENGTH: 0
+2026-10-08 17:12:49 [JettyServerThreadPool-38] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: GET, HOST: localhost:8080, PATH: /index.html, CONTENT_LENGTH: -1
+2026-10-08 17:12:49 [JettyServerThreadPool-27] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: GET, HOST: localhost:8080, PATH: /css/style.css, CONTENT_LENGTH: -1
+2026-10-08 17:37:41 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized. [InstanceId=1725097945]
+2026-10-08 17:37:41 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized. [InstanceId=1182320432]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized. [InstanceId=2114444063]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized. [InstanceId=294247762]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Instance RoomJpaRepository initialized. [InstanceId=918312414]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - Instance RoomPlayerJpaRepository initialized. [InstanceId=1448061896]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.i.p.j.r.GameJpaRepository - Instance GameJpaRepository initialized. [InstanceId=382750013]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=1240232440]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=489349054]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.a.service.RoomServiceImpl - Instance RoomServiceImpl initialized. [InstanceId=915416632]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - Instance RoomPlayerServiceImpl initialized. [InstanceId=574434418]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.p.h.m.AuthorizedHttpMiddleware - Instance AuthorizedHttpMiddleware initialized. [InstanceId=150268540]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized. [InstanceId=1130894323]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.p.s.m.AuthorizedSocketMiddleware - Instance AuthorizedSocketMiddleware initialized. [InstanceId=1962826816]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized. [InstanceId=1072410641]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized. [InstanceId=283318938]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionSocketHandler initialized. [InstanceId=443934570]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.p.s.e.h.GlobalMessageHandler - Instance GlobalMessageHandler initialized. [InstanceId=4766562]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.p.s.e.h.RoomsByStatusHandler - Instance RoomsByStatusHandler initialized. [InstanceId=1182908789]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Instance CreateRoomHandler initialized. [InstanceId=1076641925]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.p.s.e.h.MessageRoomHandler - Instance MessageRoomHandler initialized. [InstanceId=661119548]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.p.s.e.h.JoinRoomHandler - Instance JoinRoomHandler initialized. [InstanceId=1401316767]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.p.s.e.h.InfoRoomHandler - Instance InfoRoomHandler initialized. [InstanceId=216856121]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.p.s.e.h.LeaveRoomHandler - Instance LeaveRoomHandler initialized. [InstanceId=2095064787]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.p.s.e.h.ReadyRoomHandler - Instance ReadyRoomHandler initialized. [InstanceId=391183339]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.p.s.e.h.StartGameRoomHandler - Instance StartGameRoomHandler initialized. [InstanceId=646910062]
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.p.s.e.h.PlayGameHandler - Instance PlayGameHandler initialized. [InstanceId=1485891705]
+2026-10-08 17:37:42 [WebSocketSelector-23] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-10-08 17:37:42 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @958ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-10-08 17:37:42 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-10-08 17:37:42 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1253 days old. Consider checking for a newer version.).
+2026-10-08 17:37:42 [main] INFO  io.javalin.Javalin - Static file handler added: StaticFileConfig(hostedPath=/, directory=/templates/public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, skipFileFunction=Function1<javax.servlet.http.HttpServletRequest, java.lang.Boolean>). File system location: 'file:///var/mnt/HD/Workspace/ws-jala/computer-network-2/capstone/TicTacToe/source-code/TicTacToeApplication/target/classes/templates/public/'
+2026-10-08 17:37:42 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-10-08 17:37:42 [main] INFO  io.javalin.Javalin - Javalin started in 115ms \o/
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-10-08 17:37:42 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-10-08 17:37:42 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-10-08 17:38:07 [JettyServerThreadPool-38] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: GET, HOST: localhost:8080, PATH: /index.html, CONTENT_LENGTH: -1
+2026-10-08 17:38:07 [JettyServerThreadPool-27] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: GET, HOST: localhost:8080, PATH: /lib/jquery-4.0.0.min.js, CONTENT_LENGTH: -1
+2026-10-08 17:38:07 [JettyServerThreadPool-28] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: GET, HOST: localhost:8080, PATH: /css/style.css, CONTENT_LENGTH: -1
+2026-10-08 17:38:13 [JettyServerThreadPool-33] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: GET, HOST: localhost:8080, PATH: /lobby.html, CONTENT_LENGTH: -1
+2026-10-08 17:38:14 [JettyServerThreadPool-39] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: GET, HOST: localhost:8080, PATH: /css/style.css, CONTENT_LENGTH: -1
+2026-10-08 17:38:14 [JettyServerThreadPool-38] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: GET, HOST: localhost:8080, PATH: /lib/jquery-4.0.0.min.js, CONTENT_LENGTH: -1
+2026-10-08 17:38:14 [WebSocketWorker-11] WARN  c.t.t.t.p.s.m.AuthorizedSocketMiddleware - Authentication required
+2026-10-08 17:38:14 [WebSocketWorker-11] WARN  c.t.t.t.p.socket.SocketServer - Error to connection on websocket. [message=Authentication required]
+2026-10-08 17:38:14 [WebSocketSelector-23] INFO  c.t.t.t.p.s.c.ConnectionManager - Getting connection by websocket
+2026-10-08 17:38:14 [WebSocketSelector-23] WARN  c.t.t.t.p.s.c.ConnectionManager - Not found connection by websocket
+2026-10-08 17:38:14 [WebSocketSelector-23] WARN  c.t.t.t.p.socket.SocketServer - Close connection. [code=1008] [reason=Authentication required]
+2026-10-08 17:38:19 [JettyServerThreadPool-28] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: GET, HOST: localhost:8080, PATH: /index.html, CONTENT_LENGTH: -1
+2026-10-08 17:38:19 [JettyServerThreadPool-38] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: GET, HOST: localhost:8080, PATH: /css/style.css, CONTENT_LENGTH: -1
+2026-10-08 17:38:19 [JettyServerThreadPool-33] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: GET, HOST: localhost:8080, PATH: /lib/jquery-4.0.0.min.js, CONTENT_LENGTH: -1
+2026-10-08 17:38:23 [JettyServerThreadPool-39] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: GET, HOST: localhost:8080, PATH: /.well-known/appspecific/com.chrome.devtools.json, CONTENT_LENGTH: -1
+2026-10-08 17:38:24 [JettyServerThreadPool-33] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: GET, HOST: localhost:8080, PATH: /css/style.css, CONTENT_LENGTH: -1
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.i.config.Environment - Instance Environment initialized. [InstanceId=1725097945]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.i.security.JwtService - Instance JwtService initialized. [InstanceId=1182320432]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.i.persistence.jpa.JpaUtil - Instance JpaUtil initialized. [InstanceId=2114444063]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.i.p.j.r.UserJpaRepository - Instance UserJpaRepository initialized. [InstanceId=294247762]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.i.p.j.r.RoomJpaRepository - Instance RoomJpaRepository initialized. [InstanceId=918312414]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.i.p.j.r.RoomPlayerJpaRepository - Instance RoomPlayerJpaRepository initialized. [InstanceId=1448061896]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.i.p.j.r.GameJpaRepository - Instance GameJpaRepository initialized. [InstanceId=382750013]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.a.service.AuthServiceImpl - Instance AuthServiceImpl initialized. [InstanceId=1240232440]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.a.service.UserServiceImpl - Instance UserServiceImpl initialized. [InstanceId=489349054]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.a.service.RoomServiceImpl - Instance RoomServiceImpl initialized. [InstanceId=915416632]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.a.s.RoomPlayerServiceImpl - Instance RoomPlayerServiceImpl initialized. [InstanceId=574434418]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.p.h.m.AuthorizedHttpMiddleware - Instance AuthorizedHttpMiddleware initialized. [InstanceId=150268540]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.p.h.c.AuthController - Instance AuthController initialized. [InstanceId=1130894323]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.p.s.m.AuthorizedSocketMiddleware - Instance AuthorizedSocketMiddleware initialized. [InstanceId=1962826816]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.p.s.c.ConnectionManager - Instance ConnectionManager initialized. [InstanceId=1072410641]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.p.socket.room.RoomManager - Instance RoomManager initialized. [InstanceId=283318938]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.p.s.e.ExceptionSocketHandler - Instance ExceptionSocketHandler initialized. [InstanceId=443934570]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.p.s.e.h.GlobalMessageHandler - Instance GlobalMessageHandler initialized. [InstanceId=4766562]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.p.s.e.h.RoomsByStatusHandler - Instance RoomsByStatusHandler initialized. [InstanceId=1182908789]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.p.s.e.h.CreateRoomHandler - Instance CreateRoomHandler initialized. [InstanceId=1076641925]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.p.s.e.h.MessageRoomHandler - Instance MessageRoomHandler initialized. [InstanceId=661119548]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.p.s.e.h.JoinRoomHandler - Instance JoinRoomHandler initialized. [InstanceId=1401316767]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.p.s.e.h.InfoRoomHandler - Instance InfoRoomHandler initialized. [InstanceId=216856121]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.p.s.e.h.LeaveRoomHandler - Instance LeaveRoomHandler initialized. [InstanceId=2095064787]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.p.s.e.h.ReadyRoomHandler - Instance ReadyRoomHandler initialized. [InstanceId=391183339]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.p.s.e.h.StartGameRoomHandler - Instance StartGameRoomHandler initialized. [InstanceId=646910062]
+2026-10-08 17:41:33 [main] INFO  c.t.t.t.p.s.e.h.PlayGameHandler - Instance PlayGameHandler initialized. [InstanceId=1485891705]
+2026-10-08 17:41:33 [WebSocketSelector-23] INFO  c.t.t.t.p.socket.SocketServer - WebSocketServer started successfully. [port=8081] [url=ws://localhost:8081]
+2026-10-08 17:41:33 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @833ms to org.eclipse.jetty.util.log.Slf4jLog
+2026-10-08 17:41:33 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2026-10-08 17:41:33 [main] INFO  io.javalin.Javalin - You are running Javalin 4.6.8 (released May 4, 2023. Your Javalin version is 1253 days old. Consider checking for a newer version.).
+2026-10-08 17:41:34 [main] INFO  io.javalin.Javalin - Static file handler added: StaticFileConfig(hostedPath=/, directory=/templates/public, location=CLASSPATH, precompress=false, aliasCheck=null, headers={Cache-Control=max-age=0}, skipFileFunction=Function1<javax.servlet.http.HttpServletRequest, java.lang.Boolean>). File system location: 'file:///var/mnt/HD/Workspace/ws-jala/computer-network-2/capstone/TicTacToe/source-code/TicTacToeApplication/target/classes/templates/public/'
+2026-10-08 17:41:34 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+2026-10-08 17:41:34 [main] INFO  io.javalin.Javalin - Javalin started in 106ms \o/
+2026-10-08 17:41:34 [main] INFO  c.t.t.t.presentation.http.HttpServer - Instance HttpServer initialized.
+2026-10-08 17:41:34 [main] INFO  c.t.t.t.presentation.http.HttpServer - HttpServer started successfully. [port=8080] [url=http://localhost:8080]
+2026-10-08 17:41:34 [main] INFO  com.tic.tac.toe.Application - Started Application
+2026-10-08 17:41:52 [JettyServerThreadPool-38] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: GET, HOST: localhost:8080, PATH: /index.html, CONTENT_LENGTH: -1
+2026-10-08 17:41:52 [JettyServerThreadPool-26] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: GET, HOST: localhost:8080, PATH: /css/style.css, CONTENT_LENGTH: -1
+2026-10-08 17:41:52 [JettyServerThreadPool-28] INFO  c.t.t.t.presentation.http.HttpServer - METHOD: GET, HOST: localhost:8080, PATH: /lib/jquery-4.0.0.min.js, CONTENT_LENGTH: -1
