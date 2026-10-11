@@ -95,7 +95,7 @@ public final class RoomJpaRepository implements RoomRepository {
         EntityManager em = emf.createEntityManager();
         try {
             Room room = em.find(Room.class, id);
-            em.refresh(room);
+            if (room != null) em.refresh(room);
             log.debug("Room {} found: {}", id, room != null);
             return Optional.ofNullable(room);
         } catch (RuntimeException e) {

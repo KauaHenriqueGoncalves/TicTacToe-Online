@@ -62,7 +62,18 @@ public final class SocketServer extends WebSocketServer {
                     AUTHORIZED_SOCKET_MIDDLEWARE.authenticate(conn, handshake);
             Connection connection =
                     Connection.create(conn, UUID.fromString(userId));
-            CONNECTION_MANAGER.add(connection);
+            Connection old = CONNECTION_MANAGER.getByUserId(connection.getUserId());
+            if (old != null) CONNECTION_MANAGER.remove(old);
+            com.tic.tac.toe.presentation.socket.room.Room room =
+                    ROOM_MANAGER.findByUserId(connection.getUserId());
+            if (room == null) {
+                CONNECTION_MANAGER.add(connection);
+            }
+            if (room != null) {
+                CONNECTION_MANAGER.add(connection);
+                connection.setRoomId(room.getId());
+                room.getUsers().put(connection.getUserId(), conn);
+            }
         } catch (JwtException ex) {
             log.warn("Invalid access token.");
             EXCEPTION_HANDLER.handle(conn, "CONNECTION", ex);
@@ -90,8 +101,9 @@ public final class SocketServer extends WebSocketServer {
             } catch (Exception ex) {
                 log.warn("Error leaving room in memory. [roomId={}] [error={}]", roomId, ex.getMessage());
             }
+            boolean playing = false;
             try {
-                appContext.roomPlayerService.deleteByRoomIdAndUserId(roomId, connection.getUserId());
+                playing = appContext.roomService.findById(roomId).getStatus() == RoomStatus.IN_GAME;
             } catch (NotFoundException ex) {
                 log.warn("RoomPlayer already removed. [roomId={}] [userId={}]", roomId, connection.getUserId());
             } catch (Exception ex) {

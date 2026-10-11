@@ -24,6 +24,13 @@ public final class RoomManager {
                 RoomManager.class.getSimpleName(), System.identityHashCode(this), rooms.getClass());
     }
 
+    public Room findByUserId(UUID userId) {
+        for (Room room : rooms) {
+            if (room.getUsers().containsKey(userId)) return room;
+        }
+        return null;
+    }
+
     public Room create(UUID id) {
         Room room = Room.create(id);
         rooms.add(room);

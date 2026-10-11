@@ -107,13 +107,8 @@ public final class PlayGameHandler implements EventHandler<PlayGameEvent> {
         send(roomId, "room.kicked", new GameDrawDeliver("Partida encerrada"));
 
         try {
-            List<UUID> userIds = new ArrayList<>(roomManager.get(roomId).getUsers().keySet());
-            log.info("Kicking players. [roomId={}] [count={}]", roomId, userIds.size());
-            for (UUID uid : userIds) {
-                Connection c = connectionManager.getByUserId(uid);
-                if (c != null) {
-                    roomManager.leave(roomId, c);
-                }
+            for (Connection c : connectionManager.getAllByRoomId(roomId)) {
+                c.setRoomId(null);
             }
             roomManager.removeById(roomId);
         } catch (RuntimeException e) {

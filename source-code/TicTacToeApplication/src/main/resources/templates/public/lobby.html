@@ -3,15 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Lobby</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <div class="card">
         <h2>Salas</h2>
-        <input id="roomName" placeholder="Nome da sala">
-        <button id="create">Criar sala</button>
+
+        <div class="create">
+            <input id="roomName" placeholder="Nome da sala">
+            <button id="create">Criar sala</button>
+            <button id="refresh" class="secondary">Atualizar</button>
+        </div>
+
         <div id="rooms"></div>
+
+        <div id="currentRoom" style="display:none">
+            <h3 id="roomTitle"></h3>
+            <ul id="players"></ul>
+            <div class="actions">
+                <button id="ready">Pronto</button>
+                <button id="start" disabled>Iniciar</button>
+            </div>
+            <button id="leave" class="secondary">Sair da sala</button>
+        </div>
+
         <p><a id="logout">Sair</a></p>
     </div>
 </body>
@@ -20,38 +36,63 @@
 
 <script>
     $(document).ready(function () {
-        const ws = new WebSocket("ws://" + location.hostname + ":8081"); // falta accessToken
+        const token = document.cookie
+            .split("; ")
+            .find(c => c.startsWith("accessToken="))
+            ?.split("=")[1];
 
-        ws.onmessage = function (e) {
+        const ws = new WebSocket(
+            "ws://" + location.hostname + ":8081/?accessToken=" + encodeURIComponent(token)
+        );
+
+        const send = (event, content) => ws.send(JSON.stringify(content ? {event, content} : {event}));
+
+        ws.onopen = () => send("global.rooms.by.status", {status: "WAITING"});
+
+        ws.onmessage = (e) => {
             const msg = JSON.parse(e.data);
-            if (msg.event === "global.rooms.by.status") renderRooms(msg.content.rooms);
-            else console.log(msg);
+            switch (msg.event) {
+                case "global.rooms.by.status": renderRooms(msg.content.rooms); break;
+                case "room.create":
+                case "room.join":
+                case "room.ready":
+                case "room.leave":
+                    send("room.info");               // sempre re-sincroniza
+                    send("global.rooms.by.status", {status: "WAITING"});
+                    break;
+                case "room.info": renderRoom(msg.content); break;
+                case "room.game.start":
+                    location.href = "game.html";
+                    break;
+                default: console.log(msg);
+            }
         };
 
         function renderRooms(rooms) {
-            $("#rooms").html(rooms.map(r =>
-                `<div class="room">
-                <span>
-                    ${$("<i>").text(r.name).html()} (${r.currentPlayer}/${r.maxPlayers})
-                </span>
-            </div>`
-            ).join(""));
+            $("#rooms").html(rooms.map(r => `
+                <div class="room">
+                    <span>${$("<i>").text(r.name).html()} (${r.currentPlayer}/${r.maxPlayers})</span>
+                    <button class="join" data-id="${r.id}">Entrar</button>
+                </div>`)
+            .join(""));
         }
 
-        $("#create").click(function () {
-            ws.send(JSON.stringify(
-                {
-                    event: "room.create",
-                    content: {
-                        name: $("#roomName").val()
-                    }
-                }
-            ));
-        });
+        function renderRoom(room) {
+            if (!room || !room.id) { $("#currentRoom").hide(); return; }
+            $("#currentRoom").show();
+            $("#roomTitle").text(room.name);
+            $("#players").html(room.players.map(p =>
+                `<li>${$("<i>").text(p.username).html()} ${p.ready ? "✔" : "…"}</li>`).join(""));
+            const allReady = room.players.length >= 2 && room.players.every(p => p.ready);
+            $("#start").prop("disabled", !allReady);
+        }
 
-        $("#logout").click(function () {
-            $.post("/api/v1/auth/logout", () => location.href = "/index.html");
-        });
+        $("#create").click(() => send("room.create", {name: $("#roomName").val()}));
+        $("#refresh").click(() => send("global.rooms.by.status", {status: "WAITING"}));
+        $("#rooms").on("click", ".join", function () { send("room.join", {roomId: $(this).data("id")}); });
+        $("#ready").click(() => send("room.ready"));
+        $("#start").click(() => send("room.game.start"));
+        $("#leave").click(() => send("room.leave"));
     });
 </script>
 
