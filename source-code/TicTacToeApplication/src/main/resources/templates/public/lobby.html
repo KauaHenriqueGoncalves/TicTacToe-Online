@@ -36,13 +36,15 @@
 
 <script>
     $(document).ready(function () {
+        const proto = location.protocol === "https:" ? "wss://" : "ws://";
+
         const token = document.cookie
             .split("; ")
             .find(c => c.startsWith("accessToken="))
             ?.split("=")[1];
 
         const ws = new WebSocket(
-            "ws://" + location.hostname + ":8081/?accessToken=" + encodeURIComponent(token)
+            proto + location.host + "/ws?accessToken=" + encodeURIComponent(token)
         );
 
         const send = (event, content) => ws.send(JSON.stringify(content ? {event, content} : {event}));

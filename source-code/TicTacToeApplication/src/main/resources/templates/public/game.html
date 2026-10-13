@@ -38,12 +38,17 @@
 
 <script>
     $(function() {
+        const proto = location.protocol === "https:" ? "wss://" : "ws://";
+
         const token = document.cookie.split("; ")
             .find(c => c.startsWith("accessToken="))?.split("=")[1];
 
         const myUserId = JSON.parse(atob(token.split(".")[1])).sub;
 
-        const ws = new WebSocket("ws://" + location.hostname + ":8081/?accessToken=" + encodeURIComponent(token));
+        const ws = new WebSocket(
+            proto + location.host + "/ws?accessToken=" + encodeURIComponent(token)
+        );
+
         const send = (event, content) => ws.send(JSON.stringify(content ? {event, content} : {event}));
 
         ws.onopen = () => send("room.info");

@@ -9,7 +9,9 @@ public final class Environment {
     private static final Dotenv DOTENV;
 
     static {
-        DOTENV = Dotenv.load();
+        DOTENV = Dotenv.configure()
+                .ignoreIfMissing()
+                .load();;
         log.info("Instance {} initialized. [InstanceId={}]",
                 Environment.class.getSimpleName(), System.identityHashCode(Environment.class));
     }

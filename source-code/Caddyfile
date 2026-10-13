@@ -1,0 +1,9 @@
+:80 {
+    handle /ws* {
+        uri strip_prefix /ws
+        reverse_proxy tictactoe:8081
+    }
+    handle {
+        reverse_proxy tictactoe:8080
+    }
+}
