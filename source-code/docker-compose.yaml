@@ -11,6 +11,29 @@ services:
             - tictactoe-data:/app/src/main/resources/data
             - tictactoe-logs:/app/src/main/resources/logs
 
+    proxy:
+        image: caddy:2
+        container_name: tictactoe-proxy
+        restart: unless-stopped
+        volumes:
+            - ./Caddyfile:/etc/caddy/Caddyfile:ro
+        depends_on:
+            - tictactoe
+
+    ngrok:
+        image: ngrok/ngrok:latest
+        container_name: tictactoe-ngrok
+        restart: unless-stopped
+        command: start --all --config /etc/ngrok.yml
+        environment:
+            - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
+        volumes:
+            - ./ngrok.yaml:/etc/ngrok.yml
+        ports:
+            - "4040:4040"
+        depends_on:
+            - proxy
+
 volumes:
     tictactoe-data:
     tictactoe-logs:

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <style>
+        .card { width: 340px; }
+        #board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+        .cell { height: 80px; margin: 0; font-size: 32px; font-weight: bold; }
+        .cell:disabled { background: #e5e7eb; color: #111; cursor: not-allowed; }
+        #result { font-weight: bold; text-align: center; }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h2 id="turnInfo">Carregando...</h2>
+        <div id="board">
+            <button class="cell" data-pos="0"></button>
+            <button class="cell" data-pos="1"></button>
+            <button class="cell" data-pos="2"></button>
+            <button class="cell" data-pos="3"></button>
+            <button class="cell" data-pos="4"></button>
+            <button class="cell" data-pos="5"></button>
+            <button class="cell" data-pos="6"></button>
+            <button class="cell" data-pos="7"></button>
+            <button class="cell" data-pos="8"></button>
+        </div>
+        <p id="result"></p>
+        <button id="backLobby" class="secondary" style="display:none">Voltar ao lobby</button>
+    </div>
+</body>
+
+<script src="./lib/jquery-4.0.0.min.js"></script>
+
+<script>
+    $(function() {
+        const proto = location.protocol === "https:" ? "wss://" : "ws://";
+
+        const token = document.cookie.split("; ")
+            .find(c => c.startsWith("accessToken="))?.split("=")[1];
+
+        const myUserId = JSON.parse(atob(token.split(".")[1])).sub;
+
+        const ws = new WebSocket(
+            proto + location.host + "/ws?accessToken=" + encodeURIComponent(token)
+        );
+
+        const send = (event, content) => ws.send(JSON.stringify(content ? {event, content} : {event}));
+
+        ws.onopen = () => send("room.info");
+
+        let lastGame = null;
+
+        ws.onmessage = (e) => {
+            console.log("recv", e.data);
+            const msg = JSON.parse(e.data);
+            if (msg.event === "ERROR") { $("#result").text(msg.message); return; }
+
+            switch (msg.event) {
+                case "room.info":
+                    if (msg.content && msg.content.game) {
+                        lastGame = msg.content.game;
+                        render(lastGame);
+                    }
+                    break;
+                case "room.game.winner":
+                    render(lastGame, msg.content.winnerId);
+                    break;
+                case "room.game.draw":
+                    render(lastGame, "DRAW");
+                    break;
+                case "room.kicked":
+                    setTimeout(() => location.href = "lobby.html", 3000);
+                    break;
+            }
+        };
+
+        function render(g, winner) {
+            if (!g) return;
+            const mark = g.xplayerId === myUserId || g.xPlayerId === myUserId ? "X" : "O";
+            const board = (g.board || "").split("");
+            $(".cell").each(function (i) {
+                const v = board[i];
+                const taken = v === "X" || v === "O";
+                $(this).text(taken ? v : "").prop("disabled", taken || !!winner || g.turn !== mark);
+            });
+            if (winner) {
+                $("#turnInfo").text("Fim de jogo");
+                $("#result").text(winner === "DRAW" ? "Empate!"
+                    : winner === myUserId ? "Você venceu!" : "Você perdeu!");
+                $("#backLobby").show();
+            } else {
+                $("#turnInfo").text(g.turn === mark ? "Sua vez" : "Vez do oponente");
+            }
+        }
+
+        $("#board").on("click", ".cell", function () {
+            send("room.game.play", {position: String($(this).data("pos"))});
+        });
+
+        $("#backLobby").click(() => { send("room.leave"); location.href = "lobby.html"; });
+    });
+</script>
+
+</html>

@@ -47,7 +47,7 @@ public final class AuthController {
                 authService.login(body);
         Cookie cookie =
                 new Cookie("accessToken", response.getAccessToken());
-        cookie.setHttpOnly(true);
+        cookie.setHttpOnly(false);
         cookie.setSecure(false);
         cookie.setPath("/");
         ctx.cookie(cookie);

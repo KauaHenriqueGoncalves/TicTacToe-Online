@@ -39,7 +39,9 @@
             $.ajax({
                 url: API + "/login", method: "POST", contentType: "application/json",
                 data: JSON.stringify({email: $("#email").val(), password: $("#password").val()}),
-                success: () => location.href = "/lobby.html",
+                success: () => {
+                    location.href = "/lobby.html";
+                },
                 error: x => $("#msg").text(x.responseJSON?.message || "Erro ao entrar")
             });
         }

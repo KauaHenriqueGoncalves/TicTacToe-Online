@@ -11,3 +11,20 @@ button:hover { background: #2563eb; }
 .room { display: flex; justify-content: space-between; padding: 8px 0;
     border-bottom: 1px solid #eee; }
 a { color: #3b82f6; cursor: pointer; }
+
+.room { flex-direction: column; align-items: stretch; }
+.room button { width: 100%; }
+
+#currentRoom { margin-top: 16px; padding-top: 12px; border-top: 2px solid #eee; }
+#currentRoom h3 { margin: 0 0 8px; }
+#players { list-style: none; padding: 0; margin: 0; }
+#players li { display: flex; justify-content: space-between;
+    padding: 6px 0; border-bottom: 1px solid #eee; }
+#players .ok { color: #16a34a; font-weight: bold; }
+
+.actions { display: flex; gap: 8px; }
+.actions button { margin-top: 10px; }
+
+button:disabled { background: #9ca3af; cursor: not-allowed; }
+button.secondary { background: #6b7280; }
+button.secondary:hover { background: #4b5563; }
