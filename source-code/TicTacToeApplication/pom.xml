@@ -12,6 +12,15 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Testes  -->
+        <junit.version>5.10.2</junit.version>
+        <mockito.version>4.11.0</mockito.version>
+        <byte-buddy.version>1.14.19</byte-buddy.version>
+        <jacoco.version>0.8.12</jacoco.version>
+        <jacoco.minimum.coverage>0.80</jacoco.minimum.coverage>
+        <!-- valor padrao caso o agente do JaCoCo seja pulado (-Djacoco.skip=true) -->
+        <argLine></argLine>
     </properties>
 
     <dependencies>
@@ -124,6 +133,42 @@
             <version>2.2.224</version>
             <scope>runtime</scope>
         </dependency>
+
+        <!-- ===================== TESTES ===================== -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-inline</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- byte-buddy mais novo para o Mockito funcionar tambem em JDK 17/21 -->
+        <dependency>
+            <groupId>net.bytebuddy</groupId>
+            <artifactId>byte-buddy</artifactId>
+            <version>${byte-buddy.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.bytebuddy</groupId>
+            <artifactId>byte-buddy-agent</artifactId>
+            <version>${byte-buddy.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -140,6 +185,75 @@
                         </manifest>
                     </archive>
                 </configuration>
+            </plugin>
+
+            <!-- Executa os testes com variaveis de ambiente proprias (H2 em memoria) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+                <configuration>
+                    <argLine>@{argLine} -Dfile.encoding=UTF-8</argLine>
+                    <environmentVariables>
+                        <HTTP_PORT>18080</HTTP_PORT>
+                        <HTTP_PREFIX>/api/v1</HTTP_PREFIX>
+                        <SOCKET_PORT>18081</SOCKET_PORT>
+                        <ORM_PERSISTENCE>eclipseLinkPersistence</ORM_PERSISTENCE>
+                        <DB_URL>jdbc:h2:mem:tictactoe-test;DB_CLOSE_DELAY=-1</DB_URL>
+                        <DB_USERNAME>admin</DB_USERNAME>
+                        <DB_PASSWORD>admin</DB_PASSWORD>
+                        <JWT_SECRET>dGljdGFjdG9lLXRlc3Qtc2VjcmV0LWtleS0wMTIzNDU2Nzg5YWJjZGVm</JWT_SECRET>
+                    </environmentVariables>
+                </configuration>
+            </plugin>
+
+            <!-- Cobertura de testes: relatorio em target/site/jacoco/index.html
+                 e build quebra se a cobertura de linhas ficar abaixo de 80% -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco.version}</version>
+                <executions>
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>check</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <rule>
+                                    <element>BUNDLE</element>
+                                    <limits>
+                                        <limit>
+                                            <counter>LINE</counter>
+                                            <value>COVEREDRATIO</value>
+                                            <minimum>${jacoco.minimum.coverage}</minimum>
+                                        </limit>
+                                        <limit>
+                                            <counter>INSTRUCTION</counter>
+                                            <value>COVEREDRATIO</value>
+                                            <minimum>${jacoco.minimum.coverage}</minimum>
+                                        </limit>
+                                    </limits>
+                                </rule>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
